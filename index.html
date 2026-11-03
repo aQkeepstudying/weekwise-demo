@@ -1,0 +1,461 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weekwise · Planning Workspace V8 · Capture</title><style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#273544;background:#f4f6f8}*{box-sizing:border-box}body{margin:0;padding:20px}.shell{max-width:1550px;margin:auto;background:white;border:1px solid #e1e6eb;border-radius:17px;padding:22px;box-shadow:0 8px 32px #24354a09}header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}h1{font-size:22px;margin:0 0 5px}p{margin:0;color:#75808b;font-size:12px}.workspace{display:grid;grid-template-columns:minmax(0,37fr) minmax(0,63fr);gap:14px;align-items:start}.left{position:relative;min-width:0}.right{min-width:0}.panel{border:1px solid #e0e5eb;border-radius:12px;padding:13px;margin-bottom:12px;background:#fff}.heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:11px}.heading strong{font-size:14px}.muted{color:#798591;font-size:11px}.controls{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:12px}select,button{border:1px solid #d6dee7;background:white;color:#39495a;border-radius:7px;font:inherit;font-size:11px;padding:7px 8px;cursor:pointer}select{max-width:130px}button.active{background:#e8f0fb;border-color:#86a8d2}label{font-size:11px;display:flex;align-items:center;gap:4px;white-space:nowrap;color:#546371}input[type=checkbox]{accent-color:#668db7;cursor:pointer}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.project{position:relative;z-index:2;min-width:0;border:1px solid #dce3e9;border-left:4px solid var(--c);border-radius:9px;padding:10px;background:white;cursor:pointer;transition:opacity .15s,background .15s}.project.selected{background:#f1f7ff;box-shadow:0 0 0 2px #91b1d6}.project.dim{opacity:.33}.project h3{font-size:12px;margin:0 0 6px;overflow-wrap:anywhere}.project small{font-size:10px;color:#7b8793}.task{display:flex;align-items:start;gap:3px;font-size:10px;margin-top:7px;line-height:1.25}.task.dim{opacity:.35}.task input{width:12px;height:12px;margin:0;flex-shrink:0}.effort{font-size:10px;margin-top:8px;color:#536272}.bar{height:5px;background:#edf0f3;border-radius:4px;overflow:hidden;margin-top:5px}.bar i{height:100%;display:block;background:var(--c)}.timeline-panel{position:relative;z-index:1}.timeline{width:100%;height:auto;display:block}.timeline text{font-family:inherit}.timeline svg{overflow:visible}.legend{display:flex;gap:14px;font-size:10px;color:#697582;margin-top:5px}.note{font-size:10px;color:#75818e;margin-top:9px}.connectors{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:visible}.right .panel{min-height:480px}.week{border:1px solid #dfe5eb;border-radius:10px;margin-bottom:9px;overflow:hidden}.week.active{border-color:#8faed1}.weekhead{display:flex;gap:12px;align-items:center;padding:12px;cursor:pointer;background:white}.week.active .weekhead{background:#f9fbfe}.weektitle{width:30%;min-width:0}.weektitle strong{font-size:12px}.weektitle p{font-size:11px;line-height:1.45;margin-top:5px}.weekstats{flex:1;min-width:0}.weekstats .numbers{display:flex;justify-content:space-between;font-size:10px;color:#687786;gap:6px}.workbar{height:10px;background:#eef1f4;display:flex;border-radius:5px;overflow:hidden;margin-top:8px}.workbar i{display:block;height:100%}.dayarea{padding:10px;border-top:1px solid #e6eaf0;overflow-x:auto}.daygrid{display:grid;grid-template-columns:repeat(7,minmax(92px,1fr));gap:5px;min-width:700px}.day{background:#f5f7f9;border-radius:7px;padding:6px;min-height:185px}.day h4{font-size:10px;margin:0 0 4px;display:flex;justify-content:space-between}.day .hours{font-size:9px;color:#7d8995;margin-bottom:8px}.block{border-left:3px solid var(--c);background:var(--bg);border-radius:5px;padding:6px 4px;margin-bottom:6px;font-size:10px;overflow-wrap:anywhere}.block .top{display:flex;align-items:flex-start;gap:3px}.block input{width:12px;height:12px;margin:0;flex-shrink:0}.block .meta{display:flex;justify-content:space-between;align-items:center;color:#697887;font-size:9px;margin-top:5px}.block .mini{height:5px;border-radius:3px;background:#e6e9ec;margin-top:5px;overflow:hidden}.block .mini i{height:100%;display:block;background:var(--c)}.block.done{opacity:.46}.block button{padding:1px 3px;font-size:10px;border:0;background:transparent}.flag{color:#b65f55}.empty{font-size:10px;color:#b1bac2;margin-top:16px;text-align:center}.foot{font-size:11px;color:#75818c;margin-top:6px}.seg{display:flex;gap:4px}.seg button{padding:5px 8px}.badge{font-size:10px;color:#63778e;background:#edf2f8;padding:5px 7px;border-radius:6px}.off{display:none}@media(max-width:1100px){body{padding:8px}.shell{padding:12px}.workspace{grid-template-columns:1fr}.left{max-width:800px}.right .panel{min-height:0}}@media(max-width:500px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.project{padding:7px}.controls{gap:4px}header h1{font-size:18px}}
+.constraints{display:flex;flex-wrap:wrap;gap:3px 7px;margin:5px 0 2px}.constraint{font-size:10px;color:#6c7886;white-space:nowrap}.ddl-icon,.flag{color:#bd574d;font-weight:700}.fixed-icon{color:#738fb3}.window-icon{color:#b89660}.legend b{font-size:13px}.timeline [data-marker]{cursor:default}
+.taskrow{display:flex;align-items:center;gap:4px;min-width:0}.taskrow .task{flex:1;min-width:0}.taskrow.not-this-week .task span{color:#aeb6be}.taskrow.not-this-week{opacity:.7}.taskhours{font-size:10px;color:#6e8192;white-space:nowrap}.addweek{border:1px solid #d3e0eb;border-radius:5px;background:#fff;color:#527fa6;font-size:10px;padding:2px 4px;cursor:pointer;white-space:nowrap}.addweek:hover{background:#eaf2f8}.weeklylist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 20px;margin-top:13px}.weekproject{min-width:0}.weekprojecttitle{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:650;color:#34475b;margin-bottom:6px}.weekprojectdot{height:9px;width:9px;border-radius:3px;flex:none}.weeklyitem{display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.45;color:#536373;padding:3px 0;min-width:0}.weeklyitem b{color:#6f7f8f;background:#f1f4f7;border-radius:4px;padding:2px 5px;font-size:10px;flex:none}.weeklyitem .taskname{flex:1;min-width:0}.weeklyitem em{font-size:10px;font-style:normal;color:#7b8994;white-space:nowrap;margin-left:auto}.weekhead{align-items:flex-start}.weektitle{min-width:0;flex:1.3}.weekstats{flex:1}.unscheduled{padding:10px 12px;background:#f5f8fc;border-top:1px solid #e4ebf2;display:flex;flex-wrap:wrap;gap:8px;font-size:11px}.unscheduled strong{width:100%}.unscheduled span{background:white;border:1px solid #dde5ed;border-radius:6px;padding:6px}.unscheduled button{cursor:pointer;color:#477da7;background:none;border:0;text-decoration:underline}
+
+/* v6 — denser, responsive weekly overview */
+.weekhead{display:grid;grid-template-columns:minmax(0,1fr) 225px 16px;align-items:start;gap:14px}
+.weektitle{width:auto;flex:none;min-width:0}.weekstats{min-width:0}
+.weeklylist{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.weekproject{border-top:2px solid #edf0f3;padding-top:8px}.weeklyitem{gap:5px;padding:4px 0;align-items:flex-start}.weeklyitem .taskname{overflow-wrap:anywhere}
+.weeklyitem em{font-variant-numeric:tabular-nums}.weekprojecttitle{overflow-wrap:anywhere}
+.topactions{display:flex;gap:7px}.topactions button{background:#f7f9fc}.topactions button:hover{border-color:#87a8cc}
+#suggestion:not(:empty){background:#f4f8fc;border:1px solid #cddfec;border-radius:9px;padding:12px;margin-bottom:12px;font-size:12px;color:#40546a}
+#suggestion .actions{display:flex;gap:7px;margin-top:10px;flex-wrap:wrap}
+#suggestion .primary,.primary{background:#527fa8;color:white;border-color:#527fa8}
+.modalcover{position:fixed;inset:0;background:#15253b88;z-index:100;display:flex;align-items:center;justify-content:center;padding:18px}
+.modalcover.off{display:none}.modal{background:white;border-radius:14px;padding:22px;width:min(560px,100%);max-height:88vh;overflow-y:auto;box-shadow:0 24px 70px #12223730}
+.modal .heading strong{font-size:18px}.modal .controls{margin:17px 0}.modal select{max-width:none}
+.reviewrow{border:1px solid #e4e9ee;border-radius:9px;padding:11px;margin-bottom:9px}
+.reviewrow strong{font-size:12px}.reviewrow small{color:#798592}.reviewchoices{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.reviewchoices button{flex:1;min-width:100px}.reviewchoices button.chosen{background:#e4f0fb;border-color:#729dc9;color:#315b81;font-weight:650}
+.modalfoot{display:flex;justify-content:flex-end;margin-top:15px}.reviewrow .finished{color:#35836c}
+@media(max-width:1450px){.weekhead{grid-template-columns:minmax(0,1fr) 175px 12px}.weeklylist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1451px){.weeklylist{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:750px){.weekhead{grid-template-columns:1fr 12px}.weekstats{grid-column:1/-1;grid-row:2}.weeklylist{grid-template-columns:repeat(2,minmax(0,1fr))}.topactions{flex-wrap:wrap}}
+
+/* v7: one source of truth, no completion checkboxes */
+.taskstatus{font-size:9px;border-radius:4px;padding:2px 4px;background:#f0f3f6;color:#6d7c88;white-space:nowrap}
+.taskstatus.done{background:#e6f4ed;color:#347c5e}.taskstatus.progress{background:#eaf2fb;color:#507ca5}
+.block .status{display:inline-block;font-size:9px;margin-top:5px;color:#527a99}
+.block.finished{opacity:.56}.reviewchoices button{min-width:90px}
+#suggestion{margin-bottom:10px}.weekproject{min-width:0}
+
+.capture-top{display:flex;align-items:center;gap:10px}.capture-top .primary,.capture-footer .primary{background:#456f99;color:#fff;border-color:#456f99;font-weight:650}.capture-top button{font-size:12px;padding:9px 15px}.capture-modal{width:min(620px,calc(100vw - 32px));max-width:620px}.capture-modal .heading strong{font-size:19px}.capture-modal .heading p{margin-top:4px}.capture-modal textarea{width:100%;min-height:126px;resize:vertical;border:1px solid #d6dfe8;border-radius:10px;padding:13px 14px;color:#29394b;font:13px/1.65 inherit;outline:none;background:#fff}.capture-modal textarea:focus{border-color:#7e9fbf;box-shadow:0 0 0 3px #7e9fbf22}.capture-examples{display:flex;gap:8px;margin:18px 0 10px}.capture-examples button{font-size:11px;background:#f5f7fa}.capture-hint{color:#84909b;font-size:11px;line-height:1.6;margin-top:7px}.capture-error{color:#a84444;background:#fff2f0;border:1px solid #f1d5d1;padding:10px;border-radius:8px;margin-top:10px;font-size:12px}.capture-footer{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}.capture-footer button{font-size:12px;padding:9px 14px}.change-list{margin-top:16px;border:1px solid #e3e9ee;border-radius:11px;overflow:hidden}.change-head{padding:12px 14px;background:#f7f9fb;border-bottom:1px solid #e5eaf0;display:flex;justify-content:space-between;align-items:center}.change-head strong{font-size:12px}.change-item{display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border-bottom:1px solid #eef1f4}.change-item:last-child{border-bottom:0}.change-item input{margin-top:3px}.change-item-body{flex:1;min-width:0}.change-item-title{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:12px;font-weight:650}.change-item-detail{font-size:11px;color:#71808f;line-height:1.65;margin-top:4px}.change-pill{border-radius:5px;font-size:9px;letter-spacing:.3px;padding:3px 6px;background:#e7f1ed;color:#3c806a;font-weight:700}.change-pill.update{background:#e9eff8;color:#577b9f}.change-notice{font-size:11px;color:#8a6d4b;margin-top:6px}.capture-success{background:#edf6f1;color:#3d765a;padding:12px;border-radius:8px;font-size:12px;margin-top:12px}.off{display:none!important}@media(max-width:600px){.capture-top .badge{display:none}.capture-modal{padding:16px}.capture-examples{flex-wrap:wrap}}
+.weeklyitem input{accent-color:#397960;margin:0;cursor:pointer}.weeklyitem.checked .taskname{color:#526b60;text-decoration:line-through}.week-results{display:flex;flex-wrap:wrap;gap:8px 14px;padding:10px 15px;background:#eff7f2;color:#315e49;font-size:12px}.daily-controls{display:flex;gap:4px;margin-top:6px}.daily-controls button{min-width:26px;padding:2px 6px}.daily-controls [aria-pressed="true"]{background:#dcebe1;border-color:#5c8b72;color:#224c36}
+.garden-tabs{display:flex;gap:12px}.garden-tabs button{background:transparent;border:0;border-radius:0;padding:8px 12px}.garden-tabs [aria-pressed=true]{border-bottom:2px solid #5c795f;color:#305039;font-weight:700}.garden{min-height:65vh;background:#faf8ef;border:1px solid #e4decc;border-radius:16px;padding:clamp(18px,4vw,50px);color:#314737}.garden-heading{margin-bottom:26px}.garden-heading>span{font-size:10px;letter-spacing:.18em;color:#687e63}.garden-heading h2{font-family:Georgia,serif;font-size:32px;margin:8px 0}.garden-heading p{color:#596a58}.garden-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,230px));gap:16px}.specimen{display:grid;gap:8px;justify-items:center;text-align:center;padding:18px 12px;background:#fffdf6;border:1px solid #ded8c4;border-radius:12px;color:inherit}.specimen:hover{background:#f3f4e8}.specimen svg,.specimen-art svg{width:140px}.specimen span,.specimen small,.specimen-detail small{color:#657361}.specimen-detail{display:grid;grid-template-columns:minmax(100px,200px) 1fr;gap:24px;align-items:start;margin-top:16px;padding:24px;background:#fffdf6;border:1px solid #ded8c4;border-radius:12px}.specimen-detail h3{margin:5px 0 16px;font-size:23px}.specimen-detail h4{margin:14px 0 5px}.specimen-detail p{margin:4px 0}.garden-milestone{margin-top:16px;color:#506947}.garden-link{padding:0;vertical-align:middle;background:#f1f5ed;border-color:#dbe5d7}.garden-link svg{display:block;width:27px;height:23px}.garden.off,#planView.off{display:none}@media(max-width:550px){.specimen-detail{grid-template-columns:1fr}.garden-tabs{order:3}}
+.weekhead > .weeklylist{grid-column:1/-1;margin-top:0}
+.moved-history{display:grid;gap:4px;padding:6px 4px;margin-top:6px;border-top:1px dashed #c9d1d9;color:#526373;font-size:11px}.moved-history button{justify-self:start;padding:1px 5px}.daily-controls{flex-wrap:wrap}.daily-controls button{font-size:10px;padding:2px 4px}
+.garden-grid{background:#e9eddc;border:1px solid #d8e1cc;border-radius:24px;padding:20px;grid-template-columns:repeat(auto-fit,minmax(min(155px,100%),1fr))}.garden-grid .specimen{background:#f7f6e9;border-radius:45% 45% 14px 14px}.flower-reveal{display:flex;align-items:center;gap:12px;margin:12px 0;padding:12px;background:#edf3e6;border:1px solid #c9d9c2;border-radius:10px;color:#35583d}
+.weeklylist[hidden]{display:none}.day-updates{margin-top:8px;color:#536373;font-size:11px}.day-updates summary{cursor:pointer;padding:5px 2px}
+.fixed-tag{font-weight:700;color:#4b5f7c}
+#planView.projects-collapsed{grid-template-columns:minmax(0,1fr)}#planView.projects-collapsed>.left{display:none}
+#planView.projects-collapsed{max-width:1280px;margin-inline:auto}.week-checklist{padding:12px;border-top:1px solid #e5eaf0}.week-checklist .weeklylist{margin-top:8px}.week-checklist .weeklyitem em{margin-left:3px}.week-checklist .taskname{flex:0 1 auto}.day.demo-today{background:#edf3fb;box-shadow:inset 0 0 0 1px #b8cce7}#planView.projects-collapsed .block .mini{display:none}#planView.projects-collapsed .block .top{min-height:0}#planView.projects-collapsed .block .meta{margin-top:4px}#planView.projects-collapsed .day{min-height:145px}
+.project-effort{font-size:.92em;font-weight:500;color:#5a6e65;white-space:nowrap}.numbers,.project-effort,.weeklyitem em,.hours,.meta{font-variant-numeric:tabular-nums}.week-checklist .weeklyitem,.day .block{font-size:12px}.week-checklist .weekprojecttitle,.day h4{font-size:13px;font-weight:650}.garden-heading h2{font-family:Georgia,serif}.garden{background:radial-gradient(ellipse at 80% 15%,#e8eddc 0%,transparent 50%),#faf8ef}.specimen-art svg.flower-bloom{transform-origin:50% 90%;animation:bloom-in 680ms ease-out both}@keyframes bloom-in{from{opacity:.25;transform:scale(.68) rotate(-7deg)}70%{opacity:1;transform:scale(1.04) rotate(2deg)}to{transform:scale(1) rotate(0)}}@media(prefers-reduced-motion:reduce){.specimen-art svg.flower-bloom{animation:none}}
+.project-load{height:4px;background:#e9ede9;border-radius:4px;overflow:hidden;margin:0 0 8px}.project-load i{display:block;height:100%;border-radius:inherit}.garden-heading{position:relative;isolation:isolate;padding:28px 16px;border-radius:14px;overflow:hidden;background:#f6efd9}.garden-landscape{position:absolute;z-index:-1;bottom:0;right:0;width:min(66%,650px);opacity:.7}.garden-heading p{max-width:32ch}.specimen-art svg{filter:drop-shadow(1px 2px 2px #80745640)}
+.note-count,.planning-notes{background:#edf3e6;color:#405d47;border-radius:8px;padding:6px 10px}.note-count{font-size:11px}.planning-notes{margin-top:12px}.planning-notes p{margin:5px 0}.planning-notes button{margin:4px}
+#cards .taskrow{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+#cards .taskrow .task{flex:1 1 140px;min-width:min(140px,100%);overflow-wrap:normal}
+#cards .taskrow>span{max-width:100%;font-size:11px}
+#cards .taskrow select{max-width:100%;font-size:11px;padding:3px 6px}
+.day .daily-controls{flex-wrap:nowrap}
+.day .daily-controls button{min-width:0}
+.day .fixed-tag{white-space:nowrap}
+.week-checklist .weeklylist{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(175px,1fr);grid-template-columns:none;overflow-x:auto}.block[draggable=true]{cursor:grab}.day.drop-ready{outline:2px solid #72998a;outline-offset:-2px}
+.timing-icon{display:inline-block;white-space:nowrap;flex:none}.block .timing-icon{font-size:1.15em;padding:0 .2em;background:#fff;border-radius:4px;vertical-align:middle}.brain-dump{margin-bottom:8px}.brain-dump summary{cursor:pointer;width:max-content;margin-left:auto;color:#365975;font-weight:600}.brain-dump label,.brain-dump textarea{display:block;margin:8px 0}.brain-dump textarea{width:100%;box-sizing:border-box;font:inherit}.brain-dump [role=status]{margin-left:8px}.day-load{height:5px;background:#e0e6eb;border-radius:4px;overflow:hidden;margin:4px 0 8px}.day-load i{display:block;height:100%;background:#527fa4;border-radius:inherit}.week-checklist{display:grid;grid-template-columns:minmax(0,3fr) minmax(180px,1fr);gap:16px}.personal-plans{border-left:1px solid #e1e7eb;padding-left:12px}.personal-plans form{display:grid;gap:6px}.personal-plans summary{margin:6px 0}.personal-row{display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid #e1e7eb}.personal-row small{min-width:65px;color:#53687a}.personal-row span{overflow-wrap:anywhere}@media(max-width:760px){.week-checklist{grid-template-columns:1fr}.personal-plans{border-left:0;padding-left:0}}.personal-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.9em}.personal-table th,.personal-table td{text-align:left;padding:6px;border-bottom:1px solid #e1e7eb;vertical-align:top}.personal-table th{background:#f4f6f8}.personal-table td:first-child{white-space:nowrap}.personal-table td:last-child{overflow-wrap:anywhere}#project-editor{border:1px solid #d7e0e9;border-radius:12px;padding:20px}#project-editor form{display:grid;gap:12px}#project-editor label{display:grid;gap:4px}.project .taskrow:has([data-date-task]){display:flex;flex-wrap:nowrap;align-items:center;gap:6px}.project .taskrow:has([data-date-task]) .task{flex:1;min-width:0}.project [data-date-task]{white-space:nowrap;flex:none;padding:3px 6px}</style></head><body><div class="shell"><header><div><h1>Weekwise · Planning Workspace</h1><p>Projects · Timeline · Weekly allocations · Daily progress</p></div><nav class="garden-tabs" aria-label="Workspace"><button id="planTab" aria-pressed="true">Plan</button><button id="gardenTab" aria-pressed="false">Garden</button></nav><div class="capture-top"><button id="captureBtn" class="primary" hidden>＋ Capture</button><span class="badge">Interactive planning · Garden demo</span></div></header><div class="workspace projects-collapsed" id="planView"><section class="left" id="left"><div class="panel"><div class="heading"><strong>Projects</strong><span class="muted" id="count"></span></div><div class="controls"><select id="weekFilter"><option value="all">All weeks</option><option value="1" selected>W1 · Nov 2–8</option><option value="2">W2 · Nov 9–15</option><option value="3">W3 · Nov 16–22</option><option value="4">W4 · Nov 23–29</option></select><select id="sort"><option value="urgency">Urgency</option><option value="ddl">Nearest DDL</option><option value="workload">Workload</option><option value="original">Original order</option></select><label><input type="checkbox" id="hide"> Hide inactive</label></div><div class="cards" id="cards"></div></div><div class="panel timeline-panel" id="timelinePanel"><div class="heading"><strong>Timeline</strong><div class="seg"><button id="four" class="active">4W</button><button id="eight">8W</button></div></div><svg id="timeline" class="timeline" viewBox="0 0 440 215"></svg><div class="legend"><span><b class="ddl-icon">⚑</b> DDL</span><span><b class="fixed-icon">◆</b> Fixed</span><span><b class="window-icon">▰</b> Window</span></div><div class="note">Click a project to show dashed links to its timeline markers. <b id="selectedLabel"></b></div></div><svg id="connectors" class="connectors"></svg></section><section class="right"><div class="panel"><div class="heading"><strong>4-Week Plan</strong><div class="topactions"><button id="projectsToggle" aria-controls="left" aria-expanded="false">Show Timeline</button></div></div><div id="suggestion"></div><div id="unassigned"></div><div id="unassigned"></div><div id="weeks"></div><div class="foot">Flexible blocks can be moved via ↔; Fixed events are locked; DDL appears only as a flag in the day heading.</div></div></section></div><section class="garden off" id="gardenView"></section></div><div class="modalcover off" id="captureModal"><div class="modal capture-modal"><div class="heading"><div><strong>Capture</strong><p>Add something new or update what changed.</p></div><button id="closeCapture" aria-label="Close">✕</button></div><div class="capture-examples"><button data-example="both">Two changes</button><button data-example="new">New task</button><button data-example="update">Date update</button></div><textarea id="captureText" rows="5" placeholder="What's new? Paste one or several lines…"></textarea><div class="capture-hint">Try: “TopoAsia 新增 Prepare talk，2–6h，分两天” and “TopoAsia talk 改到 Nov 7，时间未定”</div><div id="captureError" class="capture-error off"></div><div id="capturePreview"></div><div class="capture-footer"><button id="captureBack" class="off">← Edit text</button><button id="captureParse" class="primary">Review changes →</button><button id="captureApply" class="primary off">Confirm changes</button></div></div></div><dialog id="project-editor"></dialog><script>
+const projects=[{id:1,name:'Boring Billion',color:'#5689b4',weeks:[1,2,3],effort:'3–5 days',hours:32,ddl:18,tasks:['Finish manuscript','Response letter','Check figures','Final review'],markers:[{day:18,type:'ddl'}]},{id:2,name:'Science Advances',color:'#987db5',weeks:[1],effort:'2–3h',hours:2.5,ddl:8,tasks:['Read manuscript','Write review','Submit review'],markers:[{day:8,type:'ddl'}]},{id:3,name:'GSA Bulletin',color:'#75a28c',weeks:[3,4],effort:'1–2 days',hours:12,ddl:29,tasks:['Read manuscript','Draft review','Submit review'],markers:[{day:29,type:'ddl'}]},{id:4,name:'TopoAsia',color:'#b89660',weeks:[1,2],effort:'2h prep',hours:2,ddl:99,tasks:['Ask Sam','Book travel','Give talk','Visit Prof. Qin'],markers:[{day:6,end:9,type:'window'}]},{id:5,name:'Hf Analysis',color:'#c18678',weeks:[1,2],effort:'~2 days',hours:16,ddl:99,tasks:['Preparation meeting','Lab work'],markers:[{day:5,type:'fixed'},{day:12,type:'fixed'}]},{id:6,name:'O Data Model',color:'#8394ae',weeks:[2,3,4],effort:'3h + 30m talk',hours:3.5,ddl:16,tasks:['Prepare model','Send to Bryant','Present model'],markers:[{day:16,type:'ddl'},{day:23,type:'fixed'}]},{id:7,name:'TANGO',color:'#af85b1',weeks:[3,4],effort:'1–2 days',hours:12,ddl:99,tasks:['Modify slides','Give presentation'],markers:[{day:24,type:'fixed'}]}];
+const seed=[{id:'a',p:1,t:0,w:1,d:0,h:2},{id:'b',p:2,t:0,w:1,d:0,h:.5},{id:'c',p:4,t:0,w:1,d:0,h:1},{id:'d',p:1,t:0,w:1,d:1,h:3},{id:'e',p:2,t:1,w:1,d:1,h:1.5},{id:'f',p:1,t:0,w:1,d:2,h:2},{id:'g',p:4,t:1,w:1,d:2,h:1},{id:'h',p:1,t:0,w:1,d:3,h:3},{id:'i',p:1,t:0,w:1,d:4,h:2},{id:'j',p:2,t:2,w:1,d:4,h:.5},{id:'k',p:1,t:0,w:2,d:0,h:4},{id:'l',p:1,t:1,w:2,d:1,h:8},{id:'m',p:6,t:0,w:2,d:4,h:2},{id:'n',p:1,t:2,w:3,d:0,h:4},{id:'o',p:1,t:3,w:3,d:1,h:4},{id:'p',p:6,t:1,w:3,d:0,h:1},{id:'q',p:7,t:0,w:3,d:3,h:8},{id:'r',p:3,t:0,w:3,d:4,h:3},{id:'s',p:7,t:0,w:4,d:0,h:4},{id:'t',p:3,t:1,w:4,d:2,h:7},{id:'u',p:3,t:2,w:4,d:4,h:2}];
+const fixed=[{id:'topo-talk',p:4,t:2,w:1,d:5,name:'TopoAsia talk',time:'Afternoon · Time TBD'},{id:'f1',p:5,t:0,w:1,d:3,name:'Hf meeting',time:'Time TBD'},{id:'f2',p:5,t:1,w:2,d:3,name:'Hf lab',time:'Time TBD'},{id:'f3',p:6,t:2,w:4,d:0,name:'O Data Model talk',time:'Time TBD'},{id:'f4',p:7,t:1,w:4,d:1,name:'TANGO presentation',time:'14:45–15:00'}];
+const deadlines=[{w:1,d:6,name:'Science Advances · Nov 8'},{w:3,d:0,name:'Send to Bryant · Nov 16'},{w:3,d:2,name:'Boring Billion · Nov 18'},{w:4,d:6,name:'GSA Bulletin · Nov 29'}];
+const weekNames=['Nov 2–8','Nov 9–15','Nov 16–22','Nov 23–29'];const goals=['Finish Science Advances review; prepare TopoAsia','Advance manuscript and complete Hf lab','Submit Boring Billion; send model to Bryant','Presentations and GSA Bulletin review'];const dayNames=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];let blocks=seed.map(x=>({...x})),done={},taskDone={},weeklyExtra=[],selected=null,openWeek=1,range=4;const $=s=>document.querySelector(s);const getP=id=>projects.find(p=>p.id===id);
+blocks.push({id:'weekend-notes',p:4,t:4,w:1,d:6,h:0.5});
+getP(4).tasks.push('Write conference notes');
+getP(4).markers.push({type:'fixed',day:7,task:2});
+const capturedWeeks = new Map();
+const capturedEstimates = new Map();
+
+function targetWeek(line){
+  if(/下下周|the week after next|in two weeks/i.test(line))return 3;
+  if(/下周|next week/i.test(line))return 2;
+  if(/本周|这周|this week/i.test(line))return 1;
+  return 0;
+}
+function weekLabel(w){
+  const start=new Date(2026,10,2+(w-1)*7),end=new Date(2026,10,8+(w-1)*7);
+  const fmt=new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric'});
+  return fmt.format(start)+'–'+fmt.format(end);
+}
+
+
+function taskHours(p,t,w){return blocks.filter(b=>b.p===p&&b.t===t&&b.w===w).reduce((s,b)=>s+(b.carried?0:b.h),0)+weeklyExtra.filter(x=>x.p===p&&x.t===t&&x.w===w).reduce((s,x)=>s+x.h,0)}
+function isTaskActive(p,t,w){return (p===4&&t===3&&!capturedWeeks.has('4-3')&&!fixed.some(f=>f.p===4&&f.t===3)&&w<=2)||capturedWeeks.get(keyFor(p,t))===w||taskHours(p,t,w)>0||fixed.some(f=>f.p===p&&f.t===t&&f.w===w)}
+function active(p){const v=$('#weekFilter').value;return v==='all'||p.tasks.some((t,i)=>isTaskActive(p.id,i,Number(v)))||p.markers.some(m=>m.type==='window'&&Number(v)===1)}
+function nextConstraintDay(p){const pending=p.markers.filter(m=>{if(m.type==='fixed'){const f=fixed.find(x=>x.p===p.id&&2+(x.w-1)*7+x.d===m.day);return !f||!done[f.id]}if(m.type==='ddl'){const lastTask={1:3,2:2,3:2,6:1}[p.id];return lastTask===undefined||!taskDone[p.id+'-'+lastTask]}return true});return pending.length?Math.min(...pending.map(m=>m.day)):Infinity}
+function visitWeekPicker(){
+ return '<select data-task-week="4-3" aria-label="Choose a week for Visit Prof. Qin"><option value="">Pick week</option><option value="1">W1</option><option value="2">W2</option></select>';
+}
+function fixedTimingIcon(event){
+ const time=(event.time||'').replace(/(?:\s*·\s*)?Time TBD$/i,'').trim();
+ const label=esc('Fixed · Nov '+(2+(event.w-1)*7+event.d)+(time?' · '+time:''));
+ return `<span class="timing-icon" role="img" aria-label="${label}" title="${label}">📅</span>`;
+}
+function projectTaskTiming(p,t,fw,h){
+ const event=fixed.find(f=>f.p===p.id&&f.t===t);
+ if(event||p.id===4&&t===3)return `<button data-date-task="${p.id}-${t}">${event?.w?"📅 Nov "+(2+(event.w-1)*7+event.d):"Waiting"}</button>`;
+ if(p.id===6&&t===1)return '<span class="taskhours">🚩 Nov 16</span>';
+ const key=keyFor(p.id,t),week=capturedWeeks.get(key);
+
+ if(week&&!blocks.some(b=>b.p===p.id&&b.t===t)&&!weeklyExtra.some(x=>x.p===p.id&&x.t===t))return `<select data-task-week="${key}" aria-label="Change planned week for ${esc(p.tasks[t])}">${Array.from({length:8},(_,i)=>`<option value="${i+1}" ${week===i+1?'selected':''}>W${i+1}</option>`).join('')}</select>`;
+ if(fw==='all')return esc(capturedEstimates.get(key)||'');
+ return h?`<span class="taskhours">${h}h</span>`:`<button class="addweek" data-add="${key}">${esc(capturedEstimates.get(key)||'Add to W'+fw)}</button>`;
+}
+function renderCards(){let arr=projects.filter(p=>!$('#hide').checked||active(p));const sort=$('#sort').value;if(sort==='urgency')arr.sort((a,b)=>nextConstraintDay(a)-nextConstraintDay(b)||a.id-b.id);if(sort==='ddl')arr.sort((a,b)=>a.ddl-b.ddl||a.id-b.id);if(sort==='workload')arr.sort((a,b)=>b.hours-a.hours);$('#count').textContent=arr.length+' / 7 projects';const fw=$('#weekFilter').value;$('#cards').innerHTML=arr.map(p=>`<div class="project ${selected===p.id?'selected':''} ${active(p)?'':'dim'}" data-id="${p.id}" style="--c:${p.color}"><h3>${p.id}. ${p.name}</h3><div class="constraints">${p.markers.filter(m=>m.type!=='fixed'||!fixed.some(f=>f.p===p.id&&f.w&&2+(f.w-1)*7+f.d===m.day)).map(m=>m.type==='ddl'?`<span class="constraint"><span class="ddl-icon">⚑</span> Nov ${m.day} · DDL</span>`:m.type==='fixed'?`<span class="constraint"><span class="fixed-icon">◆</span> Nov ${m.day} · Fixed</span>`:`<span class="constraint"><span class="window-icon">▰</span> Nov ${m.day}–${m.end} · Window</span>`).join('')}</div><div class="effort">${p.effort} total estimate</div><div class="bar"><i style="width:${Math.min(100,p.hours/35*100)}%"></i></div>${p.tasks.map((t,i)=>{const h=fw==='all'?0:taskHours(p.id,i,Number(fw)),scheduled=fw==='all'||isTaskActive(p.id,i,Number(fw));return `<div class="taskrow ${scheduled?'':'not-this-week'}"><div class="task"><span>${p.id}.${i+1} ${esc(t)}</span></div> ${taskDone[keyFor(p.id,i)]?'<span class="taskstatus done">Done</span>':''}${projectTaskTiming(p,i,fw,h)}</div>`}).join('')}<button data-new-task="${p.id}">＋ Add task</button></div>`).join('');bindProjectEditors();document.querySelectorAll('.project').forEach(el=>el.addEventListener('click',e=>{if(e.target.closest('input,button,label,select'))return;const id=+el.dataset.id;selected=selected===id?null:id;renderCards();renderTimeline();requestAnimationFrame(drawLinks)}));document.querySelectorAll('[data-task-week]').forEach(el=>el.onchange=()=>{if(!el.value)return;capturedWeeks.set(el.dataset.taskWeek,Number(el.value));renderAll()});document.querySelectorAll('[data-add]').forEach(el=>el.onclick=()=>{const [pid,tid]=el.dataset.add.split('-').map(Number),w=Number($('#weekFilter').value);const answer=prompt(`Allocate ${pid}.${tid+1} to W${w}. How many hours? (You can schedule the day later)`, '2');if(answer===null)return;const h=Number(answer);if(!Number.isFinite(h)||h<=0){alert('Enter a positive number of hours.');return;}weeklyExtra.push({p:pid,t:tid,w,h});renderAll()})}
+function bindProjectEditors(){
+  $('#cards').querySelectorAll('[data-date-task],[data-new-task]').forEach(button=>button.onclick=()=>{
+    const [pid,tid]=(button.dataset.dateTask||button.dataset.newTask).split('-').map(Number);
+    const project=getP(pid), adding=tid===undefined;
+    const event=fixed.find(f=>f.p===pid&&f.t===tid);
+    const oldDay=event?.w?2+(event.w-1)*7+event.d:null;
+    const dialog=$('#project-editor');
+    dialog.innerHTML=`<form><strong>${esc(adding?project.name:project.tasks[tid])}</strong>
+      ${adding?'<label>Task name <input name="taskName" required></label><label>Estimated hours <input name="hours" type="number" min="0.01" step="any"></label>':`<label>Date <input name="date" type="date" min="2026-11-02" max="2026-11-29" value="${oldDay?'2026-11-'+String(oldDay).padStart(2,'0'):''}"></label>${pid===4&&tid===3?'<small>Window · Nov 6–9</small>':''}`}
+      <div><button type="button" data-cancel>Cancel</button> ${adding?'':'<button type="button" data-save value="waiting">Waiting</button> '}<button type="button" data-save>${adding?'Add task':'Save date'}</button></div><small role="status"></small></form>`;
+    const form=dialog.querySelector('form');
+    form.querySelector('[data-cancel]').onclick=()=>dialog.close();
+    form.onsubmit=e=>e.preventDefault();
+    const save=waiting=>{
+      if(!waiting&&!form.reportValidity())return;
+      const data=new FormData(form);
+      if(adding){
+        const name=data.get('taskName').trim(), hours=Number(data.get('hours'));
+        if(!name||project.tasks.some(task=>task.toLowerCase()===name.toLowerCase())){
+          form.querySelector('[role=status]').textContent='Enter a new task name.';return;
+        }
+        if(hours)capturedEstimates.set(keyFor(pid,project.tasks.length),hours+'h');
+        project.tasks.push(name);
+      }else{
+        const date=data.get('date');
+        if(!waiting&&!date){form.querySelector('[role=status]').textContent='Choose a date or Waiting.';return}
+        const day=Number(date.slice(-2));
+        const next=event||{id:'cap-'+pid+'-'+tid,p:pid,t:tid,name:project.tasks[tid],time:'Time TBD'};
+        if(!event)fixed.push(next);
+        next.w=waiting?0:Math.floor((day-2)/7)+1;
+        next.d=waiting?0:(day-2)%7;
+        if(waiting||oldDay!==day)next.time='Time TBD';
+        capturedWeeks.delete(keyFor(pid,tid));
+        project.markers=project.markers.filter(m=>!(m.type==='fixed'&&(m.task===tid||(m.task==null&&m.day===oldDay))));
+        if(!waiting)project.markers.push({type:'fixed',day,task:tid});
+      }
+      dialog.close();renderAll();
+    };
+    form.querySelectorAll("[data-save]").forEach(action=>action.onclick=()=>save(action.value==="waiting"));
+    dialog.showModal();
+  });
+}
+function renderTimeline(){const svg=$('#timeline'),left=125,right=429,span=range===4?28:56,unit=(right-left)/span,x=d=>left+(d-2)*unit;let s='';for(let i=0;i<=range;i++){const xx=left+i*7*unit;const date=new Date(2026,10,2+i*7);s+=`<line x1="${xx}" y1="24" x2="${xx}" y2="210" stroke="#e1e7ed" stroke-dasharray="3 3"/><text x="${xx}" y="15" text-anchor="middle" font-size="10" fill="#7c8792">${date.toLocaleString('en-US',{month:'short'})} ${date.getDate()}</text>`}projects.forEach((p,i)=>{const y=42+i*24;s+=`<text x="3" y="${y+3}" font-size="10" fill="${selected===p.id?'#284a70':'#647280'}">${p.name}</text><line x1="${left}" x2="${right}" y1="${y}" y2="${y}" stroke="#ecf0f3"/>`;p.markers.forEach((m,j)=>{const xx=x(m.day);if(m.type==='window')s+=`<rect data-marker="${p.id}-${j}" x="${xx}" y="${y-5}" width="${(m.end-m.day+1)*unit}" height="10" rx="3" fill="${p.color}"/>`;else if(m.type==='ddl')s+=`<g data-marker="${p.id}-${j}"><line x1="${xx}" y1="${y-7}" x2="${xx}" y2="${y+7}" stroke="#b55f55" stroke-width="1.5"/><path d="M ${xx} ${y-7} l 9 2.5 -9 3 Z" fill="#b55f55"/></g>`;else s+=`<rect data-marker="${p.id}-${j}" x="${xx-4}" y="${y-4}" width="8" height="8" transform="rotate(45 ${xx} ${y})" fill="#8196b6"/>`})});svg.innerHTML=s;$('#selectedLabel').textContent=selected?'· '+getP(selected).name:'';requestAnimationFrame(drawLinks)}
+function drawLinks(){const svg=$('#connectors'),left=$('#left'),lr=left.getBoundingClientRect();svg.setAttribute('viewBox',`0 0 ${lr.width} ${lr.height}`);svg.innerHTML='';if(!selected)return;const card=document.querySelector(`.project[data-id="${selected}"]`),p=getP(selected);if(!card)return;const cr=card.getBoundingClientRect();p.markers.forEach((m,j)=>{const mark=document.querySelector(`[data-marker="${selected}-${j}"]`);if(!mark)return;const mr=mark.getBoundingClientRect();const sx=cr.left+cr.width/2-lr.left,sy=cr.bottom-lr.top,ex=mr.left+mr.width/2-lr.left,ey=mr.top+mr.height/2-lr.top;const mid=sy+(ey-sy)*.53;svg.innerHTML+=`<path d="M ${sx} ${sy} C ${sx} ${mid}, ${ex} ${mid}, ${ex} ${ey}" fill="none" stroke="${p.color}" stroke-width="2" stroke-dasharray="5 5" opacity=".85"/>`})}
+const reviewState={};let reviewDraft={};let proposal=null;let pendingCarry=[];let reviewW=1,reviewD=0;
+function keyFor(p,t){return `${p}-${t}`}
+function hasWorked(p,t){return blocks.some(b=>b.p===p&&b.t===t&&dailyResults.get(b.id)==='worked')}
+function dayStatus(){return ''}
+function statusLabel(){return ''}
+function planHours(w){return blocks.filter(b=>b.w===w).reduce((s,b)=>s+(b.carried?0:b.h),0)+weeklyExtra.filter(x=>x.w===w).reduce((s,x)=>s+x.h,0)}
+function futureBlocks(p,t){return blocks.filter(b=>b.p===p&&b.t===t&&b.w>=2&&!done[b.id]);}
+function syncTaskDone(p,t,flag){taskDone[keyFor(p,t)]=flag;if(flag){const future=futureBlocks(p,t);const extra=weeklyExtra.filter(x=>x.p===p&&x.t===t&&x.w>=2);if(future.length||extra.length)proposal={kind:'release',p,t,ids:future.map(x=>x.id),extra,hrs:future.reduce((s,b)=>s+(b.carried?0:b.h),0)+extra.reduce((s,x)=>s+x.h,0)};else proposal=null;}else proposal=null;renderAll();}
+function renderSuggestion(){const target=$('#suggestion');if(!proposal){target.innerHTML='';return;}target.innerHTML=`<div class="reviewrow"><strong>${proposal.title||'Review Next Week'}</strong><p style="margin:8px 0">${proposal.text}</p>${weekResults(proposal.w)||'<p class="muted">No results recorded for this week yet.</p>'}${flowerCard(proposal.w)}<div class="actions"><button id="closeSuggestion">Close</button></div></div>`;const reveal=$('#revealFlower'),see=$('#seeFlower');if(reveal)reveal.onclick=()=>revealFlower(proposal.w);if(see)see.onclick=()=>showGarden(proposal.w);$('#closeSuggestion').onclick=()=>{proposal=null;renderSuggestion()}}
+function renderWeeks(){const container=$('#weeks');container.innerHTML=Array.from({length:Math.max(4,...capturedWeeks.values())},(_,i)=>weekNames[i]||weekLabel(i+1)).map((date,i)=>{const w=i+1,isOpen=openWeek===w,bs=blocks.filter(b=>b.w===w),ex=weeklyExtra.filter(x=>x.w===w),total=planHours(w),completed=bs.filter(b=>done[b.id]).reduce((s,b)=>s+(b.carried?0:b.h),0);const items=[];projects.forEach(p=>p.tasks.forEach((t,ti)=>{const h=taskHours(p.id,ti,w),isFixed=fixed.some(f=>f.w===w&&f.p===p.id&&f.t===ti);if(h||isFixed||(keyFor(p.id,ti)!=="4-3"&&capturedWeeks.get(keyFor(p.id,ti))===w))items.push({p:p.id,html:`<div class="weeklyitem ${taskDone[keyFor(p.id,ti)]?'checked':''}">${weeklyCheck(p.id,ti,w)}<b>${p.id}.${ti+1}</b><span class="taskname">${esc(t)}</span><em>${h?h+'h':fixed.some(f=>!f.w&&f.pendingWeek===w&&f.p===p.id&&f.t===ti)?'<span title="Date pending">📅 …</span>':isFixed?fixedTimingIcon(fixed.find(f=>f.w===w&&f.p===p.id&&f.t===ti)):capturedEstimates.has(keyFor(p.id,ti))?esc(capturedEstimates.get(keyFor(p.id,ti)))+' est. · Unscheduled':'Unscheduled'}</em></div>`})}));const days=isOpen?`<div class="dayarea"><div class="daygrid">${dayNames.map((dn,d)=>{const tasks=bs.filter(b=>b.d===d),events=fixed.filter(f=>f.w===w&&f.d===d),ddl=deadlines.filter(x=>x.w===w&&x.d===d),dayH=tasks.reduce((s,b)=>s+(b.carried?0:b.h),0)+events.reduce((sum,event)=>sum+(event.h||0),0),untimed=events.filter(event=>!event.h).length;return `<div data-drop-day="${d}" data-drop-week="${w}" class="day ${w===1&&d===1?'demo-today':''}"><h4>${dn} ${new Date(2026,10,2+i*7+d).getDate()} ${ddl.map(x=>`<span class="flag" title="${x.name}">⚑</span>`).join('')}</h4><div class="hours">${dayH}h planned${untimed?` <span title="${untimed} fixed event(s) without a duration" aria-label="${untimed} fixed event(s) without a duration">📅 ${untimed}</span>`:''}</div><div class="day-load" aria-hidden="true" title="Full bar = 8h"><i style="width:${Math.min(100,dayH/8*100)}%"></i></div>${events.map(f=>{const p=getP(f.p);return `<div class="block ${taskDone[keyFor(f.p,f.t)]?'finished':''}" style="--c:${p.color};--bg:${p.color}16"><div class="top"><span>${fixedTimingIcon(f)} ${f.p}.${f.t+1} ${f.name}</span></div><span class="status">${statusLabel(dayStatus(f.p,f.t,w,d))}</span><div class="mini" style="border:1px dashed ${p.color}"></div><label class="daily-controls">${weeklyCheck(f.p,f.t,w)} Done</label></div>`}).join('')}${tasks.filter(b=>!b.carried).map(b=>{const p=getP(b.p);return `<div ${canDrag(b)?'draggable="true" data-drag-block="'+b.id+'"':''} class="block ${taskDone[keyFor(b.p,b.t)]?'finished':''}" style="--c:${p.color};--bg:${p.color}16"><div class="top"><span>${b.p}.${b.t+1} ${esc(p.tasks[b.t])}</span></div><span class="status">${statusLabel(dayStatus(b.p,b.t,w,d))}</span><div class="meta"><span>${b.h}h</span>${b.carried||dailyResults.has(b.id)?'':`<button data-move="${b.id}" title="Move to another day">↔</button>`}</div><div class="mini"><i style="width:${Math.min(100,b.h/8*100)}%"></i></div>${dailyControls(b)}</div>`}).join('')}${tasks.some(b=>b.carried)?`<details class="day-updates"><summary>${tasks.filter(b=>b.carried).length} update(s)</summary>${tasks.filter(b=>b.carried).map(b=>{const p=getP(b.p);return `<div class="moved-history"><strong>${esc(p.tasks[b.t])}</strong><span>${dailyResults.get(b.id)==='worked'?'Progress made · Continued on':'Not done · Moved to'} ${dayNames[b.d+1]}</span><button data-undo="${b.id}">Undo</button></div>`;}).join('')}</details>`:''}${!tasks.length&&!events.length?'<div class="empty">No tasks</div>':''}</div>`}).join('')}</div>${ex.length?`<div class="unscheduled"><strong>Not scheduled to a day yet</strong>${ex.map(x=>`<span>${x.p}.${x.t+1} ${getP(x.p).tasks[x.t]} · ${x.h}h <button data-place="${weeklyExtra.indexOf(x)}">Schedule day</button></span>`).join('')}</div>`:''}</div>`:'';return `<div class="week ${isOpen?'active':''}"><div class="weekhead" data-week="${w}"><div class="weektitle"><strong>W${w} · ${date}</strong> ${w<=4?gardenLink(w):''} <p>${goals[i]||''}</p></div><div class="weekstats"><div class="numbers"><b>${total} / 35h planned</b></div></div><span>${isOpen?'⌃':'⌄'}</span></div>${days}${isOpen?`<div class="week-checklist"><div class="work-checklist"><strong>Weekly checklist</strong><div class="weeklylist" ${isOpen?'':'hidden'}>${projects.filter(p=>items.some(x=>x.p===p.id)).map(p=>{const effort=p.tasks.reduce((sum,_,ti)=>sum+taskHours(p.id,ti,w),0);return `<div class="weekproject"><div class="weekprojecttitle"><span class="weekprojectdot" style="background:${p.color}"></span>${esc(p.name)} <span class="project-effort">${p.tasks.reduce((sum,_,ti)=>sum+taskHours(p.id,ti,w),0)||''}${p.tasks.some((_,ti)=>taskHours(p.id,ti,w))?'h':fixed.filter(f=>f.p===p.id&&f.w===w).length+' fixed'}</span></div>${effort?`<div class="project-load" title="${effort}h of ${total}h planned this week"><i style="width:${effort/total*100}%;background:${p.color}"></i></div>`:''}${items.filter(x=>x.p===p.id).map(x=>x.html).join('')}</div>`;}).join('')||'<span class="empty">No allocations yet</span>'}</div>${weekResults(w)}</div>${personalPanel(w)}</div>`:' '}</div>`}).join('');document.querySelectorAll('[data-week]').forEach(el=>el.onclick=()=>{const w=+el.dataset.week;openWeek=openWeek===w?null:w;if(openWeek)$('#weekFilter').value=String(openWeek);renderAll()});document.querySelectorAll('[data-place]').forEach(el=>el.onclick=()=>{const idx=Number(el.dataset.place),x=weeklyExtra[idx];const answer=prompt('Schedule to day: 1=Mon ... 7=Sun','1');if(answer===null)return;const d=Number(answer)-1;if(d<0||d>6||!Number.isInteger(d)){alert('Choose 1–7');return}blocks.push({id:'new'+Date.now()+Math.random(),...x,d});weeklyExtra.splice(idx,1);renderAll()});document.querySelectorAll('[data-move]').forEach(el=>el.onclick=()=>{const id=el.dataset.move;const b=blocks.find(x=>x.id===id);const answer=prompt('Move to day (1=Mon ... 7=Sun), or W#:day (e.g. 2:4):',String(b.d+1));if(!answer)return;let w=b.w,d;if(answer.includes(':')){const a=answer.split(':').map(Number);w=a[0];d=a[1]-1}else d=Number(answer)-1;if(w>=1&&w<=4&&d>=0&&d<7){b.w=w;b.d=d;openWeek=w;$('#weekFilter').value=String(w);renderAll()}else alert('Choose W1–W4 and day 1–7.')})}
+const completions = new Map();
+const dailyResults = new Map();
+function toggleCompletion(p,t,w,day) {
+  const key=keyFor(p,t);
+  if(completions.has(key)) completions.delete(key);
+  else completions.set(key,{p,t,w,day});
+  taskDone[key]=completions.has(key);
+  renderAll();
+}
+function weeklyCheck(p,t,w) {
+  const entry=completions.get(keyFor(p,t));
+  return `<input type="checkbox" data-complete="${p}-${t}-${w}" aria-label="Complete ${p}.${t+1}" ${entry?'checked':''}>`;
+}
+function dailyControls(b) {
+  const result=dailyResults.get(b.id);
+  const next=b.d<6 && blocks.some(x=>x.w===b.w&&x.d===b.d+1&&x.p===b.p&&x.t===b.t);
+  const finished=!!taskDone[keyFor(b.p,b.t)];
+  return `<div class="daily-controls">${[['finished','✓','Finished'],['worked','−','Worked on it'],['not','×','Not done']].map(([value,icon,label])=>`<button data-result="${b.id}" data-value="${value}" aria-label="${label}" title="${label}" aria-pressed="${value==='finished'?finished:result===value&&!finished}">${icon}</button>`).join('')}</div>${
+    result&&!finished?(b.carried?'Moved · <button data-undo="'+b.id+'">Undo</button>':next?'Already planned tomorrow':b.d===6?'Review Next Week':`<button data-carry="${b.id}">${result==='worked'?'Continue':'Move'} on ${dayNames[b.d+1]}</button>`):''
+  }`;
+}
+function refreshPlan() {
+  proposal={title:'Review Next Week',text:'Review this week’s results and remaining work.',w:openWeek||1};
+  renderSuggestion();
+}
+function bindProgress() {
+  document.querySelectorAll('[data-complete]').forEach(el=>{
+    el.onclick=e=>e.stopPropagation();
+    el.onchange=()=>toggleCompletion(...el.dataset.complete.split('-').map(Number));
+  });
+  document.querySelectorAll('[data-result]').forEach(el=>el.onclick=()=>{
+    const b=blocks.find(x=>x.id===el.dataset.result);
+    const value=el.dataset.value;
+    if(value==='finished') {toggleCompletion(b.p,b.t,b.w,b.d);return;}
+    if(taskDone[keyFor(b.p,b.t)]||b.carried)return;
+    if(dailyResults.get(b.id)===value) dailyResults.delete(b.id);
+    else dailyResults.set(b.id,value);
+    renderAll();
+  });
+  document.querySelectorAll('[data-carry]').forEach(el=>el.onclick=()=>{
+    const b=blocks.find(x=>x.id===el.dataset.carry);
+    b.carried='carry-'+b.id;
+    blocks.push({...b,id:b.carried,d:b.d+1,carried:null});
+    renderAll();
+  });
+  document.querySelectorAll('[data-undo]').forEach(el=>el.onclick=()=>{
+    const b=blocks.find(x=>x.id===el.dataset.undo);
+    const next=blocks.find(x=>x.id===b.carried);
+    if(next.carried||dailyResults.has(next.id)||taskDone[keyFor(b.p,b.t)])return;
+    blocks.splice(blocks.indexOf(next),1);
+    b.carried=null;
+    renderAll();
+  });
+}
+function weekResults(w){
+  const entries=[...completions.values()].filter(x=>x.w===w);
+  const progress=blocks.filter(b=>b.w===w&&dailyResults.get(b.id)==='worked');
+  if(!entries.length&&!progress.length)return '';
+  return `<div class="week-results"><strong>${entries.length} completed</strong>${entries.map(x=>`<span>✓ ${esc(getP(x.p).tasks[x.t])}</span>`).join('')}${progress.length?`<span>${progress.length} work session${progress.length===1?'':'s'} advanced</span>`:''}</div>`;
+}
+let gardenWeek=null;
+const planted=new Set();
+const flowers=[['Daisy','#fffdf0'],['Cosmos','#efb1c4'],['Marigold','#f7bb56'],['Aster','#c7b7eb']];
+function revealFlower(w){
+  planted.add(w);
+  renderAll();
+  const art=$('#gardenView .specimen-art svg');
+  if(art)art.classList.add('flower-bloom');
+}
+function flowerCard(w){
+  if(!w)return '';
+  return planted.has(w)
+    ? `<div class="flower-reveal"><strong>${flowers[w-1][0]} planted</strong><button id="seeFlower">View in Garden →</button></div>`
+    : '<button class="flower-reveal" id="revealFlower">✧ Reveal this week’s flower</button>';
+}
+function gardenRecord(w){
+  const finished=[...completions.values()].filter(x=>x.w===w);
+  const progress=new Map();
+  blocks.filter(b=>b.w===w&&dailyResults.get(b.id)==='worked').forEach(b=>{
+    const k=keyFor(b.p,b.t);
+    const item=progress.get(k)||{p:b.p,t:b.t,count:0};
+    item.count++;
+    progress.set(k,item);
+  });
+  const bloom=w===1&&finished.some(x=>x.p===2&&x.t===2);
+  return {finished,progress:[...progress.values()],bloom};
+}
+function botanicalArt(stage,w){
+  return `<svg viewBox="0 0 140 122" aria-hidden="true">
+    <ellipse cx="70" cy="110" rx="39" ry="4" fill="#e9e1cd"/>
+    ${stage==='seed'?'<ellipse cx="70" cy="101" rx="9" ry="5" transform="rotate(-24 70 101)" fill="#ad8961"/>':`
+    <path d="M70 108 Q59 76 70 42" fill="none" stroke="#527454" stroke-width="2"/>
+    <path d="M65 86 Q40 87 35 63 Q57 62 65 86Z" fill="#87a67b"/>
+    <path d="M65 76 Q70 55 96 53 Q93 74 65 76Z" fill="#a1b98a"/>
+    ${stage==='bloom'?Array.from({length:9},(_,i)=>`<ellipse cx="70" cy="24" rx="6" ry="14" transform="rotate(${i*40} 70 42)" fill="${flowers[w-1][1]}" stroke="#cdbd96"/>`).join('')+'<circle cx="70" cy="42" r="8" fill="#d5a34e"/>':''}`}
+  </svg>`;
+}
+function gardenStage(record,w){
+  return planted.has(w)?'bloom':record.finished.length||record.progress.length?'sprout':'seed';
+}
+function gardenLink(w){
+  const stage=gardenStage(gardenRecord(w),w);
+  return `<button class="garden-link" data-garden="${w}" title="View in Garden W${w}" aria-label="View in Garden W${w}">${botanicalArt(stage,w)}</button>`;
+}
+function showGarden(w=null){
+  gardenWeek=w;
+  $('#planView').classList.add('off');
+  $('#gardenView').classList.remove('off');
+  $('#planTab').setAttribute('aria-pressed','false');
+  $('#gardenTab').setAttribute('aria-pressed','true');
+  renderGarden();
+}
+function renderGarden(){
+  const view=$('#gardenView');
+  const weeks=weekNames.map((_,i)=>i+1).reverse();
+  view.innerHTML=`<div class="garden-heading"><svg class="garden-landscape" viewBox="0 0 600 175" aria-hidden="true">
+<circle cx="470" cy="38" r="25" fill="#f3ce83" opacity=".65"/>
+<path d="M0 142Q98 31 237 118Q348 36 600 100V175H0Z" fill="#c5d5b3"/>
+<path d="M0 145Q157 76 282 146Q450 76 600 126V175H0Z" fill="#91ac83"/>
+<path d="M0 157Q173 131 275 165Q455 116 600 143V175H0Z" fill="#72946e"/>
+<path d="M321 175Q435 145 468 142Q466 148 377 175Z" fill="#eddbb3"/>
+<path d="M508 117l17-25 28 4 13 23z" fill="#a66f57"/><path d="M515 117h43v24h-43z" fill="#e9d6a8"/><path d="M538 125h9v16h-9z" fill="#8e735c"/>
+<g fill="#fff6ce">${Array.from({length:24},(_,i)=>`<circle cx="${(i*73)%590+5}" cy="${157+i%5*3}" r="${1+i%3*.4}"/>`).join('')}</g>
+</svg><span>WEEKWISE · NOVEMBER 2026</span><h2>Weekly Garden</h2><p>One flower for each week you wrap up. Select a plot to revisit that week.</p></div>${
+    gardenWeek?gardenDetail(gardenWeek):`<div class="garden-grid">${weeks.map(w=>{
+      const r=gardenRecord(w),stage=gardenStage(r,w);
+      const caption=r.finished[0]?'Completed '+getP(r.finished[0].p).tasks[r.finished[0].t]:r.progress[0]?'Made progress on '+getP(r.progress[0].p).tasks[r.progress[0].t]:'Waiting for the first update';
+      return `<button class="specimen" data-open-specimen="${w}">${botanicalArt(stage,w)}<span>W${w} · ${weekNames[w-1]}</span><strong>${stage==='bloom'?flowers[w-1][0]:stage==='sprout'?'Sprout':'Seed'}</strong><small>${esc(caption)}</small></button>`;
+    }).join('')}</div>`
+  }`;
+  document.querySelectorAll('[data-garden]').forEach(btn=>btn.onclick=e=>{e.stopPropagation();showGarden(Number(btn.dataset.garden))});
+  view.querySelectorAll('[data-open-specimen]').forEach(btn=>btn.onclick=()=>showGarden(Number(btn.dataset.openSpecimen)));
+  const draw=view.querySelector('[data-garden-reveal]');
+  if(draw)draw.onclick=()=>revealFlower(Number(draw.dataset.gardenReveal));
+  const back=$('#gardenBack');
+  if(back)back.onclick=()=>showGarden();
+}
+function gardenDetail(w){
+  const r=gardenRecord(w),stage=gardenStage(r,w);
+  return `<button id="gardenBack">← Back to Garden</button><article class="specimen-detail"><div class="specimen-art">${botanicalArt(stage,w)}</div><div><div class="muted">W${w} · ${weekNames[w-1]}</div><h3>${stage==='bloom'?flowers[w-1][0]:stage==='sprout'?'Sprout':'Seed'}</h3>
+    ${planted.has(w)?'':`<button class="flower-reveal" data-garden-reveal="${w}">✧ Reveal this week’s flower</button>`}<h4>Completed · ${r.finished.length}</h4>${r.finished.map(x=>`<p>✓ ${esc(getP(x.p).tasks[x.t])} <small>· ${esc(getP(x.p).name)}</small></p>`).join('')||'<p class="muted">No completions yet.</p>'}
+    <h4>Progress · ${r.progress.length}</h4>${r.progress.map(x=>`<p>${esc(getP(x.p).tasks[x.t])} · ${x.count} sessions</p>`).join('')||'<p class="muted">No progress recorded yet.</p>'}
+    ${w===1?`<div class="garden-milestone">${r.bloom?'✿ Weekly milestone reached':'Weekly milestone'} · Submit the Science Advances review</div>`:''}
+  </div></article>`;
+}
+$('#gardenTab').onclick=()=>showGarden();
+$('#planTab').onclick=()=>{
+  $('#gardenView').classList.add('off');
+  $('#planView').classList.remove('off');
+  $('#planTab').setAttribute('aria-pressed','true');
+  $('#gardenTab').setAttribute('aria-pressed','false');
+  requestAnimationFrame(drawLinks);
+};
+function renderUnassigned(){
+  const pending=projects.flatMap(p=>p.tasks.flatMap((name,t)=>{
+    const key=keyFor(p.id,t);
+    if(key==='4-3'||taskDone[key]||capturedWeeks.has(key)||blocks.some(b=>b.p===p.id&&b.t===t)||fixed.some(f=>f.p===p.id&&f.t===t)||weeklyExtra.some(x=>x.p===p.id&&x.t===t))return [];
+    return [`<div>${esc(p.name)} · ${p.id}.${t+1} ${esc(name)} ${esc(capturedEstimates.get(key)||'')} <select data-assign-week="${key}" aria-label="Assign ${esc(name)} to a week"><option value="">Choose week</option>${Array.from({length:8},(_,i)=>`<option value="${i+1}">${weekLabel(i+1)}</option>`).join('')}</select></div>`];
+  }));
+  $('#unassigned').innerHTML=pending.length?`<details class="planning-notes"><summary>${pending.length} tasks without a week</summary>${pending.join('')}</details>`:'';
+  document.querySelectorAll('[data-assign-week]').forEach(el=>el.onchange=()=>{
+    if(!el.value)return;
+    openWeek=Number(el.value);
+    capturedWeeks.set(el.dataset.assignWeek,openWeek);
+    renderAll();
+  });
+}
+const storageKey='weekwise.workspace.v1';
+function saveWorkspace(){
+  try {
+    localStorage.setItem(storageKey,JSON.stringify({
+      projects,blocks,fixed,weeklyExtra,openWeek,
+      capturedWeeks:[...capturedWeeks],capturedEstimates:[...capturedEstimates],
+      completions:[...completions],dailyResults:[...dailyResults],planted:[...planted]
+    }));
+  } catch {}
+}
+function restoreWorkspace(){
+  try {
+    const state=JSON.parse(localStorage.getItem(storageKey));
+    if(!state)return;
+    for(const [target,source] of [[projects,state.projects],[blocks,state.blocks],[fixed,state.fixed],[weeklyExtra,state.weeklyExtra]]) target.splice(0,target.length,...source);
+    for(const [target,source] of [[capturedWeeks,state.capturedWeeks],[capturedEstimates,state.capturedEstimates],[completions,state.completions],[dailyResults,state.dailyResults]]) {
+      for(const [key,value] of source)target.set(key,value);
+    }
+    for(const week of state.planted)planted.add(week);
+    for(const key of completions.keys())taskDone[key]=true;
+    openWeek=state.openWeek;
+  } catch {}
+}
+restoreWorkspace();
+function canDrag(b){
+  return !b.carried&&!dailyResults.has(b.id)&&!taskDone[keyFor(b.p,b.t)];
+}
+function bindDrag(){
+  let moving;
+  document.querySelectorAll('[data-drag-block]').forEach(card=>{
+    card.ondragstart=e=>{
+      moving=blocks.find(b=>b.id===card.dataset.dragBlock);
+      e.dataTransfer.setData('text/plain',moving.id);
+      e.dataTransfer.effectAllowed='move';
+    };
+    card.ondragend=()=>{
+      moving=null;
+      document.querySelectorAll(".drop-ready").forEach(day=>day.classList.remove("drop-ready"));
+    };
+  });
+  document.querySelectorAll('[data-drop-day]').forEach(day=>{
+    const w=Number(day.dataset.dropWeek),d=Number(day.dataset.dropDay);
+    const accepts=()=>moving&&canDrag(moving)&&moving.w===w;
+    day.ondragover=e=>{if(accepts()){e.preventDefault();e.dataTransfer.dropEffect='move';day.classList.add('drop-ready')}};
+    day.ondragleave=e=>{if(!day.contains(e.relatedTarget))day.classList.remove('drop-ready')};
+    day.ondrop=e=>{
+      if(!accepts())return;
+      e.preventDefault();
+      moving.d=d;
+      renderAll();
+    };
+  });
+}
+function personalPanel(w){
+  return `<aside class="personal-plans"><strong>Personal plans</strong><details class="brain-dump"><summary>＋ Brain dump</summary><form id="personal-form"><input name="item" aria-label="Personal plan" placeholder="What's on your mind?" required><select name="when" aria-label="When"><option value="today">Today</option><option value="week">This week</option><option value="date">Pick a date</option></select><input type="date" name="date" aria-label="Date" hidden><button type="button" id="personal-add">Add</button><small role="status"></small></form></details><div id="personal-list" data-week="${w}"></div></aside>`;
+}
+let personalSessionEntries;
+function bindBrainDump(){
+  const list=$('#personal-list');
+  if(!list)return;
+  const form=$('#personal-form'), week=Number(list.dataset.week);
+  const key='weekwise-personal-plans';
+  let entries=[];
+  try {const saved=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(saved))entries=saved} catch {}
+  entries=personalSessionEntries||entries;
+  const dateLabel=new Intl.DateTimeFormat('en',{weekday:'short',day:'numeric',month:'short'});
+  const show=()=>{
+    const rows=entries.filter(item=>item.week===week).sort((a,b)=>(a.date||'~').localeCompare(b.date||'~')).map(item=>`<tr><td>${item.date?dateLabel.format(new Date(item.date+'T12:00')):'This week'}</td><td>${esc(item.text)}</td></tr>`) .join('');
+    list.innerHTML=`<table class="personal-table"><thead><tr><th scope="col">When</th><th scope="col">Plan</th></tr></thead><tbody>${rows||'<tr><td colspan="2">No personal plans yet</td></tr>'}</tbody></table>`;
+  };
+  show();
+  const input=form.elements;
+  const itemField=input.namedItem("item");
+  input.when.onchange=()=>{input.date.hidden=input.when.value!=='date';input.date.required=!input.date.hidden};
+  const add=()=>{
+    if(!form.reportValidity())return;
+    const text=itemField.value.trim();
+    if(!text)return;
+    const date=input.when.value==='today'?'2026-11-03':input.when.value==='date'?input.date.value:'';
+    const target=date?Math.floor((Date.parse(date)-Date.UTC(2026,10,2))/604800000)+1:week;
+    const status=form.querySelector('[role=status]');
+    if(target<1||target>4){status.textContent='Choose a date within the 4-week plan.';return}
+    const next=[...entries,{text,date,week:target}];
+    let saved=true;
+    try {localStorage.setItem(key,JSON.stringify(next))} catch {saved=false}
+    entries=personalSessionEntries=next;
+    itemField.value='';
+    status.textContent=(target===week?'Added':'Added to W'+target)+(saved?'':' · Available until reload');
+    if(target!==week){openWeek=target;$('#weekFilter').value=String(target);renderAll();return}
+    show();
+  };
+  $('#personal-add').onclick=add;
+  itemField.onkeydown=e=>{if(e.key==='Enter'&&!e.isComposing){e.preventDefault();add()}};
+}
+function renderAll(){saveWorkspace();renderCards();renderTimeline();renderWeeks();bindBrainDump();bindDrag();bindProgress();renderSuggestion();renderGarden();renderUnassigned();document.querySelectorAll('[data-task-week]').forEach(el=>el.onchange=()=>{if(!el.value)return;capturedWeeks.set(el.dataset.taskWeek,Number(el.value));renderAll()})}
+$('#weekFilter').onchange=()=>{const w=$('#weekFilter').value;if(w!=='all')openWeek=Number(w);renderAll()};$('#sort').onchange=renderAll;$('#hide').onchange=()=>{if(selected&&!active(getP(selected)))selected=null;renderAll()};$('#four').onclick=()=>{range=4;$('#four').classList.add('active');$('#eight').classList.remove('active');renderTimeline()};$('#eight').onclick=()=>{range=8;$('#eight').classList.add('active');$('#four').classList.remove('active');renderTimeline()};$('#projectsToggle').onclick=()=>{
+  const collapsed=$('#planView').classList.toggle('projects-collapsed');
+  $('#projectsToggle').setAttribute('aria-expanded',String(!collapsed));
+  $('#projectsToggle').textContent=collapsed?'Show Timeline':'Focus on this week';
+  requestAnimationFrame(drawLinks);
+};
+window.addEventListener('resize',()=>requestAnimationFrame(drawLinks));renderAll();
+
+// Capture prototype: deterministic parsing of demonstrated patterns, not an AI parser.
+const captureExamples={both:'TopoAsia 新增 Prepare talk，2–6h，分两天\nTopoAsia talk 改到 Nov 7，具体时间未定',new:'TopoAsia 新增 Prepare talk，2–6h，分两天',update:'TopoAsia talk 改到 Nov 7，具体时间未定'};
+let captureChanges=[];
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function captureOpen(){ $('#captureModal').classList.remove('off');$('#captureText').value=captureExamples.both;captureEdit(); }
+function captureEdit(){captureChanges=[];$('#capturePreview').innerHTML='';$('#captureError').classList.add('off');$('#captureText').classList.remove('off');$('.capture-examples').classList.remove('off');$('.capture-hint').classList.remove('off');$('#captureParse').classList.remove('off');$('#captureApply').classList.add('off');$('#captureBack').classList.add('off');}
+function parseCapture(text){const out=[],errors=[];text.split(/\n+/).map(x=>x.trim()).filter(Boolean).forEach((line,i)=>{const id=line.match(/^\s*(\d+)\.(\d+)\b/);
+if(id){
+ const p=+id[1],t=+id[2]-1;
+ const event=fixed.find(f=>f.p===p&&f.t===t);
+ const match=line.match(/(?:Nov(?:ember)?\s*|11\s*月\s*|11[\/.-])(\d{1,2})/i);
+ const day=match?+match[1]:null;
+ if(!event|| (day===null?!/待定|未定|pending|tbd/i.test(line):day<2||day>29)){
+   errors.push(`Line ${i+1}: Use a fixed task number and Nov 2–29 or “date pending”.`);return;
+ }
+ out.push({type:'update',p,t,day,time:/下午|afternoon/i.test(line)?'Afternoon':'Time TBD',checked:true});return;
+}
+const proj=projects.find(p=>line.toLowerCase().includes(p.name.toLowerCase()))||(/visit prof\. qin/i.test(line)?getP(4):null);if(!proj&&!/visit prof\. qin/i.test(line)){errors.push(`Line ${i+1}: Project not recognized — ${line}`);return;}const isNew=/新增|新建|add\s|new\s|create\s/i.test(line);const talk=/\b(talk|give talk)\b|演讲|报告时间/i.test(line);const dayMatch=line.match(/(?:Nov(?:ember)?\s*|11[\/.-])(\d{1,2})/i);if(isNew){let name='';const m=line.match(/(?:新增|新建|add(?:\s+(?:a|new))?|create)\s*([^，,;；]+?)(?=\s*[,，;；]|\s+\d+[–-]\d+\s*h|$)/i);name=m?m[1].trim():'';name=name.replace(/^(?:task|subtask)\s*[:：]?\s*/i,'');if(!name){errors.push(`Line ${i+1}: Could not find a task name`);return;}const exists=proj.tasks.findIndex(t=>t.toLowerCase()===name.toLowerCase());if(exists!==-1){errors.push(`Line ${i+1}: “${name}” already exists; no duplicate will be created`);return;}const h=line.match(/(\d+(?:\.\d+)?)\s*[–-]\s*(\d+(?:\.\d+)?)\s*h/i)||line.match(/(\d+(?:\.\d+)?)\s*h/i);const effort=h?(h[2]?`${h[1]}–${h[2]}h`:`${h[1]}h`):'Not estimated';const session=/两天|2\s*days?|two\s*days?/i.test(line)?'Prefer 2 days':'Days not assigned';out.push({type:'create',p:proj.id,name,effort,session,checked:true,destination:targetWeek(line)});}
+else if(proj.id===4&&/visit prof\.? qin|拜访/i.test(line)){
+const match=dayMatch||line.match(/11\s*月\s*(\d{1,2})\s*日/);
+const day=Number(match?.[1]);
+if(!Number.isInteger(day)||day<2||day>29){errors.push('Use a date between Nov 2 and Nov 29 for the visit.');return;}
+out.push({type:'update',p:4,t:3,day,time:/下午|afternoon/i.test(line)?'Afternoon':'Time TBD',checked:true});
+}
+else if(talk&&dayMatch){const day=+dayMatch[1];if(day<1||day>30){errors.push(`Line ${i+1}: Invalid November date`);return;}const t=proj.tasks.findIndex(x=>/give talk|talk/i.test(x));if(t<0){errors.push(`Line ${i+1}: No matching talk task in ${proj.name}`);return;}out.push({type:'update',p:proj.id,t,day,checked:true});}
+else{errors.push(`Line ${i+1}: Not sure what to change — ${line}`);}});return{out,errors};}
+function capturePreview(){const parsed=parseCapture($('#captureText').value);captureChanges=parsed.out;$('#captureError').textContent=parsed.errors.join('  •  ');$('#captureError').classList.toggle('off',!parsed.errors.length);if(!captureChanges.length)return;$('#captureText').classList.add('off');$('.capture-examples').classList.add('off');$('.capture-hint').classList.add('off');$('#captureParse').classList.add('off');$('#captureBack').classList.remove('off');$('#captureApply').classList.remove('off');renderCaptureChanges();}
+function renderCaptureChanges(){const checked=captureChanges.filter(c=>c.checked).length;$('#capturePreview').innerHTML=`<div class="change-list"><div class="change-head"><strong>${captureChanges.length} proposed change${captureChanges.length===1?'':'s'}</strong><span class="muted">Nothing saved yet</span></div>${captureChanges.map((c,i)=>{const p=getP(c.p);const detail=c.type==='create'?`New subtask · ${esc(c.effort)} · ${esc(c.session)} · Choose where to plan`:(c.day===null?"Date → Pending":`Fixed date → Nov ${c.day}, 2026 · ${c.time||'Time TBD'}`);const name=c.type==='create'?c.name:p.tasks[c.t];return `<label class="change-item"><input type="checkbox" data-change="${i}" ${c.checked?'checked':''}><div class="change-item-body"><div class="change-item-title"><span class="change-pill ${c.type==='update'?'update':''}">${c.type==='create'?'ADD':'UPDATE'}</span>${esc(p.name)} · ${esc(name)}</div><div class="change-item-detail">${detail}</div>${c.type==='create'?`<select aria-label="Planning destination" data-destination="${i}"><option value="0">No week assigned</option>${Array.from({length:8},(_,i)=>i+1).map(w=>`<option value="${w}" ${c.destination===w?'selected':''}>${weekLabel(w)} · Unscheduled</option>`).join('')}</select>`:''}${c.type==='update'&&c.p===4?'<div class="change-notice">The Nov 6–9 conference window stays unchanged.</div>':''}</div></label>`}).join('')}</div>`;document.querySelectorAll('[data-destination]').forEach(el=>el.onchange=()=>{captureChanges[+el.dataset.destination].destination=+el.value});document.querySelectorAll('[data-change]').forEach(x=>x.onchange=()=>{captureChanges[+x.dataset.change].checked=x.checked;$('#captureApply').textContent=`Confirm ${captureChanges.filter(c=>c.checked).length} change(s)`;$('#captureApply').disabled=!captureChanges.some(c=>c.checked)});$('#captureApply').textContent=`Confirm ${checked} change(s)`;$('#captureApply').disabled=!checked;}
+function applyCapture(){const changes=captureChanges.filter(c=>c.checked);if(!changes.length)return;for(const c of changes){const p=getP(c.p);if(c.type==='create'){if(p.tasks.some(t=>t.toLowerCase()===c.name.toLowerCase()))continue;const key=keyFor(p.id,p.tasks.length);if(c.effort!=='Not estimated')capturedEstimates.set(key,c.effort);if(c.destination)capturedWeeks.set(key,c.destination);p.tasks.push(c.name);p.effort=p.effort+' · '+c.effort; p.hours+=Number((c.effort.match(/\d+(?:\.\d+)?/)||['0'])[0]);}else{const old=fixed.find(f=>f.p===c.p&&f.t===c.t);const previousDay=old?.w?2+(old.w-1)*7+old.d:null;
+p.markers=p.markers.filter(m=>!(m.type==='fixed'&&(m.task===c.t||(m.task==null&&m.day===previousDay))));
+if(c.day===null){old.pendingWeek=old.w||old.pendingWeek;old.w=0;continue}
+const w=Math.floor((c.day-2)/7)+1,d=(c.day-2)%7;if(old){old.w=w;old.d=d;old.time=c.time||'Time TBD';}else{fixed.push({id:'cap-'+c.p+'-'+c.t,p:c.p,t:c.t,w,d,name:p.tasks[c.t],time:c.time||'Time TBD'});}p.markers=p.markers.filter(m=>!(m.type==='fixed'&&m.task===c.t));if(!p.markers.some(m=>m.type==='fixed'&&m.day===c.day&&m.task===c.t))p.markers.push({type:'fixed',day:c.day,task:c.t});}}
+$('#capturePreview').innerHTML=`<div class="capture-success">✓ ${changes.length} change${changes.length===1?'':'s'} applied to this demo. ${changes.some(c=>c.type==='create')?'New tasks appear in the selected week or in Tasks without a week.':''}</div>`;$('#captureApply').classList.add('off');$('#captureBack').classList.add('off');$('#captureError').classList.add('off');openWeek=openWeek||1;$('#weekFilter').value=String(openWeek);$('#hide').checked=false;renderAll();setTimeout(()=>$('#captureModal').classList.add('off'),1250);}
+$('#captureBtn').onclick=captureOpen;$('#closeCapture').onclick=()=>$('#captureModal').classList.add('off');$('#captureBack').onclick=captureEdit;$('#captureParse').onclick=capturePreview;$('#captureApply').onclick=applyCapture;document.querySelectorAll('[data-example]').forEach(b=>b.onclick=()=>{$('#captureText').value=captureExamples[b.dataset.example];captureEdit()});
+</script></body></html>
