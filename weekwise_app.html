@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weekwise · Planning Workspace V8 · Capture</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weekwise</title><style>
 :root{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#273544;background:#f4f6f8}*{box-sizing:border-box}body{margin:0;padding:20px}.shell{max-width:1550px;margin:auto;background:white;border:1px solid #e1e6eb;border-radius:17px;padding:22px;box-shadow:0 8px 32px #24354a09}header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:16px}h1{font-size:22px;margin:0 0 5px}p{margin:0;color:#75808b;font-size:12px}.workspace{display:grid;grid-template-columns:minmax(0,37fr) minmax(0,63fr);gap:14px;align-items:start}.left{position:relative;min-width:0}.right{min-width:0}.panel{border:1px solid #e0e5eb;border-radius:12px;padding:13px;margin-bottom:12px;background:#fff}.heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:11px}.heading strong{font-size:14px}.muted{color:#798591;font-size:11px}.controls{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:12px}select,button{border:1px solid #d6dee7;background:white;color:#39495a;border-radius:7px;font:inherit;font-size:11px;padding:7px 8px;cursor:pointer}select{max-width:130px}button.active{background:#e8f0fb;border-color:#86a8d2}label{font-size:11px;display:flex;align-items:center;gap:4px;white-space:nowrap;color:#546371}input[type=checkbox]{accent-color:#668db7;cursor:pointer}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.project{position:relative;z-index:2;min-width:0;border:1px solid #dce3e9;border-left:4px solid var(--c);border-radius:9px;padding:10px;background:white;cursor:pointer;transition:opacity .15s,background .15s}.project.selected{background:#f1f7ff;box-shadow:0 0 0 2px #91b1d6}.project.dim{opacity:.33}.project h3{font-size:12px;margin:0 0 6px;overflow-wrap:anywhere}.project small{font-size:10px;color:#7b8793}.task{display:flex;align-items:start;gap:3px;font-size:10px;margin-top:7px;line-height:1.25}.task.dim{opacity:.35}.task input{width:12px;height:12px;margin:0;flex-shrink:0}.effort{font-size:10px;margin-top:8px;color:#536272}.bar{height:5px;background:#edf0f3;border-radius:4px;overflow:hidden;margin-top:5px}.bar i{height:100%;display:block;background:var(--c)}.timeline-panel{position:relative;z-index:1}.timeline{width:100%;height:auto;display:block}.timeline text{font-family:inherit}.timeline svg{overflow:visible}.legend{display:flex;gap:14px;font-size:10px;color:#697582;margin-top:5px}.note{font-size:10px;color:#75818e;margin-top:9px}.connectors{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:visible}.right .panel{min-height:480px}.week{border:1px solid #dfe5eb;border-radius:10px;margin-bottom:9px;overflow:hidden}.week.active{border-color:#8faed1}.weekhead{display:flex;gap:12px;align-items:center;padding:12px;cursor:pointer;background:white}.week.active .weekhead{background:#f9fbfe}.weektitle{width:30%;min-width:0}.weektitle strong{font-size:12px}.weektitle p{font-size:11px;line-height:1.45;margin-top:5px}.weekstats{flex:1;min-width:0}.weekstats .numbers{display:flex;justify-content:space-between;font-size:10px;color:#687786;gap:6px}.workbar{height:10px;background:#eef1f4;display:flex;border-radius:5px;overflow:hidden;margin-top:8px}.workbar i{display:block;height:100%}.dayarea{padding:10px;border-top:1px solid #e6eaf0;overflow-x:auto}.daygrid{display:grid;grid-template-columns:repeat(7,minmax(92px,1fr));gap:5px;min-width:700px}.day{background:#f5f7f9;border-radius:7px;padding:6px;min-height:185px}.day h4{font-size:10px;margin:0 0 4px;display:flex;justify-content:space-between}.day .hours{font-size:9px;color:#7d8995;margin-bottom:8px}.block{border-left:3px solid var(--c);background:var(--bg);border-radius:5px;padding:6px 4px;margin-bottom:6px;font-size:10px;overflow-wrap:anywhere}.block .top{display:flex;align-items:flex-start;gap:3px}.block input{width:12px;height:12px;margin:0;flex-shrink:0}.block .meta{display:flex;justify-content:space-between;align-items:center;color:#697887;font-size:9px;margin-top:5px}.block .mini{height:5px;border-radius:3px;background:#e6e9ec;margin-top:5px;overflow:hidden}.block .mini i{height:100%;display:block;background:var(--c)}.block.done{opacity:.46}.block button{padding:1px 3px;font-size:10px;border:0;background:transparent}.flag{color:#b65f55}.empty{font-size:10px;color:#b1bac2;margin-top:16px;text-align:center}.foot{font-size:11px;color:#75818c;margin-top:6px}.seg{display:flex;gap:4px}.seg button{padding:5px 8px}.badge{font-size:10px;color:#63778e;background:#edf2f8;padding:5px 7px;border-radius:6px}.off{display:none}@media(max-width:1100px){body{padding:8px}.shell{padding:12px}.workspace{grid-template-columns:1fr}.left{max-width:800px}.right .panel{min-height:0}}@media(max-width:500px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.project{padding:7px}.controls{gap:4px}header h1{font-size:18px}}
 .constraints{display:flex;flex-wrap:wrap;gap:3px 7px;margin:5px 0 2px}.constraint{font-size:10px;color:#6c7886;white-space:nowrap}.ddl-icon,.flag{color:#bd574d;font-weight:700}.fixed-icon{color:#738fb3}.window-icon{color:#b89660}.legend b{font-size:13px}.timeline [data-marker]{cursor:default}
 .taskrow{display:flex;align-items:center;gap:4px;min-width:0}.taskrow .task{flex:1;min-width:0}.taskrow.not-this-week .task span{color:#aeb6be}.taskrow.not-this-week{opacity:.7}.taskhours{font-size:10px;color:#6e8192;white-space:nowrap}.addweek{border:1px solid #d3e0eb;border-radius:5px;background:#fff;color:#527fa6;font-size:10px;padding:2px 4px;cursor:pointer;white-space:nowrap}.addweek:hover{background:#eaf2f8}.weeklylist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 20px;margin-top:13px}.weekproject{min-width:0}.weekprojecttitle{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:650;color:#34475b;margin-bottom:6px}.weekprojectdot{height:9px;width:9px;border-radius:3px;flex:none}.weeklyitem{display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.45;color:#536373;padding:3px 0;min-width:0}.weeklyitem b{color:#6f7f8f;background:#f1f4f7;border-radius:4px;padding:2px 5px;font-size:10px;flex:none}.weeklyitem .taskname{flex:1;min-width:0}.weeklyitem em{font-size:10px;font-style:normal;color:#7b8994;white-space:nowrap;margin-left:auto}.weekhead{align-items:flex-start}.weektitle{min-width:0;flex:1.3}.weekstats{flex:1}.unscheduled{padding:10px 12px;background:#f5f8fc;border-top:1px solid #e4ebf2;display:flex;flex-wrap:wrap;gap:8px;font-size:11px}.unscheduled strong{width:100%}.unscheduled span{background:white;border:1px solid #dde5ed;border-radius:6px;padding:6px}.unscheduled button{cursor:pointer;color:#477da7;background:none;border:0;text-decoration:underline}
@@ -40,7 +40,7 @@
 .weeklylist[hidden]{display:none}.day-updates{margin-top:8px;color:#536373;font-size:11px}.day-updates summary{cursor:pointer;padding:5px 2px}
 .fixed-tag{font-weight:700;color:#4b5f7c}
 #planView.projects-collapsed{grid-template-columns:minmax(0,1fr)}#planView.projects-collapsed>.left{display:none}
-#planView.projects-collapsed{max-width:1280px;margin-inline:auto}.week-checklist{padding:12px;border-top:1px solid #e5eaf0}.week-checklist .weeklylist{margin-top:8px}.week-checklist .weeklyitem em{margin-left:3px}.week-checklist .taskname{flex:0 1 auto}.day.demo-today{background:#edf3fb;box-shadow:inset 0 0 0 1px #b8cce7}#planView.projects-collapsed .block .mini{display:none}#planView.projects-collapsed .block .top{min-height:0}#planView.projects-collapsed .block .meta{margin-top:4px}#planView.projects-collapsed .day{min-height:145px}
+#planView.projects-collapsed{max-width:1280px;margin-inline:auto}.week-checklist{padding:12px;border-top:1px solid #e5eaf0}.week-checklist .weeklylist{margin-top:8px}.week-checklist .weeklyitem em{margin-left:3px}.week-checklist .taskname{flex:0 1 auto}.day.demo-today{background:#edf3fb;box-shadow:inset 0 0 0 1px #b8cce7}#planView.projects-collapsed #planView.projects-collapsed .block .top{min-height:0}#planView.projects-collapsed .block .meta{margin-top:4px}#planView.projects-collapsed .day{min-height:145px}
 .project-effort{font-size:.92em;font-weight:500;color:#5a6e65;white-space:nowrap}.numbers,.project-effort,.weeklyitem em,.hours,.meta{font-variant-numeric:tabular-nums}.week-checklist .weeklyitem,.day .block{font-size:12px}.week-checklist .weekprojecttitle,.day h4{font-size:13px;font-weight:650}.garden-heading h2{font-family:Georgia,serif}.garden{background:radial-gradient(ellipse at 80% 15%,#e8eddc 0%,transparent 50%),#faf8ef}.specimen-art svg.flower-bloom{transform-origin:50% 90%;animation:bloom-in 680ms ease-out both}@keyframes bloom-in{from{opacity:.25;transform:scale(.68) rotate(-7deg)}70%{opacity:1;transform:scale(1.04) rotate(2deg)}to{transform:scale(1) rotate(0)}}@media(prefers-reduced-motion:reduce){.specimen-art svg.flower-bloom{animation:none}}
 .project-load{height:4px;background:#e9ede9;border-radius:4px;overflow:hidden;margin:0 0 8px}.project-load i{display:block;height:100%;border-radius:inherit}.garden-heading{position:relative;isolation:isolate;padding:28px 16px;border-radius:14px;overflow:hidden;background:#f6efd9}.garden-landscape{position:absolute;z-index:-1;bottom:0;right:0;width:min(66%,650px);opacity:.7}.garden-heading p{max-width:32ch}.specimen-art svg{filter:drop-shadow(1px 2px 2px #80745640)}
 .note-count,.planning-notes{background:#edf3e6;color:#405d47;border-radius:8px;padding:6px 10px}.note-count{font-size:11px}.planning-notes{margin-top:12px}.planning-notes p{margin:5px 0}.planning-notes button{margin:4px}
@@ -52,55 +52,356 @@
 .day .daily-controls button{min-width:0}
 .day .fixed-tag{white-space:nowrap}
 .week-checklist .weeklylist{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(175px,1fr);grid-template-columns:none;overflow-x:auto}.block[draggable=true]{cursor:grab}.day.drop-ready{outline:2px solid #72998a;outline-offset:-2px}
-.timing-icon{display:inline-block;white-space:nowrap;flex:none}.block .timing-icon{font-size:1.15em;padding:0 .2em;background:#fff;border-radius:4px;vertical-align:middle}.brain-dump{margin-bottom:8px}.brain-dump summary{cursor:pointer;width:max-content;margin-left:auto;color:#365975;font-weight:600}.brain-dump label,.brain-dump textarea{display:block;margin:8px 0}.brain-dump textarea{width:100%;box-sizing:border-box;font:inherit}.brain-dump [role=status]{margin-left:8px}.day-load{height:5px;background:#e0e6eb;border-radius:4px;overflow:hidden;margin:4px 0 8px}.day-load i{display:block;height:100%;background:#527fa4;border-radius:inherit}.week-checklist{display:grid;grid-template-columns:minmax(0,3fr) minmax(180px,1fr);gap:16px}.personal-plans{border-left:1px solid #e1e7eb;padding-left:12px}.personal-plans form{display:grid;gap:6px}.personal-plans summary{margin:6px 0}.personal-row{display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid #e1e7eb}.personal-row small{min-width:65px;color:#53687a}.personal-row span{overflow-wrap:anywhere}@media(max-width:760px){.week-checklist{grid-template-columns:1fr}.personal-plans{border-left:0;padding-left:0}}.personal-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.9em}.personal-table th,.personal-table td{text-align:left;padding:6px;border-bottom:1px solid #e1e7eb;vertical-align:top}.personal-table th{background:#f4f6f8}.personal-table td:first-child{white-space:nowrap}.personal-table td:last-child{overflow-wrap:anywhere}#project-editor{border:1px solid #d7e0e9;border-radius:12px;padding:20px}#project-editor form{display:grid;gap:12px}#project-editor label{display:grid;gap:4px}.project .taskrow:has([data-date-task]){display:flex;flex-wrap:nowrap;align-items:center;gap:6px}.project .taskrow:has([data-date-task]) .task{flex:1;min-width:0}.project [data-date-task]{white-space:nowrap;flex:none;padding:3px 6px}</style></head><body><div class="shell"><header><div><h1>Weekwise · Planning Workspace</h1><p>Projects · Timeline · Weekly allocations · Daily progress</p></div><nav class="garden-tabs" aria-label="Workspace"><button id="planTab" aria-pressed="true">Plan</button><button id="gardenTab" aria-pressed="false">Garden</button></nav><div class="capture-top"><button id="captureBtn" class="primary" hidden>＋ Capture</button><span class="badge">Interactive planning · Garden demo</span></div></header><div class="workspace projects-collapsed" id="planView"><section class="left" id="left"><div class="panel"><div class="heading"><strong>Projects</strong><span class="muted" id="count"></span></div><div class="controls"><select id="weekFilter"><option value="all">All weeks</option><option value="1" selected>W1 · Nov 2–8</option><option value="2">W2 · Nov 9–15</option><option value="3">W3 · Nov 16–22</option><option value="4">W4 · Nov 23–29</option></select><select id="sort"><option value="urgency">Urgency</option><option value="ddl">Nearest DDL</option><option value="workload">Workload</option><option value="original">Original order</option></select><label><input type="checkbox" id="hide"> Hide inactive</label></div><div class="cards" id="cards"></div></div><div class="panel timeline-panel" id="timelinePanel"><div class="heading"><strong>Timeline</strong><div class="seg"><button id="four" class="active">4W</button><button id="eight">8W</button></div></div><svg id="timeline" class="timeline" viewBox="0 0 440 215"></svg><div class="legend"><span><b class="ddl-icon">⚑</b> DDL</span><span><b class="fixed-icon">◆</b> Fixed</span><span><b class="window-icon">▰</b> Window</span></div><div class="note">Click a project to show dashed links to its timeline markers. <b id="selectedLabel"></b></div></div><svg id="connectors" class="connectors"></svg></section><section class="right"><div class="panel"><div class="heading"><strong>4-Week Plan</strong><div class="topactions"><button id="projectsToggle" aria-controls="left" aria-expanded="false">Show Timeline</button></div></div><div id="suggestion"></div><div id="unassigned"></div><div id="unassigned"></div><div id="weeks"></div><div class="foot">Flexible blocks can be moved via ↔; Fixed events are locked; DDL appears only as a flag in the day heading.</div></div></section></div><section class="garden off" id="gardenView"></section></div><div class="modalcover off" id="captureModal"><div class="modal capture-modal"><div class="heading"><div><strong>Capture</strong><p>Add something new or update what changed.</p></div><button id="closeCapture" aria-label="Close">✕</button></div><div class="capture-examples"><button data-example="both">Two changes</button><button data-example="new">New task</button><button data-example="update">Date update</button></div><textarea id="captureText" rows="5" placeholder="What's new? Paste one or several lines…"></textarea><div class="capture-hint">Try: “TopoAsia 新增 Prepare talk，2–6h，分两天” and “TopoAsia talk 改到 Nov 7，时间未定”</div><div id="captureError" class="capture-error off"></div><div id="capturePreview"></div><div class="capture-footer"><button id="captureBack" class="off">← Edit text</button><button id="captureParse" class="primary">Review changes →</button><button id="captureApply" class="primary off">Confirm changes</button></div></div></div><dialog id="project-editor"></dialog><script>
+.timing-icon{display:inline-block;white-space:nowrap;flex:none}.block .timing-icon{font-size:1.15em;padding:0 .2em;background:#fff;border-radius:4px;vertical-align:middle}.brain-dump{margin-bottom:8px}.brain-dump summary{cursor:pointer;width:max-content;margin-left:auto;color:#365975;font-weight:600}.brain-dump label,.brain-dump textarea{display:block;margin:8px 0}.brain-dump textarea{width:100%;box-sizing:border-box;font:inherit}.brain-dump [role=status]{margin-left:8px}.day-load{height:5px;background:#e0e6eb;border-radius:4px;overflow:hidden;margin:4px 0 8px}.day-load i{display:block;height:100%;background:#527fa4;border-radius:inherit}.week-checklist{display:grid;grid-template-columns:minmax(0,3fr) minmax(180px,1fr);gap:16px}.personal-plans{border-left:1px solid #e1e7eb;padding-left:12px}.personal-plans form{display:grid;gap:6px}.personal-plans summary{margin:6px 0}.personal-row{display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid #e1e7eb}.personal-row small{min-width:65px;color:#53687a}.personal-row span{overflow-wrap:anywhere}@media(max-width:760px){.week-checklist{grid-template-columns:1fr}.personal-plans{border-left:0;padding-left:0}}.personal-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.9em}.personal-table th,.personal-table td{text-align:left;padding:6px;border-bottom:1px solid #e1e7eb;vertical-align:top}.personal-table th{background:#f4f6f8}.personal-table td:first-child{white-space:nowrap}.personal-table td:last-child{overflow-wrap:anywhere}#project-editor{border:1px solid #d7e0e9;border-radius:12px;padding:20px}#project-editor form{display:grid;gap:12px}#project-editor label{display:grid;gap:4px}.project .taskrow:has([data-date-task]){display:flex;flex-wrap:nowrap;align-items:center;gap:6px}.project .taskrow:has([data-date-task]) .task{flex:1;min-width:0}.project [data-date-task]{white-space:nowrap;flex:none;padding:3px 6px}.garden-window{position:relative;aspect-ratio:1672/941;border-radius:15px;overflow:hidden;background:#e8d9bd none center/100% 100%}.garden-window button{position:absolute;transform:translate(-50%,-50%);background:#f5e4c8;color:#4b3421;border:1px solid #a27e55;border-radius:5px;font-family:Georgia,serif;font-weight:bold;box-shadow:0 2px 6px #33271366}.garden-window button:hover,.garden-window button:focus-visible{background:#fff4d9}.garden-window .garden-packet{left:30%;top:84%}.garden-heading:has(+ .garden-window){min-height:0;padding:14px 18px;background:#f4eddc;color:#4b3421}.completed-projects{grid-column:1/-1;padding:8px 10px;border-top:1px solid #e1e7eb}.completed-projects summary{cursor:pointer}.project-stamp{color:#a43d32}.garden-spread:has(.specimen-detail){display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px;align-items:start}.garden-spread .specimen-detail{position:relative;display:block;margin:0;background:#fff9e9;padding:18px}.garden-spread .specimen-art{max-width:90px}.garden-spread #gardenBack{position:absolute;right:8px;top:8px}.garden-window button[aria-pressed=true]{background:#fff3c6;box-shadow:0 0 0 3px #dfac65}@media(max-width:800px){.garden-spread:has(.specimen-detail){grid-template-columns:1fr}}#garden-note{display:block;width:100%;box-sizing:border-box;margin:8px 0;font:inherit}.garden-grown{position:absolute;width:66px;bottom:100%;left:50%;transform:translateX(-50%);pointer-events:none}.bloom-notice{padding:9px;margin:8px 0;background:#e9f0dc;color:#355641;border-radius:8px}.bloom-notice button{margin-left:6px}.garden-link:has(svg){vertical-align:middle}.week:has(.bloom-notice) .garden-link svg{animation:weekwise-bloom .65s ease-out}@keyframes weekwise-bloom{from{transform:scale(.55)}to{transform:scale(1)}}@media(prefers-reduced-motion:reduce){.week:has(.bloom-notice) .garden-link svg{animation:none}}
+.sill-heading{padding:20px 4px;color:#344b39}.sill-heading h2{font:700 clamp(28px,4vw,48px) Georgia;margin:8px 0}.sill-heading p{margin:0}.sill-heading small{letter-spacing:.14em}
+.sill-window{position:relative;overflow:hidden;border:12px solid #825e45;border-bottom:24px solid #80543a;border-radius:20px;background:radial-gradient(ellipse at 20% 10%,#fff2c4,transparent 50%),linear-gradient(155deg,#edf0d2,#a8b99a 65%,#d8c39b);box-shadow:inset 0 0 30px #64533a55}
+.sill-window::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49%,#8a674e99 49% 51%,transparent 51%),linear-gradient(135deg,transparent 32%,#fff9dc55 33% 49%,transparent 50%);pointer-events:none}
+.sill-pots{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;padding:clamp(18px,5vw,72px) 3% 12px;background:linear-gradient(transparent 82%,#bb8963 82%,#a97551)}
+.sill-pots .sill-plot{display:grid;justify-items:center;align-content:end;gap:5px;background:none;border:0;color:#493425;padding:4px;min-width:0}
+.sill-plant{display:block;width:min(100%,145px);aspect-ratio:1;z-index:1;margin-bottom:-15%}.sill-plant svg{width:100%;height:100%}
+.sill-pot{width:min(80%,104px);aspect-ratio:1.45;background:linear-gradient(90deg,#a5563e,#d58b64 32%,#bf704f 75%,#94503b);border-radius:12% 12% 27% 27%;box-shadow:0 7px 10px #4b30274a;border-top:7px solid #854b34}
+.sill-label{position:relative;background:#f5dfb5;border-radius:4px;padding:4px 6px;font:700 clamp(10px,1.4vw,15px) Georgia}.sill-plot[aria-pressed=true] .sill-label{background:#fff2cd}.sill-plot:focus-visible{outline:2px solid #325140}
+
+.week.week-complete{border-color:#71957a}.week.week-complete .weekhead{background:#e9f3e8}.week-done{display:inline-block;background:#326447;color:#fff;border-radius:20px;padding:4px 9px;font-size:.8em;font-weight:700}.block.finished{opacity:1}.block.finished .top{color:#9b302a;font-weight:700}.block.finished .top::before{content:"✓";color:#9b302a;font-weight:800;flex:none}.weeklyitem.checked .taskname{color:#9b302a;font-weight:700;text-decoration:none}
+.sill-window{border:0;border-radius:20px;background:radial-gradient(ellipse at 15% 0%,#fff1cc,transparent 64%),#f7f5eb;box-shadow:none}.sill-window::before{display:none}.sill-pots{padding:18px;gap:12px;background:none}.sill-pots .sill-plot{border:1px solid #ded9c8;border-radius:14px;background:#faf8f0;padding:12px 4px;gap:8px}.sill-pots .sill-plot[data-stage=bloom]{background:#eaf2df;border-color:#9eb48b}.sill-plant{width:min(100%,190px);margin-bottom:-16px}.sill-plot[data-stage=sprout] .sill-plant svg{transform:scale(.56);transform-origin:bottom}.sill-pot{width:min(48%,76px);border-top-width:4px}.sill-label{background:none;color:#5c5549}.plot-status{font-size:clamp(10px,1.4vw,15px);color:#426149}.sill-plot[aria-pressed=true]{outline:2px solid #708d60}@media(max-width:600px){.sill-pots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.project h3 .project-stamp{font-size:1.55em;line-height:1;vertical-align:middle}.project .taskrow:has(.taskstatus.done){opacity:1}.project .taskrow{flex-wrap:nowrap}.project .taskrow .task{flex:1;min-width:0;overflow-wrap:anywhere}.project .taskrow button,.project .taskrow .taskstatus{flex-shrink:0}.project .taskrow.not-this-week{opacity:1}.project.project-completed,.project.project-completed.selected{background:#f5f1e8}.block .daily-controls button[data-value]{min-width:24px;min-height:24px;font-size:13px;font-weight:700;color:#344456;border:1px solid #a8b4bf;background:#ffffff80}.block .daily-controls button[data-value][aria-pressed=true]{color:white;background:#40586b;border-color:#40586b}.block .daily-controls button[data-value=finished][aria-pressed=true]{background:#9b302a;border-color:#9b302a}.mobile-days{display:none}
+@media(max-width:700px){
+.mobile-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;padding:8px}
+.mobile-days button{min-height:44px;padding:3px 0;font-size:12px}.mobile-days button[aria-pressed=true]{background:#355a76;color:white}
+#weeks .daygrid{display:block;min-width:0;overflow:visible}#weeks .day[data-mobile-current=false]{display:none}#weeks .day{min-width:0;min-height:0}
+#weeks .block{font-size:16px;padding:9px}#weeks .block .top{min-height:0}#weeks .block .meta{font-size:14px;margin-top:4px}
+#weeks .block .daily-controls button[data-value],#weeks [data-move]{min-height:44px;min-width:44px}
+#weeks .week-checklist{grid-template-columns:minmax(0,1fr)}#weeks .weeklylist{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible}
+#weeks .weekproject{min-width:0}#weeks .weeklyitem{font-size:14px}
+}
+ .workspace-tabs{display:flex;gap:10px;flex-wrap:wrap}.workspace-tabs button{min-height:48px;min-width:112px;padding:12px 22px;font-size:16px}.workspace-tabs [aria-pressed=true]{box-shadow:inset 0 -3px #476b52}
+.workspace-tabs [aria-pressed=true]{background:#e7eff8;border-color:#7194b7;font-weight:700}
+#planView .right{min-width:0}
+@media(max-width:1100px){#planView .right{grid-row:1}}
+.week-workspace{display:grid;gap:16px}
+.week-workspace>section{min-width:0;border:1px solid #dce4ed;border-radius:12px;padding:12px}
+.week-navigation,.overview-week{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:space-between}
+.week-navigation{margin-bottom:14px}
+.week-navigation nav{display:flex;flex-wrap:wrap;gap:6px}
+.week-workspace .dayarea{padding:0;margin-top:10px}
+.week-workspace .daygrid{grid-template-columns:repeat(7,minmax(100px,1fr));min-width:0;overflow-x:auto}
+.compact-checklist{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:12px;overflow-x:auto;padding:6px 0}
+.compact-project{min-width:0;border-top:2px solid var(--project-color);padding-top:6px}
+.compact-project h4{margin:0 0 4px;font-size:13px}
+.compact-project .compact-task{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 6px;padding:3px 0;font-size:12px}
+.compact-task label{display:flex;align-items:baseline;gap:4px;min-width:0}
+.compact-task label span{overflow-wrap:anywhere}
+.compact-task small{white-space:nowrap;color:#536779}
+.compact-task.done label span{color:#a43d32;font-weight:700}
+.week-task{padding:8px 0;border-bottom:1px solid #eef1f4}
+.week-task label{display:flex;align-items:baseline;gap:6px;overflow-wrap:anywhere}
+.week-task-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:4px;font-size:.82rem;color:#516377}
+.week-task.done label{color:#9e3028;font-weight:650}
+.overview-week{padding:8px 0;border-top:1px solid #e2e8ef}
+@media(max-width:650px){.week-workspace .daygrid{grid-template-columns:minmax(0,1fr)}}
+.today-panel{max-width:720px;margin:0 auto;padding:16px}
+#todayTasks>.day{display:block;min-height:0;margin-top:12px}
+.today-deadline{font-weight:650;color:#9a352d}
+@media(max-width:600px){header{gap:10px}.workspace-tabs button{min-height:44px}.today-panel{padding:12px}}
+#captureModal{box-sizing:border-box;border:1px solid #d9e2eb;border-radius:14px;width:min(580px,calc(100% - 24px));max-height:90dvh;padding:clamp(14px,4vw,24px);color:inherit;overflow:auto}
+#captureModal::backdrop{background:#18293966}
+#captureModal h2{margin:4px 0;font-size:clamp(20px,4vw,26px)}
+#captureModal textarea{width:100%;font:inherit;font-size:16px}
+#captureModal .capture-footer{flex-wrap:wrap;gap:8px}
+#captureModal .change-item-body{min-width:0;overflow-wrap:anywhere}
+#captureModal .change-item-body input,#captureModal .change-item-body select{max-width:100%;font-size:16px}
+#captureBtn{min-height:44px;background:#456f99;color:white;border-color:#456f99}
+@media(max-width:600px){#captureModal button{min-height:44px}}
+.checklist-hours{flex-basis:100%;height:5px;background:#e5e9ed;border-radius:4px;overflow:hidden;margin:2px 0 5px 22px}.checklist-hours i{display:block;height:100%;background:var(--project-color);border-radius:inherit}.checklist-hours.unknown{background:none;border-bottom:1px dashed #c4cdd5;height:4px}
+#v9-preview{display:grid;gap:12px}#v9-preview label{display:grid;gap:5px;white-space:normal}#v9-preview input,#v9-preview select,#v9-preview textarea{max-width:100%;width:100%;padding:8px;border:1px solid #d6dee7;border-radius:7px;font:inherit}#v9-project-fields{display:grid;gap:12px}#v9-project-fields[hidden]{display:none}.personal-table button{min-height:32px}header>span{display:flex;gap:5px;flex-wrap:wrap}@media(max-width:600px){header{flex-wrap:wrap}#v9-preview input,#v9-preview select{font-size:16px}.personal-table{font-size:13px}}
+#captureBtn{display:inline-flex!important;align-items:center;justify-content:center;flex-shrink:0;visibility:visible!important;min-width:112px;font-weight:650}header{flex-wrap:wrap}
+/* V9.1 compact actions, shared by Quick Tasks and project subtasks. */
+.icon-edit{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;padding:4px;border-radius:8px;flex:none}.icon-edit:hover,.icon-edit:focus-visible{background:#e8eef5;outline:2px solid #7894b0;outline-offset:1px}
+.block-actions{position:relative;display:inline-block}.block-actions summary{cursor:pointer;list-style:none;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center;border:1px solid #b9c6d2;border-radius:8px;background:#fff}.block-actions summary::-webkit-details-marker{display:none}.block-actions[open]{z-index:5}.block-actions .action-menu{position:absolute;right:0;top:100%;min-width:170px;background:white;box-shadow:0 4px 18px #23364b33;border:1px solid #d7e0e9;border-radius:8px;padding:5px;z-index:10}.action-menu button{display:block;width:100%;text-align:left;margin:2px 0}.estimate-note{display:block;color:#607181;font-size:12px;margin:4px 0}
+
+/* In-flow work-block editor; no overlay menus in Calendar. */
+.project .taskrow,.project .taskrow:has([data-date-task]){display:flex!important;flex-wrap:nowrap!important;align-items:center;gap:5px;min-width:0}
+.project .taskrow .task{flex:1 1 auto;min-width:0;overflow:hidden}.project .taskrow .task span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.project .taskrow>button,.project .taskrow>small,.project .taskrow>.taskstatus{flex:0 0 auto;white-space:nowrap}
+.project .taskrow .icon-edit{opacity:.35;border-color:transparent;background:transparent;min-width:32px;min-height:36px;padding:3px}.project .taskrow:hover .icon-edit,.project .taskrow:focus-within .icon-edit{opacity:1}
+#weeks .block .daily-controls button[data-value],#todayTasks .block .daily-controls button[data-value]{background:transparent;border:0;box-shadow:none;min-width:32px;min-height:32px;padding:3px;color:#637486;font-size:19px}
+#weeks .block .daily-controls button[aria-pressed=true],#todayTasks .block .daily-controls button[aria-pressed=true]{color:#a5342d;background:transparent;font-weight:bold}
+.block[data-work-block],.block[data-work-fixed]{cursor:pointer}.block:focus-visible,.block.work-selected{outline:2px solid #6889a6;outline-offset:2px}
+.work-editor{padding:16px;margin:12px 0;border:1px solid #cbd7e1;border-radius:10px;background:#fafcfd}.work-editor h3{font-size:15px;margin:0 0 12px}.work-editor form{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.work-editor label{display:grid;gap:5px;font-size:13px}.work-editor input,.work-editor select{max-width:100%;font:inherit;padding:7px;border:1px solid #bdcad6;border-radius:6px}.work-editor .panel-footer{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}.work-editor .panel-footer [data-panel-remove]{margin-right:auto;color:#8c4941}.work-editor [data-panel-detail]{border:0;background:transparent;color:#42698b;padding:5px 0}.work-editor .panel-followup{margin-top:10px;font-size:13px}
+@media(pointer:coarse){.project .taskrow .icon-edit{opacity:.7;min-width:44px;min-height:44px}#weeks .block .daily-controls button[data-value],#todayTasks .block .daily-controls button[data-value]{min-width:44px;min-height:44px}}
+#timeline [role=button]:focus-visible{outline:2px solid #527fa4}#timeline-overview[aria-pressed=true],#timeline-focus[aria-pressed=true]{background:#eaf1f8;color:#284a70}
+
+/* Today is a compact projection of Calendar, with no independent state. */
+#todayView .heading{justify-content:flex-start;gap:16px;flex-wrap:wrap}
+#todayPlanned{margin-left:auto;color:#64748b;font-size:14px}
+#todayTasks>.today-list{background:none;padding:0;display:block}
+#todayTasks .today-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(90px,160px) 70px auto;align-items:center;gap:12px;background:transparent;border-radius:0;border-left:3px solid var(--c);border-bottom:1px solid #edf0f3;min-height:58px;margin:0;padding:8px 12px;opacity:1;box-shadow:none}
+#todayTasks .today-row .top{min-width:0;line-height:1.35;font-size:15px}
+#todayTasks .today-row .top button{display:block;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;color:inherit;padding:0;min-height:32px}
+#todayTasks .today-row.finished .top,#todayTasks .today-row.carried .top{color:#ac302a;font-weight:650;text-decoration:none}
+#todayTasks .today-project{color:#7b8794;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#todayTasks .today-row .top::before{content:none}
+#todayTasks .today-row .meta{margin:0;min-width:0}
+#todayTasks .today-row .meta>button{font-size:14px;min-height:36px;color:#526579}
+#todayTasks .today-row .daily-controls{margin:0;display:flex;gap:4px;white-space:nowrap}
+#todayTasks .today-row .daily-controls button{min-width:32px;min-height:36px;padding:3px;border:1px solid #cbd5df;border-radius:6px;color:#334155}
+#todayTasks .today-row .daily-controls button[aria-pressed=true]{background:#ac302a;color:white;border-color:#ac302a}
+#todayTasks [data-work-fixed] .daily-controls{grid-column:4}
+#todayTasks .hours-edit{display:flex;flex-wrap:wrap;gap:2px}
+#todayTasks .hours-edit input{width:60px;min-width:0}
+#todayTasks [data-carry-notice]{grid-column:1/-1;color:#9b332c}
+@media(max-width:600px){
+ #todayView{padding:14px;min-width:0}#todayView .heading{gap:8px}#todayDate{font-size:13px}
+ #todayTasks .today-row{grid-template-columns:minmax(0,1fr) 48px 36px auto;gap:6px;padding:8px 6px}
+ #todayTasks .today-project{font-size:10px}#todayTasks .today-row .top{font-size:14px}
+ #todayTasks .today-row .daily-controls button{min-width:30px;min-height:44px}
+ #todayTasks .today-row .meta button{padding:2px;font-size:13px}
+ #todayTasks .today-row .hours-edit{position:relative;width:44px}#todayTasks .hours-edit input{width:44px}
+}
+
+.checklist-and-note{display:grid;grid-template-columns:minmax(0,3fr) minmax(230px,1fr);gap:16px;align-items:start}.week-workspace>section,.checklist-and-note>section{min-width:0}
+.brain-note{background:#fff9e7;border:1px solid #eadfbb;border-radius:8px;padding:14px;align-self:start;min-width:0}
+.brain-note>strong{font-size:15px;color:#635b42}.brain-note>p{font-size:12px;color:#8a8063;margin:6px 0 10px}
+.brain-note textarea{display:block;width:100%;min-height:190px;aspect-ratio:1.2;resize:vertical;background:transparent;border:0;padding:5px 0;color:#4c4c40;font:inherit;font-size:14px;line-height:1.85;outline-offset:4px}
+.brain-note-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #eadebb;padding-top:10px}
+.brain-note-footer small{font-size:11px;color:#8a8063}.brain-note-footer button{background:#fffdf4;border-color:#ded1a7;font-size:12px;min-height:36px}
+.brain-note button:disabled{opacity:.45;cursor:default}.brain-existing{margin-top:12px;font-size:12px}.brain-existing summary{cursor:pointer;color:#82785e}.brain-existing .personal-table{font-size:11px;table-layout:fixed;overflow-wrap:anywhere}
+#brain-organizer{width:min(460px,calc(100vw - 28px));border:1px solid #e0d9c5;border-radius:14px;padding:22px;color:#39495a}#brain-organizer::backdrop{background:#20304066}
+#brain-organizer .brain-current{font-size:18px;color:#3f463e;line-height:1.6;margin:18px 0;overflow-wrap:anywhere}
+#brain-organizer label{display:grid;grid-template-columns:90px minmax(0,1fr);margin:12px 0;font-size:13px;white-space:normal}#brain-organizer select{max-width:100%;width:100%}#brain-organizer input{width:100%;min-width:0;padding:8px;border:1px solid #d6dee7;border-radius:6px;font:inherit}
+#brain-organizer .brain-help{font-size:12px;line-height:1.6}#brain-organizer [data-brain-message]{color:#a43d32;margin-top:8px}#brain-organizer .brain-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}#brain-organizer button{min-height:36px}
+@media(max-width:760px){.checklist-and-note{grid-template-columns:minmax(0,1fr)}.brain-note textarea{aspect-ratio:auto;min-height:180px}.brain-note{width:100%}}
+
+#cards .taskrow>.taskstatus{flex:none;font-size:10px;padding:3px 5px}
+.compact-task>.taskstatus{font-size:10px;padding:3px 5px}
+.compact-task input[data-week-blocks]{accent-color:#397960;cursor:pointer}
+.taskstatus.done{color:#287653;background:#e3f3e9;font-weight:650}
+
+.project .taskrow.not-this-week:not(.inline-edit) .inline-time{color:#aeb6be}.project .taskrow.inline-edit .task span{color:inherit}
+
+/* Weekly checklist: one readable list, one summary. */
+.weekly-checklist-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.weekly-summary{display:flex;align-items:center;gap:10px;font-size:12px;color:#536779}
+.weekly-summary progress{width:110px;height:8px;accent-color:#477b62}
+.compact-checklist{display:flex;flex-direction:column;gap:16px;overflow:visible;padding-top:14px}
+.compact-project{border-top:0;border-left:3px solid var(--project-color);padding:0 0 0 12px}
+.compact-project h4{margin-bottom:5px}
+.compact-project .compact-task{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:8px;padding:8px 0;border-bottom:1px solid #edf0f3}
+.compact-task label{align-items:flex-start;white-space:normal;line-height:1.5}
+.compact-task label input{flex:none;margin-top:3px}
+.checklist-timing{display:flex;gap:8px;align-items:center;justify-content:flex-end;max-width:260px}
+.checklist-timing small{white-space:normal;text-align:right;line-height:1.5}
+@media(max-width:700px){.compact-project .compact-task{grid-template-columns:minmax(0,1fr)}.checklist-timing{justify-content:flex-start;padding-left:20px;max-width:none}.checklist-timing small{text-align:left}}
+
+.block.worked .top,.block.worked .top button{color:#a52f29!important;font-weight:700}
+</style><style>
+.project .taskrow{cursor:pointer;min-height:36px;max-width:100%;outline-offset:2px}.project .taskrow .task{min-width:0}.project .taskrow .inline-time{flex:0 0 auto;white-space:nowrap;font-size:13px}.project .taskrow.inline-edit{display:grid!important;grid-template-rows:auto auto;gap:4px!important;opacity:1!important}.inline-first,.inline-second{display:flex;align-items:center;flex-wrap:nowrap;gap:4px;min-width:0;max-width:100%}.inline-first input{flex:1;min-width:0}.inline-first button{flex:none}.inline-second select{width:84px;flex:none}.inline-second input{min-width:0;width:65px;flex:1}.inline-second input[type=date]{width:118px;flex:2}.inline-second input[type=time]{width:80px}.inline-edit input,.inline-edit select{font:inherit;font-size:12px;padding:4px 2px;border:1px solid #96a7b6;border-radius:4px;box-sizing:border-box;height:34px}.inline-first button{padding:3px;min-width:32px;height:34px}.inline-error{color:#a52c24;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.block .top button,.block .meta button{color:inherit;font:inherit;text-align:left;border:0;background:transparent;padding:0;max-width:100%}.block .top button{cursor:pointer}.hours-edit{display:flex;flex-wrap:nowrap;gap:3px;max-width:100%}.hours-edit input{width:64px;min-width:0}.hours-edit button{padding:3px;min-width:28px}.block .daily-controls{display:flex!important;gap:5px}.block .daily-controls button{min-width:28px;min-height:28px;padding:3px;border:1px solid #8192a0}.block .daily-controls button[aria-pressed=true]{background:#a52c24;color:white}.work-editor{display:none!important}@media(pointer:coarse){.project .taskrow{min-height:44px}.inline-edit input,.inline-edit select,.inline-first button{height:44px}.inline-first button{min-width:44px}.block .daily-controls button,.hours-edit button{min-width:44px;min-height:44px}}
+@media(max-width:700px){.inline-edit input,.inline-edit select{font-size:16px}.inline-second{gap:2px}}
+ .block.carried .top,.block.carried .top button{color:#a52f29!important;font-weight:700}.block.carried .mini{opacity:.35}.project-task-input{display:flex;gap:8px;margin:8px 0}.project-task-input input{flex:1;min-width:0}#project-editor label{display:block;margin:12px 0}#project-editor label input{display:block;width:100%;box-sizing:border-box}
+/* Comfortable project entry, including the retained subtask step. */
+#project-editor{width:min(540px,calc(100vw - 32px));max-height:85vh;box-sizing:border-box;padding:28px;border:1px solid #d7dfeb;border-radius:18px;overflow:auto}
+#project-editor form{display:grid;gap:18px}#project-editor form>strong{font-size:22px}#project-editor form>label{display:grid;gap:7px;margin:0}#project-editor input,#project-editor select{box-sizing:border-box;min-height:44px;width:100%;font:inherit;padding:9px 11px;border:1px solid #bdcbd9;border-radius:8px}#project-editor form>div:last-child{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}#project-editor button{min-height:44px}#project-editor [data-advance],#project-editor [data-create]{background:#466e96;color:white;border-color:#466e96}#project-editor .project-task-input{display:flex;gap:8px;margin-bottom:10px}#project-editor [role=status]:empty{display:none}
+</style><style>.project .taskrow button.inline-time{border:1px solid #c9d5df;border-radius:6px;background:#fff;padding:5px 8px;min-height:32px;color:#39495a;cursor:pointer}.project .taskrow button.inline-time:hover{background:#eaf2fb;border-color:#7299bd}.project .taskrow button.inline-time:focus-visible{outline:2px solid #456f99;outline-offset:2px}@media(pointer:coarse){.project .taskrow button.inline-time{min-height:44px}}</style><style>
+.project .taskrow.inline-edit{padding:10px;background:#f6f9fc;border:1px solid #cbd9e5;border-radius:8px;gap:10px!important;cursor:default}
+.inline-first{display:grid;grid-template-columns:1fr auto auto;gap:6px}.inline-first>input{grid-column:1/-1;width:100%;padding:8px!important}.inline-first>[data-inline-save]{grid-column:2;background:#456f99;color:white;padding:6px 12px}
+.inline-second,.inline-fields{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;min-width:0;width:100%}
+.inline-second .inline-field{display:flex;flex-direction:column;align-items:stretch;gap:5px;min-width:0;width:100%;white-space:normal;color:#536575;font-size:12px}
+.inline-second .inline-field input,.inline-second .inline-field select{width:100%;min-width:0;max-width:100%;flex:none;height:38px;padding:7px 8px;background:white;font-size:14px}
+.inline-field small{font-size:11px;color:#75818c;line-height:1.4}
+.inline-second .inline-done{display:flex;align-items:center;justify-content:flex-start;gap:7px;min-height:32px;font-size:13px}
+.project .inline-second input[type=checkbox]{appearance:auto;width:16px!important;height:16px!important;min-width:16px!important;min-height:16px!important;max-width:16px;flex:0 0 16px;margin:0;padding:0;accent-color:#456f99}
+.project .taskrow button.inline-time{max-width:60%;white-space:normal;text-align:right;overflow-wrap:anywhere}
+@media(pointer:coarse){.inline-second .inline-field input,.inline-second .inline-field select{height:44px}.inline-second .inline-done{min-height:44px}}
+@media(max-width:700px){.inline-second .inline-field input,.inline-second .inline-field select{font-size:16px}}
+</style></head><body><div class="shell"><header><div><h1>Weekwise</h1></div><nav class="workspace-tabs" aria-label="Workspace"><button data-view="today" aria-pressed="true">Today</button><button data-view="week" aria-pressed="false">Week Plan</button></nav></header><section class="panel today-panel" id="todayView"><div class="heading"><strong>Today</strong><span id="todayDate"></span></div><div id="todayTasks"></div></section><div class="workspace off" id="planView" data-view="today"><section class="left" id="left"><div class="panel"><div class="heading"><strong>Projects</strong><button id="new-project">＋ New Project</button><span class="muted" id="count"></span></div><div class="controls"><select id="weekFilter"></select><select id="sort"><option value="urgency">Urgency</option><option value="ddl">Nearest DDL</option><option value="workload">Workload</option><option value="original">Original order</option></select><label><input type="checkbox" id="hide"> Hide inactive</label><label><input type="checkbox" id="hide-completed"> Hide completed</label></div><div class="cards" id="cards"></div></div><div class="panel timeline-panel" id="timelinePanel"><div class="heading"><strong>Timeline</strong><div class="seg" aria-label="Timeline display"><button type="button" id="timeline-overview" aria-pressed="true">Overview</button><button type="button" id="timeline-focus" aria-pressed="false">Focus</button></div><div class="seg"><button id="four" class="active">4W</button><button id="eight">8W</button></div></div><svg id="timeline" class="timeline" viewBox="0 0 440 215"></svg><div class="legend"><span><b class="ddl-icon">⚑</b> DDL</span><span><b class="fixed-icon">◆</b> Fixed</span><span><b class="window-icon">▰</b> Window</span></div><div class="note">Select a project to highlight its timeline. Display order indicates priority, not dependency. <b id="selectedLabel"></b></div></div></section><section class="right"><div class="panel"><div class="heading"><strong>Week Plan</strong></div><div id="suggestion"></div><div id="unassigned"></div><div id="weeks"></div><div class="foot">Flexible blocks can be moved via ↔; Fixed events are locked; DDL appears only as a flag in the day heading.</div></div></section></div></div><dialog id="quick-task-editor"><h2>Edit task</h2><div id="quick-task-fields"></div><button type="button" id="quick-task-cancel">Cancel</button><button type="button" id="quick-task-save">Save</button></dialog><dialog id="project-editor"></dialog><script>
+// Data integrity boundary. V9 is the only writable workspace.
+const DI_KEY='weekwise.workspace.v9';
+let diReady=false,diBlocked=false,diLoaded=null,diLastRaw=null;
+function integrityError(message){let el=document.getElementById('v9-storage-error');if(!el){el=document.createElement('p');el.id='v9-storage-error';el.setAttribute('role','alert');document.querySelector('header').after(el)}el.textContent=message;el.style.color='#a43d32'}
+function validDate(x){return typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x+'T00:00:00Z'))&&new Date(x+'T00:00:00Z').toISOString().slice(0,10)===x}
+function validateIntegrity(data,legacy=false){
+ const fail=m=>{throw Error(m)},obj=x=>x&&typeof x==='object'&&!Array.isArray(x),positive=x=>typeof x==='number'&&Number.isFinite(x)&&x>0;
+ if(!obj(data))fail('Invalid workspace object');
+ if(data.brainDump!=null&&typeof data.brainDump!=='string')fail('Invalid brain dump');
+ if(!legacy&&(data.schemaVersion!==9||!validDate(data.dateOrigin)||new Date(data.dateOrigin+'T00:00:00Z').getUTCDay()!==1||!Array.isArray(data.tasks)||!obj(data.subtasks)))fail('Unsupported or incomplete Weekwise format');
+ const w=legacy?data:data.workspace;
+ if(!obj(w)||!['projects','blocks','fixed','weeklyExtra','capturedWeeks','capturedEstimates','completions','dailyResults'].every(k=>Array.isArray(w[k])))fail('Incomplete workspace');
+ if(w.deadlines!=null&&(!Array.isArray(w.deadlines)||w.deadlines.some(d=>!Number.isInteger(d.w)||!Number.isInteger(d.d)||d.d<0||d.d>6)))fail('Invalid deadlines');
+ const ids=new Set(),keys=new Set(),stable=new Set();
+ for(const p of w.projects){if(!obj(p)||!Number.isInteger(p.id)||ids.has(p.id)||typeof p.name!=='string'||!Array.isArray(p.tasks)||!p.tasks.every(t=>typeof t==='string')||!Array.isArray(p.markers))fail('Invalid or duplicate project');ids.add(p.id);if(p.stableId){if(stable.has(p.stableId))fail('Duplicate project identity');stable.add(p.stableId)}p.tasks.forEach((_,t)=>keys.add(p.id+'-'+t));for(const m of p.markers)if(!obj(m)||!Number.isInteger(m.day)||(m.end!=null&&!Number.isInteger(m.end))||(m.task!=null&&(!Number.isInteger(m.task)||!p.tasks[m.task])))fail('Invalid project marker')}
+ const recordIds=new Set();
+ for(const kind of ['blocks','fixed','weeklyExtra'])for(const r of w[kind]){if(!obj(r)||!keys.has(r.p+'-'+r.t)||!Number.isInteger(r.t)||!Number.isInteger(r.w)||(kind!=='weeklyExtra'&&(!Number.isInteger(r.d)||r.d<0||r.d>6)))fail('Invalid schedule reference or date');if(kind!=='weeklyExtra'){if(typeof r.id!=='string'||!r.id||recordIds.has(r.id))fail('Invalid or duplicate calendar ID');recordIds.add(r.id)}if(r.h!=null&&!positive(r.h))fail('Invalid allocated hours');if(kind==='blocks'&&!positive(r.h))fail('Missing block hours');if(r.durationHours!=null&&!positive(r.durationHours))fail('Invalid fixed duration');if(r.startTime!=null&&r.startTime!==''&&!/^([01]\d|2[0-3]):[0-5]\d$/.test(r.startTime))fail('Invalid start time');if(r.completedAt!=null&&!Number.isFinite(Date.parse(r.completedAt)))fail('Invalid completion time')}
+ for(const k of ['capturedWeeks','capturedEstimates','completions','dailyResults']){const seen=new Set();for(const pair of w[k]){if(!Array.isArray(pair)||pair.length!==2||seen.has(pair[0]))fail('Invalid or duplicate map entry');seen.add(pair[0]);if(k==='dailyResults'){if(!w.blocks.some(b=>b.id===pair[0])||!['finished','worked','missed','partial'].includes(pair[1]))fail('Invalid daily status reference')}else if(!keys.has(pair[0]))fail('Invalid task reference');if(k==='capturedWeeks'&&!Number.isInteger(pair[1]))fail('Invalid allocation week');if(k==='completions'){if(!obj(pair[1])||pair[1].p+'-'+pair[1].t!==pair[0]||pair[1].date&&!validDate(pair[1].date)||pair[1].completedAt&&!Number.isFinite(Date.parse(pair[1].completedAt)))fail('Invalid task completion')}}}
+ if(!legacy){if(Object.keys(data.subtasks).length!==keys.size)fail('Missing subtask identities');const taskIds=new Set();for(const [key,r] of Object.entries(data.subtasks)){if(!keys.has(key)||!obj(r)||typeof r.id!=='string'||!r.id||taskIds.has(r.id))fail('Invalid subtask identity');taskIds.add(r.id);const p=w.projects.find(p=>key.startsWith(p.id+'-'));if(r.projectId!==p.stableId||r.name!==p.tasks[Number(key.slice(key.indexOf('-')+1))])fail('Invalid subtask project relation or name');if(r.completedAt!=null&&!Number.isFinite(Date.parse(r.completedAt)))fail('Invalid subtask completion time');if(r.estimatedHours!=null&&(typeof r.estimatedHours!=='number'||!Number.isFinite(r.estimatedHours)||r.estimatedHours<0))fail('Invalid task estimate');if(r.type&&!['flexible','fixed','waiting'].includes(r.type))fail('Invalid task type');if(r.deadline&&!validDate(r.deadline)||r.savedTiming?.date&&!validDate(r.savedTiming.date))fail('Invalid subtask date')}
+ for(const t of data.tasks){if(!obj(t)||typeof t.id!=='string'||!t.id||taskIds.has(t.id)||typeof t.name!=='string')fail('Invalid or duplicate quick task');taskIds.add(t.id);for(const k of ['date','deadline'])if(t[k]!=null&&!validDate(t[k]))fail('Invalid quick task date');if(t.week!=null&&!Number.isInteger(t.week)||t.hours!=null&&!positive(t.hours)||t.completedAt!=null&&!Number.isFinite(Date.parse(t.completedAt)))fail('Invalid quick task state')}
+ }
+ return data;
+}
+function backupIntegrity(reason){const raw={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith('weekwise'))raw[k]=localStorage.getItem(k)}const key='weekwise.backup.integrity.'+reason+'.'+Date.now();localStorage.setItem(key,JSON.stringify({createdAt:new Date().toISOString(),raw}));return key}
+try{if(!localStorage.getItem('weekwise.backup.creation-carry-v1')){const raw={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith('weekwise')&&!k.startsWith('weekwise.backup'))raw[k]=localStorage.getItem(k)}localStorage.setItem('weekwise.backup.creation-carry-v1',JSON.stringify({createdAt:new Date().toISOString(),raw}))}}catch(error){throw Error('Backup failed; no workspace changes applied. '+error.message)}
+try{diLastRaw=localStorage.getItem(DI_KEY);if(diLastRaw)diLoaded=validateIntegrity(JSON.parse(diLastRaw));else{const raw=localStorage.getItem('weekwise.workspace.v1');if(raw)validateIntegrity(JSON.parse(raw),true)}}catch(error){diBlocked=true;integrityError('Workspace could not be read. Original data preserved. '+error.message);throw error}
 const projects=[{id:1,name:'Boring Billion',color:'#5689b4',weeks:[1,2,3],effort:'3–5 days',hours:32,ddl:18,tasks:['Finish manuscript','Response letter','Check figures','Final review'],markers:[{day:18,type:'ddl'}]},{id:2,name:'Science Advances',color:'#987db5',weeks:[1],effort:'2–3h',hours:2.5,ddl:8,tasks:['Read manuscript','Write review','Submit review'],markers:[{day:8,type:'ddl'}]},{id:3,name:'GSA Bulletin',color:'#75a28c',weeks:[3,4],effort:'1–2 days',hours:12,ddl:29,tasks:['Read manuscript','Draft review','Submit review'],markers:[{day:29,type:'ddl'}]},{id:4,name:'TopoAsia',color:'#b89660',weeks:[1,2],effort:'2h prep',hours:2,ddl:99,tasks:['Ask Sam','Book travel','Give talk','Visit Prof. Qin'],markers:[{day:6,end:9,type:'window'}]},{id:5,name:'Hf Analysis',color:'#c18678',weeks:[1,2],effort:'~2 days',hours:16,ddl:99,tasks:['Preparation meeting','Lab work'],markers:[{day:5,type:'fixed'},{day:12,type:'fixed'}]},{id:6,name:'O Data Model',color:'#8394ae',weeks:[2,3,4],effort:'3h + 30m talk',hours:3.5,ddl:16,tasks:['Prepare model','Send to Bryant','Present model'],markers:[{day:16,type:'ddl'},{day:23,type:'fixed'}]},{id:7,name:'TANGO',color:'#af85b1',weeks:[3,4],effort:'1–2 days',hours:12,ddl:99,tasks:['Modify slides','Give presentation'],markers:[{day:24,type:'fixed'}]}];
 const seed=[{id:'a',p:1,t:0,w:1,d:0,h:2},{id:'b',p:2,t:0,w:1,d:0,h:.5},{id:'c',p:4,t:0,w:1,d:0,h:1},{id:'d',p:1,t:0,w:1,d:1,h:3},{id:'e',p:2,t:1,w:1,d:1,h:1.5},{id:'f',p:1,t:0,w:1,d:2,h:2},{id:'g',p:4,t:1,w:1,d:2,h:1},{id:'h',p:1,t:0,w:1,d:3,h:3},{id:'i',p:1,t:0,w:1,d:4,h:2},{id:'j',p:2,t:2,w:1,d:4,h:.5},{id:'k',p:1,t:0,w:2,d:0,h:4},{id:'l',p:1,t:1,w:2,d:1,h:8},{id:'m',p:6,t:0,w:2,d:4,h:2},{id:'n',p:1,t:2,w:3,d:0,h:4},{id:'o',p:1,t:3,w:3,d:1,h:4},{id:'p',p:6,t:1,w:3,d:0,h:1},{id:'q',p:7,t:0,w:3,d:3,h:8},{id:'r',p:3,t:0,w:3,d:4,h:3},{id:'s',p:7,t:0,w:4,d:0,h:4},{id:'t',p:3,t:1,w:4,d:2,h:7},{id:'u',p:3,t:2,w:4,d:4,h:2}];
 const fixed=[{id:'topo-talk',p:4,t:2,w:1,d:5,name:'TopoAsia talk',time:'Afternoon · Time TBD'},{id:'f1',p:5,t:0,w:1,d:3,name:'Hf meeting',time:'Time TBD'},{id:'f2',p:5,t:1,w:2,d:3,name:'Hf lab',time:'Time TBD'},{id:'f3',p:6,t:2,w:4,d:0,name:'O Data Model talk',time:'Time TBD'},{id:'f4',p:7,t:1,w:4,d:1,name:'TANGO presentation',time:'14:45–15:00'}];
 const deadlines=[{w:1,d:6,name:'Science Advances · Nov 8'},{w:3,d:0,name:'Send to Bryant · Nov 16'},{w:3,d:2,name:'Boring Billion · Nov 18'},{w:4,d:6,name:'GSA Bulletin · Nov 29'}];
-const weekNames=['Nov 2–8','Nov 9–15','Nov 16–22','Nov 23–29'];const goals=['Finish Science Advances review; prepare TopoAsia','Advance manuscript and complete Hf lab','Submit Boring Billion; send model to Bryant','Presentations and GSA Bulletin review'];const dayNames=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];let blocks=seed.map(x=>({...x})),done={},taskDone={},weeklyExtra=[],selected=null,openWeek=1,range=4;const $=s=>document.querySelector(s);const getP=id=>projects.find(p=>p.id===id);
+const goals=['Finish Science Advances review; prepare TopoAsia','Advance manuscript and complete Hf lab','Submit Boring Billion; send model to Bryant','Presentations and GSA Bulletin review'];const dayNames=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];let blocks=seed.map(x=>({...x})),done={},taskDone={},weeklyExtra=[],selected=null,openWeek=currentWeek(),range=4;const $=s=>document.querySelector(s);const getP=id=>projects.find(p=>p.id===id);
 blocks.push({id:'weekend-notes',p:4,t:4,w:1,d:6,h:0.5});
 getP(4).tasks.push('Write conference notes');
 getP(4).markers.push({type:'fixed',day:7,task:2});
 const capturedWeeks = new Map();
 const capturedEstimates = new Map();
 
+
+// Stored week numbers remain anchored to actual dates; only visible labels roll.
+function markerDate(day){return new Date(Date.UTC(2026,10,day)).toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'})}
+function rollingWeeks(){return Array.from({length:4},(_,i)=>currentWeek()+i)}
+function weekCode(w){return w===9999||w>=currentWeek()+4?'W4+':'W'+(w-currentWeek()+1)}
+function weekOptions(selected){return [...rollingWeeks(),9999].map(w=>`<option value="${w}" ${Number(selected)===w?'selected':''}>${weekCode(w)}${w===9999?'':' · '+weekLabel(w)}</option>`).join('')}
+function refreshWeekFilter(){const el=$('#weekFilter'),value=el.value;el.innerHTML='<option value="all">All weeks</option>'+weekOptions();el.value=value==='all'?'all':String(Number(value)>=currentWeek()+4?9999:Math.max(currentWeek(),Number(value)||currentWeek()))}
+function futureTask(p,t){return capturedWeeks.get(keyFor(p,t))>=currentWeek()+4||blocks.some(b=>b.p===p&&b.t===t&&b.w>=currentWeek()+4)||weeklyExtra.some(b=>b.p===p&&b.t===t&&b.w>=currentWeek()+4)||fixed.some(f=>f.p===p&&f.t===t&&f.w>=currentWeek()+4)}
+function futurePlans(){return '<h3>W4+ · Future plans</h3><p class="muted">Beyond '+weekLabel(currentWeek()+3)+'. Dated tasks move into the four-week plan automatically.</p>'+projects.map(p=>{const tasks=p.tasks.map((name,t)=>futureTask(p.id,t)?`<div class="taskrow"><span>${p.id}.${t+1} ${esc(name)}</span>${fixed.some(f=>f.p===p.id&&f.t===t)?projectTaskTiming(p,t,"all",0):`<select data-task-week="${keyFor(p.id,t)}" aria-label="Move planned week">${weekOptions(9999)}</select>`}</div>`:'').join('');return tasks?`<section class="panel"><strong>${esc(p.name)}</strong>${tasks}</section>`:''}).join('')}
+function assignTaskWeek(key,w){const [p,t]=key.split('-').map(Number);capturedWeeks.set(key,w);for(const b of [...blocks,...weeklyExtra])if(b.p===p&&b.t===t&&!taskDone[key])b.w=w;openWeek=w;renderAll()}
+
 function targetWeek(line){
-  if(/下下周|the week after next|in two weeks/i.test(line))return 3;
-  if(/下周|next week/i.test(line))return 2;
-  if(/本周|这周|this week/i.test(line))return 1;
+  if(/下下周|the week after next|in two weeks/i.test(line))return currentWeek()+2;
+  if(/下周|next week/i.test(line))return currentWeek()+1;
+  if(/本周|这周|this week/i.test(line))return currentWeek();
   return 0;
 }
+function currentWeek(){
+  return Math.floor((timelineDay(todayISO())-2)/7)+1;
+}
+function weekDate(w,d=0){
+  return new Date(Date.UTC(2026,10,2+(w-1)*7+d));
+}
+function taskDeadline(p,t){
+  const milestone={1:3,2:2,3:2,6:1}[p.id];
+  return t===milestone?p.markers.find(m=>m.type==='ddl'):null;
+}
+function blockIsComplete(b){return !!taskDone[keyFor(b.p,b.t)]||dailyResults.get(b.id)==='finished'||!!b.completedAt}
+function workProgress(p,t,w=null){
+ const items=blocks.filter(b=>b.p===p&&b.t===t&&(w===null||b.w===w)&&countedBlock(b));
+ const planned=items.reduce((n,b)=>n+b.h,0),completed=items.filter(blockIsComplete).reduce((n,b)=>n+b.h,0);
+ const extra=weeklyExtra.filter(b=>b.p===p&&b.t===t&&(w===null||b.w===w)).reduce((n,b)=>n+b.h,0);
+ return {items,planned,completed,all:items.length>0&&items.every(blockIsComplete)&&extra===0};
+}
+function progressBadge(p,t,w=null){
+ if(taskDone[keyFor(p,t)])return '<span class="taskstatus done">Done</span>';
+ const worked=blocks.some(b=>b.p===p&&b.t===t&&(w===null||b.w===w)&&dailyResults.get(b.id)==='worked');
+ return worked?'<span class="taskstatus progress">In progress</span>':'';
+}
+function weeklyChecklistItems(w){
+ return orderedProjects().flatMap(p=>p.tasks.flatMap((name,t)=>{
+  const key=keyFor(p.id,t),event=fixed.find(f=>f.w===w&&f.p===p.id&&f.t===t);
+  const scheduled=blocks.filter(b=>b.w===w&&b.p===p.id&&b.t===t&&!b.carried).reduce((sum,b)=>sum+b.h,0);
+  const extra=weeklyExtra.filter(x=>x.w===w&&x.p===p.id&&x.t===t);
+  const historical=blocks.some(b=>b.w===w&&b.p===p.id&&b.t===t)||completions.get(key)?.w===w;
+  if(!inWeeklyChecklist(p.id,t,w,scheduled+extra.reduce((sum,x)=>sum+x.h,0),Boolean(event))&&!historical)return [];
+  return [{p,t,name,key,event,extra,historical,allocated:weekTaskPlanned(p.id,t,w),complete:!!taskDone[key]||(!event&&(!!v9.weeklyGoals?.[key+'@'+w]||workProgress(p.id,t,w).all))}];
+ }));
+}
+function weeklySummary(w){
+ const items=weeklyChecklistItems(w),done=items.filter(x=>x.complete).length,total=items.length;
+ return `<div class="weekly-summary"><span>已完成 <b>${done} / ${total}</b> 项</span><progress max="${total||1}" value="${done}" aria-label="本周目标完成进度"></progress></div>`;
+}
+function weeklyTasks(w){
+ const items=weeklyChecklistItems(w);
+ return orderedProjects().map(p=>{
+  const rows=items.filter(x=>x.p===p).map(({t,name,key,event,extra,historical,allocated,complete})=>{
+   const estimate=capturedEstimates.get(key),ddl=taskDeadline(p,t);
+   const check=event?weeklyCheck(p.id,t,w):`<input type="checkbox" data-week-blocks="${p.id}-${t}-${w}" aria-label="Complete this week's goal: ${esc(name)}" ${complete?'checked':''}>`;
+   const timing=event?`📅 ${esc(eventDetail(event,true))}`:[allocated?allocated+'h':esc(estimate||''),ddl?'⚑ Nov '+ddl.day:''].filter(Boolean).join(' · ');
+   return `<div class="compact-task ${complete?'done':''}"><label>${check}<span>${p.id}.${t+1} ${esc(name)}</span></label><div class="checklist-timing">${timing?'<small>'+timing+'</small>':''}${!complete&&!event&&(extra.length||(!allocated&&!historical))?`<button type="button" data-pick-day="${p.id}-${t}-${w}">Pick day</button>`:''}</div></div>`;
+  }).join('');
+  return rows?`<div class="compact-project" style="--project-color:${p.color}"><h4>${esc(p.name)}</h4>${rows}</div>`:'';
+ }).join('')||'<p class="muted">No tasks allocated this week.</p>';
+}
 function weekLabel(w){
-  const start=new Date(2026,10,2+(w-1)*7),end=new Date(2026,10,8+(w-1)*7);
-  const fmt=new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric'});
+  if(w===9999)return "Future";
+  const start=weekDate(w),end=weekDate(w,6);
+  const fmt=new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',timeZone:'UTC'});
   return fmt.format(start)+'–'+fmt.format(end);
 }
 
 
-function taskHours(p,t,w){return blocks.filter(b=>b.p===p&&b.t===t&&b.w===w).reduce((s,b)=>s+(b.carried?0:b.h),0)+weeklyExtra.filter(x=>x.p===p&&x.t===t&&x.w===w).reduce((s,x)=>s+x.h,0)}
-function isTaskActive(p,t,w){return (p===4&&t===3&&!capturedWeeks.has('4-3')&&!fixed.some(f=>f.p===4&&f.t===3)&&w<=2)||capturedWeeks.get(keyFor(p,t))===w||taskHours(p,t,w)>0||fixed.some(f=>f.p===p&&f.t===t&&f.w===w)}
+function taskHours(p,t,w){return blocks.filter(b=>b.p===p&&b.t===t&&b.w===w&&scheduleEnabled(p,t)).reduce((s,b)=>s+(b.carried?0:b.h),0)+weeklyExtra.filter(x=>x.p===p&&x.t===t&&x.w===w&&scheduleEnabled(p,t)).reduce((s,x)=>s+x.h,0)}
+function isTaskActive(p,t,w){if(w===9999)return futureTask(p,t);return (p===4&&t===3&&!capturedWeeks.has('4-3')&&!fixed.some(f=>f.p===4&&f.t===3)&&w<=2)||capturedWeeks.get(keyFor(p,t))===w||taskHours(p,t,w)>0||fixed.some(f=>f.p===p&&f.t===t&&f.w===w)}
 function active(p){const v=$('#weekFilter').value;return v==='all'||p.tasks.some((t,i)=>isTaskActive(p.id,i,Number(v)))||p.markers.some(m=>m.type==='window'&&Number(v)===1)}
 function nextConstraintDay(p){const pending=p.markers.filter(m=>{if(m.type==='fixed'){const f=fixed.find(x=>x.p===p.id&&2+(x.w-1)*7+x.d===m.day);return !f||!done[f.id]}if(m.type==='ddl'){const lastTask={1:3,2:2,3:2,6:1}[p.id];return lastTask===undefined||!taskDone[p.id+'-'+lastTask]}return true});return pending.length?Math.min(...pending.map(m=>m.day)):Infinity}
 function visitWeekPicker(){
  return '<select data-task-week="4-3" aria-label="Choose a week for Visit Prof. Qin"><option value="">Pick week</option><option value="1">W1</option><option value="2">W2</option></select>';
 }
+function eventDuration(f){const h=f.durationHours!==undefined?f.durationHours:f.h;return typeof h==='number'&&Number.isFinite(h)&&h>0?h:0}
+function eventDetail(f,withDate=false){return [withDate?markerDate(2+(f.w-1)*7+f.d):'',f.startTime||'',eventDuration(f)?eventDuration(f)+'h':''].filter(Boolean).join(' · ')}
+function timingError(duration,start){if(duration!==''&&(!Number.isFinite(Number(duration))||Number(duration)<=0))return 'Duration must be greater than 0, or left blank.';if(start&&!/^([01]\d|2[0-3]):[0-5]\d$/.test(start))return 'Enter a valid local time (HH:mm).';if(start&&duration!==''&&Number(start.slice(0,2))*60+Number(start.slice(3))+Number(duration)*60>1440)return 'This event crosses midnight. Split it into two dated events before saving.';return ''}
+function fixedFields(f={}){return `<label>Start time (optional)<input name="startTime" type="time" value="${esc(f.startTime||'')}"></label><label>Duration (hours, optional)<input name="durationHours" type="number" min="0.01" step="any" value="${f.durationHours??(f.h>0?f.h:'')}"></label><small data-timing-error role="status"></small>`}
+// Fixed duration replaces a matching same-day block in capacity totals; no extra block is created.
+function countedBlock(b){return scheduleEnabled(b.p,b.t)&&!b.carried&&!fixed.some(f=>f.w===b.w&&f.d===b.d&&f.p===b.p&&f.t===b.t&&eventDuration(f)>0)}
+function dayPlannedHours(w,d){return blocks.filter(b=>b.w===w&&b.d===d&&countedBlock(b)).reduce((n,b)=>n+b.h,0)+fixed.filter(f=>f.w===w&&f.d===d).reduce((n,f)=>n+eventDuration(f),0)}
+function weekTaskPlanned(p,t,w){return blocks.filter(b=>b.p===p&&b.t===t&&b.w===w&&countedBlock(b)).reduce((n,b)=>n+b.h,0)+fixed.filter(f=>f.p===p&&f.t===t&&f.w===w).reduce((n,f)=>n+eventDuration(f),0)+weeklyExtra.filter(b=>b.p===p&&b.t===t&&b.w===w&&scheduleEnabled(p,t)&&!fixed.some(f=>f.p===p&&f.t===t&&f.w===w&&eventDuration(f)>0)).reduce((n,b)=>n+b.h,0)}
 function fixedTimingIcon(event){
- const time=(event.time||'').replace(/(?:\s*·\s*)?Time TBD$/i,'').trim();
- const label=esc('Fixed · Nov '+(2+(event.w-1)*7+event.d)+(time?' · '+time:''));
+ const time=(event.startTime||event.time||'').replace(/(?:\s*·\s*)?Time TBD$/i,'').trim();
+ const label=esc('Fixed · '+weekDate(event.w,event.d).toISOString().slice(0,10)+(time?' · '+time:''));
  return `<span class="timing-icon" role="img" aria-label="${label}" title="${label}">📅</span>`;
 }
 function projectTaskTiming(p,t,fw,h){
  const event=fixed.find(f=>f.p===p.id&&f.t===t);
- if(event||p.id===4&&t===3)return `<button data-date-task="${p.id}-${t}">${event?.w?"📅 Nov "+(2+(event.w-1)*7+event.d):"Waiting"}</button>`;
+ if(event||p.id===4&&t===3)return `<button data-date-task="${p.id}-${t}">${event?.w?"📅 "+weekDate(event.w,event.d).toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:"UTC"}):"Waiting"}</button>`;
  if(p.id===6&&t===1)return '<span class="taskhours">🚩 Nov 16</span>';
  const key=keyFor(p.id,t),week=capturedWeeks.get(key);
 
- if(week&&!blocks.some(b=>b.p===p.id&&b.t===t)&&!weeklyExtra.some(x=>x.p===p.id&&x.t===t))return `<select data-task-week="${key}" aria-label="Change planned week for ${esc(p.tasks[t])}">${Array.from({length:8},(_,i)=>`<option value="${i+1}" ${week===i+1?'selected':''}>W${i+1}</option>`).join('')}</select>`;
- if(fw==='all')return esc(capturedEstimates.get(key)||'');
- return h?`<span class="taskhours">${h}h</span>`:`<button class="addweek" data-add="${key}">${esc(capturedEstimates.get(key)||'Add to W'+fw)}</button>`;
+ if(week&&!blocks.some(b=>b.p===p.id&&b.t===t)&&!weeklyExtra.some(x=>x.p===p.id&&x.t===t))return `<select data-task-week="${key}" aria-label="Change planned week for ${esc(p.tasks[t])}">${weekOptions(week>=currentWeek()+4?9999:week)}</select>`;
+ if(fw==='all'){const total=blocks.filter(b=>b.p===p.id&&b.t===t&&!b.carried).reduce((n,b)=>n+b.h,0)+weeklyExtra.filter(b=>b.p===p.id&&b.t===t).reduce((n,b)=>n+b.h,0);return `<button data-edit-hours="${key}" title="Edit estimated hours">${total?total+'h':esc(capturedEstimates.get(key)||'Set hours')}</button>`;}
+ return h?`<button class="taskhours" data-edit-hours="${key}" title="Edit hours for this week">${h}h</button>`:`<button class="addweek" data-add="${key}">${esc(capturedEstimates.get(key)||'Add to '+weekCode(Number(fw)))}</button>`;
 }
-function renderCards(){let arr=projects.filter(p=>!$('#hide').checked||active(p));const sort=$('#sort').value;if(sort==='urgency')arr.sort((a,b)=>nextConstraintDay(a)-nextConstraintDay(b)||a.id-b.id);if(sort==='ddl')arr.sort((a,b)=>a.ddl-b.ddl||a.id-b.id);if(sort==='workload')arr.sort((a,b)=>b.hours-a.hours);$('#count').textContent=arr.length+' / 7 projects';const fw=$('#weekFilter').value;$('#cards').innerHTML=arr.map(p=>`<div class="project ${selected===p.id?'selected':''} ${active(p)?'':'dim'}" data-id="${p.id}" style="--c:${p.color}"><h3>${p.id}. ${p.name}</h3><div class="constraints">${p.markers.filter(m=>m.type!=='fixed'||!fixed.some(f=>f.p===p.id&&f.w&&2+(f.w-1)*7+f.d===m.day)).map(m=>m.type==='ddl'?`<span class="constraint"><span class="ddl-icon">⚑</span> Nov ${m.day} · DDL</span>`:m.type==='fixed'?`<span class="constraint"><span class="fixed-icon">◆</span> Nov ${m.day} · Fixed</span>`:`<span class="constraint"><span class="window-icon">▰</span> Nov ${m.day}–${m.end} · Window</span>`).join('')}</div><div class="effort">${p.effort} total estimate</div><div class="bar"><i style="width:${Math.min(100,p.hours/35*100)}%"></i></div>${p.tasks.map((t,i)=>{const h=fw==='all'?0:taskHours(p.id,i,Number(fw)),scheduled=fw==='all'||isTaskActive(p.id,i,Number(fw));return `<div class="taskrow ${scheduled?'':'not-this-week'}"><div class="task"><span>${p.id}.${i+1} ${esc(t)}</span></div> ${taskDone[keyFor(p.id,i)]?'<span class="taskstatus done">Done</span>':''}${projectTaskTiming(p,i,fw,h)}</div>`}).join('')}<button data-new-task="${p.id}">＋ Add task</button></div>`).join('');bindProjectEditors();document.querySelectorAll('.project').forEach(el=>el.addEventListener('click',e=>{if(e.target.closest('input,button,label,select'))return;const id=+el.dataset.id;selected=selected===id?null:id;renderCards();renderTimeline();requestAnimationFrame(drawLinks)}));document.querySelectorAll('[data-task-week]').forEach(el=>el.onchange=()=>{if(!el.value)return;capturedWeeks.set(el.dataset.taskWeek,Number(el.value));renderAll()});document.querySelectorAll('[data-add]').forEach(el=>el.onclick=()=>{const [pid,tid]=el.dataset.add.split('-').map(Number),w=Number($('#weekFilter').value);const answer=prompt(`Allocate ${pid}.${tid+1} to W${w}. How many hours? (You can schedule the day later)`, '2');if(answer===null)return;const h=Number(answer);if(!Number.isFinite(h)||h<=0){alert('Enter a positive number of hours.');return;}weeklyExtra.push({p:pid,t:tid,w,h});renderAll()})}
+function todayISO(){
+  return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Shanghai'}).format(new Date());
+}
+function timelineDay(date){
+  return 2+(Date.parse(date)-Date.UTC(2026,10,2))/86400000;
+}
+function projectCompletion(p){
+  const records=p.tasks.map((_,i)=>completions.get(keyFor(p.id,i)));
+  if(!records.length||!records.every(Boolean))return null;
+  const dates=records.map(r=>r.date).filter(Boolean).sort();
+  return {date:dates.at(-1),flower:['✿','❀','✾'][p.id%3]};
+}
+function projectWaiting(p){
+  return p.tasks.some((_,t)=>taskKind(p.id,t)==='waiting');
+}
+function orderedProjects(items=projects){
+  const arr=[...items],sort=$('#sort').value;
+  if(sort==='urgency')arr.sort((a,b)=>nextConstraintDay(a)-nextConstraintDay(b)||a.id-b.id);
+  else if(sort==='ddl')arr.sort((a,b)=>a.ddl-b.ddl||a.id-b.id);
+  else if(sort==='workload')arr.sort((a,b)=>b.hours-a.hours||a.id-b.id);
+  else arr.sort((a,b)=>a.id-b.id);
+  return arr;
+}
+function visibleProjects(){return orderedProjects(projects.filter(p=>projectCompletion(p)?!$('#hide-completed').checked:!$('#hide').checked||active(p)))}
+function selectProject(id){selected=selected===id?null:id;renderCards();renderTimeline()}
+function renderCards(){let arr=visibleProjects();if(selected&&!arr.some(p=>p.id===selected))selected=null;$('#count').textContent=arr.length+' / '+projects.length+' projects';const fw=$('#weekFilter').value;$('#cards').innerHTML=arr.map(p=>`<div class="project ${projectCompletion(p)?'project-completed':''} ${selected===p.id?'selected':''} ${active(p)||projectCompletion(p)?'':'dim'}" data-id="${p.id}" style="--c:${p.color}"><h3>${p.id}. ${esc(p.name)}${projectCompletion(p)?` <span class="project-stamp" role="img" aria-label="Completed" title="Completed">${projectCompletion(p).flower}</span>`:''}</h3><div class="constraints">${p.markers.filter(m=>m.type!=='fixed'||!fixed.some(f=>f.p===p.id&&f.w&&2+(f.w-1)*7+f.d===m.day)).map(m=>m.type==='ddl'?`<span class="constraint"><span class="ddl-icon">⚑</span> ${markerDate(m.day)} · DDL</span>`:m.type==='fixed'?`<span class="constraint"><span class="fixed-icon">◆</span> ${markerDate(m.day)} · Fixed</span>`:`<span class="constraint"><span class="window-icon">▰</span> ${markerDate(m.day)}–${markerDate(m.end)} · Window</span>`).join('')}</div><div class="effort">${p.effort} total estimate</div><div class="bar"><i style="width:${Math.min(100,p.hours/35*100)}%"></i></div>${p.tasks.map((t,i)=>{const h=fw==='all'?0:taskHours(p.id,i,Number(fw)),scheduled=fw==='all'||isTaskActive(p.id,i,Number(fw));return `<div class="taskrow ${scheduled?'':'not-this-week'}"><div class="task"><span>${p.id}.${i+1} ${esc(t)}</span></div> ${taskDone[keyFor(p.id,i)]?'<span class="taskstatus done">Done</span>':''}${projectTaskTiming(p,i,fw,h)}</div>`}).join('')}<button data-new-task="${p.id}" type="button">＋ Add Task</button></div>`).join('');bindProjectEditors();document.querySelectorAll('.project').forEach(el=>el.addEventListener('click',e=>{if(e.target.closest('input,button,label,select'))return;const id=+el.dataset.id;selectProject(id)}));document.querySelectorAll('[data-task-week]').forEach(el=>el.onchange=()=>{if(!el.value)return;assignTaskWeek(el.dataset.taskWeek,Number(el.value))});document.querySelectorAll('[data-add]').forEach(el=>el.onclick=()=>{const [pid,tid]=el.dataset.add.split('-').map(Number),w=Number($('#weekFilter').value);const dialog=$('#project-editor');
+dialog.innerHTML=`<strong>${esc(getP(pid).tasks[tid])} · ${weekCode(w)}</strong><p><label>Planned hours <input type="number" min="0.01" step="any" required value="2"></label></p><button type="button" data-cancel>Cancel</button> <button type="button" data-save>Add to ${weekCode(w)}</button>`;
+const hours=dialog.querySelector('input');
+dialog.querySelector('[data-cancel]').onclick=()=>dialog.close();
+dialog.querySelector('[data-save]').onclick=()=>{
+  if(!hours.reportValidity())return;
+  weeklyExtra.push({p:pid,t:tid,w,h:hours.valueAsNumber});
+  openWeek=w;
+  dialog.close();renderAll();
+};
+dialog.showModal();
+})}
 function bindProjectEditors(){
+ $('#cards').querySelectorAll('[data-edit-hours]').forEach(button=>button.onclick=()=>{
+ const [pid,tid]=button.dataset.editHours.split('-').map(Number),fw=$('#weekFilter').value;
+ const entries=[...blocks.filter(b=>b.p===pid&&b.t===tid&&!b.carried),...weeklyExtra.filter(b=>b.p===pid&&b.t===tid)].filter(b=>fw==='all'||b.w===Number(fw));
+ const previous=entries.reduce((n,b)=>n+b.h,0),dialog=$('#project-editor');
+ dialog.innerHTML=`<form><strong>${esc(getP(pid).tasks[tid])}</strong><label>${fw==='all'?'Total estimated hours':'Hours in '+weekCode(Number(fw))}<input name="hours" type="number" min="0.01" step="any" required value="${previous||parseFloat(capturedEstimates.get(keyFor(pid,tid)))||1}"></label><small>Existing sessions keep their dates. Hours are adjusted proportionally.</small><div><button type="button" data-cancel>Cancel</button><button type="button" data-save>Save</button></div></form>`;
+ const form=dialog.querySelector('form');form.onsubmit=e=>e.preventDefault();form.querySelector('[data-cancel]').onclick=()=>dialog.close();
+ form.querySelector('[data-save]').onclick=()=>{if(!form.reportValidity())return;const hours=form.elements.namedItem('hours').valueAsNumber;
+ entries.forEach(b=>b.h=hours*(previous?b.h/previous:1/entries.length));
+ capturedEstimates.set(keyFor(pid,tid),hours+'h');const project=getP(pid);project.hours+=(hours-previous);dialog.close();renderAll();};dialog.showModal();
+ });
+
   $('#cards').querySelectorAll('[data-date-task],[data-new-task]').forEach(button=>button.onclick=()=>{
     const [pid,tid]=(button.dataset.dateTask||button.dataset.newTask).split('-').map(Number);
     const project=getP(pid), adding=tid===undefined;
@@ -108,7 +409,7 @@ function bindProjectEditors(){
     const oldDay=event?.w?2+(event.w-1)*7+event.d:null;
     const dialog=$('#project-editor');
     dialog.innerHTML=`<form><strong>${esc(adding?project.name:project.tasks[tid])}</strong>
-      ${adding?'<label>Task name <input name="taskName" required></label><label>Estimated hours <input name="hours" type="number" min="0.01" step="any"></label>':`<label>Date <input name="date" type="date" min="2026-11-02" max="2026-11-29" value="${oldDay?'2026-11-'+String(oldDay).padStart(2,'0'):''}"></label>${pid===4&&tid===3?'<small>Window · Nov 6–9</small>':''}`}
+      ${adding?'<label>Task name <input name="taskName" required></label><label>Estimated hours <input name="hours" type="number" min="0.01" step="any"></label>':`<label>Fixed date <input name="date" type="date" value="${oldDay?weekDate(Math.floor((oldDay-2)/7)+1,((oldDay-2)%7+7)%7).toISOString().slice(0,10):''}"></label>${fixedFields(event)}${pid===4&&tid===3?'<small>Window · Nov 6–9</small>':''}`}
       <div><button type="button" data-cancel>Cancel</button> ${adding?'':'<button type="button" data-save value="waiting">Waiting</button> '}<button type="button" data-save>${adding?'Add task':'Save date'}</button></div><small role="status"></small></form>`;
     const form=dialog.querySelector('form');
     form.querySelector('[data-cancel]').onclick=()=>dialog.close();
@@ -124,11 +425,11 @@ function bindProjectEditors(){
         if(hours)capturedEstimates.set(keyFor(pid,project.tasks.length),hours+'h');
         project.tasks.push(name);
       }else{
-        const date=data.get('date');
+        const date=data.get('date');const duration=data.get('durationHours')||'',startTime=data.get('startTime')||'';const error=timingError(duration,startTime);if(error){form.querySelector('[role=status]').textContent=error;return}
         if(!waiting&&!date){form.querySelector('[role=status]').textContent='Choose a date or Waiting.';return}
-        const day=Number(date.slice(-2));
+        const day=timelineDay(date);
         const next=event||{id:'cap-'+pid+'-'+tid,p:pid,t:tid,name:project.tasks[tid],time:'Time TBD'};
-        if(!event)fixed.push(next);
+        if(!event)fixed.push(next);next.durationHours=duration===''?null:Number(duration);next.startTime=startTime||null;delete next.h;
         next.w=waiting?0:Math.floor((day-2)/7)+1;
         next.d=waiting?0:(day-2)%7;
         if(waiting||oldDay!==day)next.time='Time TBD';
@@ -142,24 +443,148 @@ function bindProjectEditors(){
     dialog.showModal();
   });
 }
-function renderTimeline(){const svg=$('#timeline'),left=125,right=429,span=range===4?28:56,unit=(right-left)/span,x=d=>left+(d-2)*unit;let s='';for(let i=0;i<=range;i++){const xx=left+i*7*unit;const date=new Date(2026,10,2+i*7);s+=`<line x1="${xx}" y1="24" x2="${xx}" y2="210" stroke="#e1e7ed" stroke-dasharray="3 3"/><text x="${xx}" y="15" text-anchor="middle" font-size="10" fill="#7c8792">${date.toLocaleString('en-US',{month:'short'})} ${date.getDate()}</text>`}projects.forEach((p,i)=>{const y=42+i*24;s+=`<text x="3" y="${y+3}" font-size="10" fill="${selected===p.id?'#284a70':'#647280'}">${p.name}</text><line x1="${left}" x2="${right}" y1="${y}" y2="${y}" stroke="#ecf0f3"/>`;p.markers.forEach((m,j)=>{const xx=x(m.day);if(m.type==='window')s+=`<rect data-marker="${p.id}-${j}" x="${xx}" y="${y-5}" width="${(m.end-m.day+1)*unit}" height="10" rx="3" fill="${p.color}"/>`;else if(m.type==='ddl')s+=`<g data-marker="${p.id}-${j}"><line x1="${xx}" y1="${y-7}" x2="${xx}" y2="${y+7}" stroke="#b55f55" stroke-width="1.5"/><path d="M ${xx} ${y-7} l 9 2.5 -9 3 Z" fill="#b55f55"/></g>`;else s+=`<rect data-marker="${p.id}-${j}" x="${xx-4}" y="${y-4}" width="8" height="8" transform="rotate(45 ${xx} ${y})" fill="#8196b6"/>`})});svg.innerHTML=s;$('#selectedLabel').textContent=selected?'· '+getP(selected).name:'';requestAnimationFrame(drawLinks)}
-function drawLinks(){const svg=$('#connectors'),left=$('#left'),lr=left.getBoundingClientRect();svg.setAttribute('viewBox',`0 0 ${lr.width} ${lr.height}`);svg.innerHTML='';if(!selected)return;const card=document.querySelector(`.project[data-id="${selected}"]`),p=getP(selected);if(!card)return;const cr=card.getBoundingClientRect();p.markers.forEach((m,j)=>{const mark=document.querySelector(`[data-marker="${selected}-${j}"]`);if(!mark)return;const mr=mark.getBoundingClientRect();const sx=cr.left+cr.width/2-lr.left,sy=cr.bottom-lr.top,ex=mr.left+mr.width/2-lr.left,ey=mr.top+mr.height/2-lr.top;const mid=sy+(ey-sy)*.53;svg.innerHTML+=`<path d="M ${sx} ${sy} C ${sx} ${mid}, ${ex} ${mid}, ${ex} ${ey}" fill="none" stroke="${p.color}" stroke-width="2" stroke-dasharray="5 5" opacity=".85"/>`})}
+function parseDraftTask(line){
+ const months='jan feb mar apr may jun jul aug sep oct nov dec'.split(' ');
+ const match=line.match(/\b(\d{4})-(\d{1,2})-(\d{1,2})\b|\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?\s*(\d{1,2})\b|(\d{1,2})月(\d{1,2})日?|(\d{1,2})\/(\d{1,2})/i);
+ if(!match)return {name:line};
+ const year=match[1]?+match[1]:2026,month=match[2]?+match[2]:match[4]?months.indexOf(match[4].slice(0,3).toLowerCase())+1:+(match[6]||match[8]),day=+(match[3]||match[5]||match[7]||match[9]);
+ const date=new Date(Date.UTC(year,month-1,day));if(date.getUTCMonth()!==month-1||date.getUTCDate()!==day)throw Error('Invalid date in '+line);
+ const offset=timelineDay(date.toISOString().slice(0,10))-2;if(offset<0)throw Error('Choose a date on or after Nov 2, 2026.');
+ return {name:(line.slice(0,match.index).replace(/\s+(on|at)\s*$/i,'')+line.slice(match.index+match[0].length)).trim()||line,w:Math.floor(offset/7)+1,d:offset%7};
+}
+let timelineMode='overview';
+function renderTimeline(){
+ const svg=$('#timeline'),all=visibleProjects();if(selected&&!all.some(p=>p.id===selected))selected=null;
+ const rows=timelineMode==='focus'&&selected?all.filter(p=>p.id===selected):all;
+ const left=150,right=429,span=range===4?28:56,unit=(right-left)/span,height=Math.max(70,rows.length*22+42),bottom=height-8;
+ const origin=2+(currentWeek()-1)*7,x=d=>left+(d-origin)*unit,today=timelineDay(todayISO()),boundary=Math.max(left,Math.min(right,x(today)));
+ let html=`<defs><clipPath id="timeline-label-clip"><rect x="0" y="22" width="143" height="${height}"/></clipPath><clipPath id="timeline-plot-clip"><rect x="${left}" y="22" width="${right-left}" height="${height}"/></clipPath></defs><rect x="${left}" y="24" width="${boundary-left}" height="${bottom-24}" fill="#eef0ed"/>`;
+ for(let i=0;i<=range;i++){const xx=left+i*7*unit,date=weekDate(currentWeek()+i);html+=`<line x1="${xx}" y1="24" x2="${xx}" y2="${bottom}" stroke="#e1e7ed" stroke-dasharray="3 3"/><text x="${xx}" y="15" text-anchor="middle" font-size="9" fill="#7c8792">${date.toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'})}</text>`}
+ rows.forEach((p,i)=>{const y=37+i*22;html+=`<g data-timeline-project="${p.id}" opacity="${selected&&selected!==p.id?.32:1}"><rect x="0" y="${y-10}" width="438" height="21" rx="3" fill="${selected===p.id?'#eaf1f8':'transparent'}"/><g data-timeline-select="${p.id}" tabindex="0" role="button" aria-label="${esc(p.name)}" aria-pressed="${selected===p.id}" style="cursor:pointer"><title>${esc(p.name)}</title><text clip-path="url(#timeline-label-clip)" x="3" y="${y+3}" font-size="10" fill="${selected===p.id?'#284a70':'#647280'}">${esc(p.name.length>23?p.name.slice(0,22)+'…':p.name)}</text></g><g clip-path="url(#timeline-plot-clip)"><line x1="${left}" x2="${right}" y1="${y}" y2="${y}" stroke="#e5ebf0"/>`;
+ p.markers.forEach(m=>{const xx=x(m.day);if(m.type==='window')html+=`<rect x="${xx}" y="${y-4}" width="${(m.end-m.day+1)*unit}" height="8" rx="3" fill="${p.color}"/>`;else if(m.type==='ddl')html+=`<path d="M ${xx} ${y+7} v -14 l 8 2.5 -8 3" fill="#b55f55" stroke="#b55f55"/>`;else html+=`<rect x="${xx-3.5}" y="${y-3.5}" width="7" height="7" transform="rotate(45 ${xx} ${y})" fill="#8196b6"/>`});html+='</g></g>'});
+ if(today>=origin&&today<=origin+span)html+=`<line x1="${boundary}" x2="${boundary}" y1="24" y2="${bottom}" stroke="#537465"/>`;
+ svg.setAttribute('viewBox',`0 0 440 ${height}`);svg.innerHTML=html;
+ svg.querySelectorAll('[data-timeline-select]').forEach(el=>{el.onfocus=()=>{$('#selectedLabel').textContent=el.getAttribute('aria-label')};el.onblur=()=>{$('#selectedLabel').textContent=selected?getP(selected).name:''};el.onclick=()=>selectProject(+el.dataset.timelineSelect);el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectProject(+el.dataset.timelineSelect)}}});
+ $('#selectedLabel').textContent=selected?getP(selected).name:'';
+}
 const reviewState={};let reviewDraft={};let proposal=null;let pendingCarry=[];let reviewW=1,reviewD=0;
 function keyFor(p,t){return `${p}-${t}`}
 function hasWorked(p,t){return blocks.some(b=>b.p===p&&b.t===t&&dailyResults.get(b.id)==='worked')}
 function dayStatus(){return ''}
 function statusLabel(){return ''}
-function planHours(w){return blocks.filter(b=>b.w===w).reduce((s,b)=>s+(b.carried?0:b.h),0)+weeklyExtra.filter(x=>x.w===w).reduce((s,x)=>s+x.h,0)}
+function planHours(w){return Array.from({length:7},(_,d)=>dayPlannedHours(w,d)).reduce((n,h)=>n+h,0)+weeklyExtra.filter(b=>b.w===w&&scheduleEnabled(b.p,b.t)&&!fixed.some(f=>f.p===b.p&&f.t===b.t&&f.w===w&&eventDuration(f)>0)).reduce((n,b)=>n+b.h,0)}
 function futureBlocks(p,t){return blocks.filter(b=>b.p===p&&b.t===t&&b.w>=2&&!done[b.id]);}
-function syncTaskDone(p,t,flag){taskDone[keyFor(p,t)]=flag;if(flag){const future=futureBlocks(p,t);const extra=weeklyExtra.filter(x=>x.p===p&&x.t===t&&x.w>=2);if(future.length||extra.length)proposal={kind:'release',p,t,ids:future.map(x=>x.id),extra,hrs:future.reduce((s,b)=>s+(b.carried?0:b.h),0)+extra.reduce((s,x)=>s+x.h,0)};else proposal=null;}else proposal=null;renderAll();}
+function syncTaskDone(p,t,flag){const key=keyFor(p,t);if(flag&&!completions.has(key))completions.set(key,{p,t,w:openWeek,date:todayISO(),completedAt:new Date().toISOString()});if(!flag)completions.delete(key);taskDone[key]=flag;if(flag){const future=futureBlocks(p,t);const extra=weeklyExtra.filter(x=>x.p===p&&x.t===t&&x.w>=2);if(future.length||extra.length)proposal={kind:'release',p,t,ids:future.map(x=>x.id),extra,hrs:future.reduce((s,b)=>s+(b.carried?0:b.h),0)+extra.reduce((s,x)=>s+x.h,0)};else proposal=null;}else proposal=null;renderAll();}
 function renderSuggestion(){const target=$('#suggestion');if(!proposal){target.innerHTML='';return;}target.innerHTML=`<div class="reviewrow"><strong>${proposal.title||'Review Next Week'}</strong><p style="margin:8px 0">${proposal.text}</p>${weekResults(proposal.w)||'<p class="muted">No results recorded for this week yet.</p>'}${flowerCard(proposal.w)}<div class="actions"><button id="closeSuggestion">Close</button></div></div>`;const reveal=$('#revealFlower'),see=$('#seeFlower');if(reveal)reveal.onclick=()=>revealFlower(proposal.w);if(see)see.onclick=()=>showGarden(proposal.w);$('#closeSuggestion').onclick=()=>{proposal=null;renderSuggestion()}}
-function renderWeeks(){const container=$('#weeks');container.innerHTML=Array.from({length:Math.max(4,...capturedWeeks.values())},(_,i)=>weekNames[i]||weekLabel(i+1)).map((date,i)=>{const w=i+1,isOpen=openWeek===w,bs=blocks.filter(b=>b.w===w),ex=weeklyExtra.filter(x=>x.w===w),total=planHours(w),completed=bs.filter(b=>done[b.id]).reduce((s,b)=>s+(b.carried?0:b.h),0);const items=[];projects.forEach(p=>p.tasks.forEach((t,ti)=>{const h=taskHours(p.id,ti,w),isFixed=fixed.some(f=>f.w===w&&f.p===p.id&&f.t===ti);if(h||isFixed||(keyFor(p.id,ti)!=="4-3"&&capturedWeeks.get(keyFor(p.id,ti))===w))items.push({p:p.id,html:`<div class="weeklyitem ${taskDone[keyFor(p.id,ti)]?'checked':''}">${weeklyCheck(p.id,ti,w)}<b>${p.id}.${ti+1}</b><span class="taskname">${esc(t)}</span><em>${h?h+'h':fixed.some(f=>!f.w&&f.pendingWeek===w&&f.p===p.id&&f.t===ti)?'<span title="Date pending">📅 …</span>':isFixed?fixedTimingIcon(fixed.find(f=>f.w===w&&f.p===p.id&&f.t===ti)):capturedEstimates.has(keyFor(p.id,ti))?esc(capturedEstimates.get(keyFor(p.id,ti)))+' est. · Unscheduled':'Unscheduled'}</em></div>`})}));const days=isOpen?`<div class="dayarea"><div class="daygrid">${dayNames.map((dn,d)=>{const tasks=bs.filter(b=>b.d===d),events=fixed.filter(f=>f.w===w&&f.d===d),ddl=deadlines.filter(x=>x.w===w&&x.d===d),dayH=tasks.reduce((s,b)=>s+(b.carried?0:b.h),0)+events.reduce((sum,event)=>sum+(event.h||0),0),untimed=events.filter(event=>!event.h).length;return `<div data-drop-day="${d}" data-drop-week="${w}" class="day ${w===1&&d===1?'demo-today':''}"><h4>${dn} ${new Date(2026,10,2+i*7+d).getDate()} ${ddl.map(x=>`<span class="flag" title="${x.name}">⚑</span>`).join('')}</h4><div class="hours">${dayH}h planned${untimed?` <span title="${untimed} fixed event(s) without a duration" aria-label="${untimed} fixed event(s) without a duration">📅 ${untimed}</span>`:''}</div><div class="day-load" aria-hidden="true" title="Full bar = 8h"><i style="width:${Math.min(100,dayH/8*100)}%"></i></div>${events.map(f=>{const p=getP(f.p);return `<div class="block ${taskDone[keyFor(f.p,f.t)]?'finished':''}" style="--c:${p.color};--bg:${p.color}16"><div class="top"><span>${fixedTimingIcon(f)} ${f.p}.${f.t+1} ${f.name}</span></div><span class="status">${statusLabel(dayStatus(f.p,f.t,w,d))}</span><div class="mini" style="border:1px dashed ${p.color}"></div><label class="daily-controls">${weeklyCheck(f.p,f.t,w)} Done</label></div>`}).join('')}${tasks.filter(b=>!b.carried).map(b=>{const p=getP(b.p);return `<div ${canDrag(b)?'draggable="true" data-drag-block="'+b.id+'"':''} class="block ${taskDone[keyFor(b.p,b.t)]?'finished':''}" style="--c:${p.color};--bg:${p.color}16"><div class="top"><span>${b.p}.${b.t+1} ${esc(p.tasks[b.t])}</span></div><span class="status">${statusLabel(dayStatus(b.p,b.t,w,d))}</span><div class="meta"><span>${b.h}h</span>${b.carried||dailyResults.has(b.id)?'':`<button data-move="${b.id}" title="Move to another day">↔</button>`}</div><div class="mini"><i style="width:${Math.min(100,b.h/8*100)}%"></i></div>${dailyControls(b)}</div>`}).join('')}${tasks.some(b=>b.carried)?`<details class="day-updates"><summary>${tasks.filter(b=>b.carried).length} update(s)</summary>${tasks.filter(b=>b.carried).map(b=>{const p=getP(b.p);return `<div class="moved-history"><strong>${esc(p.tasks[b.t])}</strong><span>${dailyResults.get(b.id)==='worked'?'Progress made · Continued on':'Not done · Moved to'} ${dayNames[b.d+1]}</span><button data-undo="${b.id}">Undo</button></div>`;}).join('')}</details>`:''}${!tasks.length&&!events.length?'<div class="empty">No tasks</div>':''}</div>`}).join('')}</div>${ex.length?`<div class="unscheduled"><strong>Not scheduled to a day yet</strong>${ex.map(x=>`<span>${x.p}.${x.t+1} ${getP(x.p).tasks[x.t]} · ${x.h}h <button data-place="${weeklyExtra.indexOf(x)}">Schedule day</button></span>`).join('')}</div>`:''}</div>`:'';return `<div class="week ${isOpen?'active':''}"><div class="weekhead" data-week="${w}"><div class="weektitle"><strong>W${w} · ${date}</strong> ${w<=4?gardenLink(w):''} <p>${goals[i]||''}</p></div><div class="weekstats"><div class="numbers"><b>${total} / 35h planned</b></div></div><span>${isOpen?'⌃':'⌄'}</span></div>${days}${isOpen?`<div class="week-checklist"><div class="work-checklist"><strong>Weekly checklist</strong><div class="weeklylist" ${isOpen?'':'hidden'}>${projects.filter(p=>items.some(x=>x.p===p.id)).map(p=>{const effort=p.tasks.reduce((sum,_,ti)=>sum+taskHours(p.id,ti,w),0);return `<div class="weekproject"><div class="weekprojecttitle"><span class="weekprojectdot" style="background:${p.color}"></span>${esc(p.name)} <span class="project-effort">${p.tasks.reduce((sum,_,ti)=>sum+taskHours(p.id,ti,w),0)||''}${p.tasks.some((_,ti)=>taskHours(p.id,ti,w))?'h':fixed.filter(f=>f.p===p.id&&f.w===w).length+' fixed'}</span></div>${effort?`<div class="project-load" title="${effort}h of ${total}h planned this week"><i style="width:${effort/total*100}%;background:${p.color}"></i></div>`:''}${items.filter(x=>x.p===p.id).map(x=>x.html).join('')}</div>`;}).join('')||'<span class="empty">No allocations yet</span>'}</div>${weekResults(w)}</div>${personalPanel(w)}</div>`:' '}</div>`}).join('');document.querySelectorAll('[data-week]').forEach(el=>el.onclick=()=>{const w=+el.dataset.week;openWeek=openWeek===w?null:w;if(openWeek)$('#weekFilter').value=String(openWeek);renderAll()});document.querySelectorAll('[data-place]').forEach(el=>el.onclick=()=>{const idx=Number(el.dataset.place),x=weeklyExtra[idx];const answer=prompt('Schedule to day: 1=Mon ... 7=Sun','1');if(answer===null)return;const d=Number(answer)-1;if(d<0||d>6||!Number.isInteger(d)){alert('Choose 1–7');return}blocks.push({id:'new'+Date.now()+Math.random(),...x,d});weeklyExtra.splice(idx,1);renderAll()});document.querySelectorAll('[data-move]').forEach(el=>el.onclick=()=>{const id=el.dataset.move;const b=blocks.find(x=>x.id===id);const answer=prompt('Move to day (1=Mon ... 7=Sun), or W#:day (e.g. 2:4):',String(b.d+1));if(!answer)return;let w=b.w,d;if(answer.includes(':')){const a=answer.split(':').map(Number);w=a[0];d=a[1]-1}else d=Number(answer)-1;if(w>=1&&w<=4&&d>=0&&d<7){b.w=w;b.d=d;openWeek=w;$('#weekFilter').value=String(w);renderAll()}else alert('Choose W1–W4 and day 1–7.')})}
+const mobileDays=new Map();
+function dayDeadlines(w,d){
+  const day=(w-1)*7+d+2;
+  return [...deadlines.filter(item=>item.w===w&&item.d===d),
+    ...projects.filter(project=>project.id>7&&project.ddl===day).map(project=>({name:project.name}))];
+}
+function renderToday(w,d){
+  $('#todayDate').textContent=new Intl.DateTimeFormat('en',{timeZone:'Asia/Shanghai',weekday:'long',month:'short',day:'numeric'}).format(new Date());
+  let total=$('#todayPlanned');if(!total){total=document.createElement('span');total.id='todayPlanned';$('#todayDate').after(total)}
+  total.textContent=dayPlannedHours(w,d)+'h planned';
+  const tasks=$('#todayTasks');tasks.replaceChildren();
+  if($('#planView').dataset.view!=='today')return;
+  const day=$('#weeks').querySelector(`[data-drop-week="${w}"][data-drop-day="${d}"]`);
+  if(!day){tasks.textContent='Nothing scheduled today.';return}
+  const list=document.createElement('div');list.className='today-list day';
+  // Reuse Calendar order, identifiers, controls and their shared event binding.
+  day.querySelectorAll('[data-work-block],[data-work-fixed]').forEach(source=>{
+    const row=source.cloneNode(true),isFixed=!!row.dataset.workFixed;
+    const item=(isFixed?fixed:blocks).find(x=>x.id===(row.dataset.workBlock||row.dataset.workFixed));
+    row.classList.add('today-row');row.removeAttribute('draggable');row.removeAttribute('data-drag-block');
+    row.querySelectorAll('.mini,.status').forEach(x=>x.remove());
+    const project=document.createElement('span');project.className='today-project';project.textContent=getP(item.p).name;
+    row.querySelector('.top').after(project);
+    if(!isFixed&&taskDone[keyFor(item.p,item.t)]){
+      const title=row.querySelector('.top span');title.textContent='✓ '+title.textContent;
+    }
+    list.append(row);
+  });
+  if(!list.children.length)list.textContent='Nothing scheduled today.';
+  tasks.append(list);
+}
+function renderWeeks(){
+const offset=timelineDay(todayISO())-2;
+const todayWeek=currentWeek(),todayDay=offset-(todayWeek-1)*7;
+const view=$('#planView').dataset.view;
+const w=view==='today'?todayWeek:(openWeek??todayWeek);
+if(w===9999){$('#weeks').innerHTML=futurePlans();const offset=timelineDay(todayISO())-2;renderToday(currentWeek(),offset-(currentWeek()-1)*7);return}
+const bs=blocks.filter(b=>b.w===w&&scheduleEnabled(b.p,b.t));
+const container=$('#weeks');
+const days=`<div class="dayarea"><nav class="mobile-days" aria-label="Choose day">${dayNames.map((name,d)=>`<button type="button" data-mobile-day="${d}" data-mobile-week="${w}" aria-pressed="${d===(mobileDays.get(w)??(w===todayWeek?todayDay:0))}">${name.slice(0,3)}<br>${weekDate(w,d).getUTCDate()}</button>`).join('')}</nav><div class="daygrid">${dayNames.map((dn,d)=>{const tasks=bs.filter(b=>b.d===d),events=fixed.filter(f=>f.w===w&&f.d===d),ddl=dayDeadlines(w,d),dayH=dayPlannedHours(w,d),untimed=events.filter(event=>!eventDuration(event)).length;return `<div data-mobile-current="${d===(mobileDays.get(w)??(w===todayWeek?todayDay:0))}" data-drop-day="${d}" data-drop-week="${w}" class="day ${w===todayWeek&&d===todayDay?'demo-today':''}"><h4>${dn} ${weekDate(w,d).getUTCDate()} ${ddl.map(x=>`<span class="flag" title="${esc(x.name)}">⚑</span>`).join('')}</h4><div class="hours">${dayH}h planned${untimed?` <span title="${untimed} fixed event(s) without a duration" aria-label="${untimed} fixed event(s) without a duration">📅 ${untimed}</span>`:''}</div>${events.map(f=>{const p=getP(f.p);return `<div data-work-fixed="${f.id}" tabindex="0" role="group" aria-label="Edit event: ${esc(f.name)}" class="block ${taskDone[keyFor(f.p,f.t)]?'finished':''}" style="--c:${p.color};--bg:${p.color}16"><div class="top"><span>${fixedTimingIcon(f)} ${f.p}.${f.t+1} ${esc(f.name)}${eventDetail(f)?' · '+esc(eventDetail(f)):''}</span></div><span class="status">${statusLabel(dayStatus(f.p,f.t,w,d))}</span><label class="daily-controls">${weeklyCheck(f.p,f.t,w)} Done</label></div>`}).join('')}${tasks.map(b=>{const p=getP(b.p);return `<div ${canDrag(b)?'draggable="true" data-drag-block="'+b.id+'"':''} data-work-block="${b.id}" tabindex="0" role="group" aria-label="Edit work block: ${esc(p.tasks[b.t])}" class="block ${blockIsComplete(b)?'finished':dailyResults.get(b.id)==='worked'?'worked':b.carried?'carried':''}" style="--c:${p.color};--bg:${p.color}16"><div class="top"><span>${b.p}.${b.t+1} ${esc(p.tasks[b.t])}</span></div><span class="status">${statusLabel(dayStatus(b.p,b.t,w,d))}</span><div class="meta"><span>${b.h}h</span></div><div class="mini" title="${b.h}h planned · full bar = 8h" aria-hidden="true"><i style="width:${Math.min(100,b.h/8*100)}%"></i></div>${dailyControls(b)}</div>`}).join('')}${!tasks.length&&!events.length?'<div class="empty">No tasks</div>':''}</div>`}).join('')}</div></div>`;
+container.innerHTML=view==='week'?`
+  <div class="week-navigation">
+    <div><strong>${weekCode(w)} · ${weekLabel(w)}</strong> · ${planHours(w)}h planned</div>
+    <nav aria-label="Week navigation"><button type="button" data-open-plan="${w-1}">Previous week</button><button type="button" data-open-plan="${todayWeek}">This week</button><button type="button" data-open-plan="${w+1}">Next week</button></nav>
+  </div>
+  <div class="week-workspace">
+    <section aria-label="Calendar"><strong>Calendar</strong>${days}</section>
+    <div class="checklist-and-note"><section aria-label="Weekly checklist"><div class="weekly-checklist-heading"><strong>Weekly checklist</strong>${weeklySummary(w)}</div><div class="compact-checklist">${weeklyTasks(w)}</div></section>${personalPanel(w)}</div>
+  </div>`:days;
+renderToday(todayWeek,todayDay);
+document.querySelectorAll('[data-open-plan]').forEach(button=>button.onclick=()=>{
+  openWeek=Number(button.dataset.openPlan);
+  $('#weekFilter').value=String(openWeek);
+  showView('week');
+});
+document.querySelectorAll('[data-pick-day]').forEach(button=>button.onclick=()=>{
+  const [,project,task,week]=button.dataset.pickDay.match(/^(\d+)-(\d+)-(-?\d+)$/);
+  const [p,t,w]=[project,task,week].map(Number);
+  const index=weeklyExtra.findIndex(x=>x.p===p&&x.t===t&&x.w===w);
+  const extra=weeklyExtra[index];
+  const dialog=$('#project-editor');
+  dialog.innerHTML=`<strong>${esc(getP(p).tasks[t])} · ${weekCode(w)}</strong>
+    <p><label>Day <select>${dayNames.map((name,d)=>`<option value="${d}">${name} ${weekDate(w,d).getUTCDate()}</option>`).join('')}</select></label></p>
+    <p><label>Planned hours <input type="number" min="0.01" step="any" required ${extra?`max="${extra.h}"`:''} value="${extra?.h??''}"></label></p>
+    <button type="button" data-cancel>Cancel</button> <button type="button" data-save>Schedule</button>`;
+  const hours=dialog.querySelector('input');
+  dialog.querySelector('[data-cancel]').onclick=()=>dialog.close();
+  dialog.querySelector('[data-save]').onclick=()=>{
+    if(!hours.reportValidity())return;
+    const d=Number(dialog.querySelector('select').value);
+    blocks.push({id:'new'+Date.now()+Math.random(),p,t,w,d,h:hours.valueAsNumber});
+    if(extra){
+      extra.h-=hours.valueAsNumber;
+      if(extra.h<=1e-9)weeklyExtra.splice(index,1);
+    }
+    mobileDays.set(w,d);
+    dialog.close();renderAll();
+  };
+  dialog.showModal();
+});
+document.querySelectorAll('[data-mobile-day]').forEach(button=>button.onclick=()=>{
+  mobileDays.set(+button.dataset.mobileWeek,+button.dataset.mobileDay);
+  renderAll();
+  document.querySelector('[data-mobile-day="'+button.dataset.mobileDay+'"]')?.focus();
+});
+document.querySelectorAll('[data-move]').forEach(button=>button.onclick=()=>{
+  const block=blocks.find(b=>b.id===button.dataset.move);
+  const dialog=$('#project-editor');
+  dialog.innerHTML=`<strong>Move to…</strong><p><label>Date <input type="date" required value="${weekDate(block.w,block.d).toISOString().slice(0,10)}"></label></p><button type="button" data-cancel>Cancel</button> <button type="button" data-save>Move</button>`;
+  const date=dialog.querySelector('input');
+  dialog.querySelector('[data-cancel]').onclick=()=>dialog.close();
+  dialog.querySelector('[data-save]').onclick=()=>{
+    if(!date.reportValidity())return;
+    const offset=timelineDay(date.value)-2;
+    block.w=Math.floor(offset/7)+1;
+    block.d=offset-(block.w-1)*7;
+    mobileDays.set(block.w,block.d);
+    openWeek=block.w;
+    $('#weekFilter').value=String(openWeek);
+    dialog.close();renderAll();
+  };
+  dialog.showModal();
+})}
 const completions = new Map();
 const dailyResults = new Map();
 function toggleCompletion(p,t,w,day) {
   const key=keyFor(p,t);
   if(completions.has(key)) completions.delete(key);
-  else completions.set(key,{p,t,w,day});
+  else completions.set(key,{p,t,w,day,date:todayISO(),completedAt:new Date().toISOString()});
   taskDone[key]=completions.has(key);
   renderAll();
 }
@@ -169,10 +594,10 @@ function weeklyCheck(p,t,w) {
 }
 function dailyControls(b) {
   const result=dailyResults.get(b.id);
-  const next=b.d<6 && blocks.some(x=>x.w===b.w&&x.d===b.d+1&&x.p===b.p&&x.t===b.t);
+  const next=blocks.some(x=>x.w===b.w+(b.d===6?1:0)&&x.d===(b.d+1)%7&&x.p===b.p&&x.t===b.t&&!x.carried);
   const finished=!!taskDone[keyFor(b.p,b.t)];
-  return `<div class="daily-controls">${[['finished','✓','Finished'],['worked','−','Worked on it'],['not','×','Not done']].map(([value,icon,label])=>`<button data-result="${b.id}" data-value="${value}" aria-label="${label}" title="${label}" aria-pressed="${value==='finished'?finished:result===value&&!finished}">${icon}</button>`).join('')}</div>${
-    result&&!finished?(b.carried?'Moved · <button data-undo="'+b.id+'">Undo</button>':next?'Already planned tomorrow':b.d===6?'Review Next Week':`<button data-carry="${b.id}">${result==='worked'?'Continue':'Move'} on ${dayNames[b.d+1]}</button>`):''
+  return `<div class="daily-controls">${[['finished','✓','Finished']].map(([value,icon,label])=>`<button data-result="${b.id}" data-value="${value}" aria-label="${label}" title="${label}" aria-pressed="${value==='finished'?finished:result===value&&!finished}">${icon}</button>`).join('')}</div>${
+    false?(b.carried?(result==='worked'?'Continues tomorrow':'Moved')+' · <button data-undo="'+b.id+'">Undo</button>':next?'Already planned tomorrow':b.d===6?'Review Next Week':`<button data-carry="${b.id}">${result==='worked'?'Continue':'Move'} on ${dayNames[b.d+1]}</button>`):''
   }`;
 }
 function refreshPlan() {
@@ -182,15 +607,24 @@ function refreshPlan() {
 function bindProgress() {
   document.querySelectorAll('[data-complete]').forEach(el=>{
     el.onclick=e=>e.stopPropagation();
-    el.onchange=()=>toggleCompletion(...el.dataset.complete.split('-').map(Number));
+    el.onchange=()=>toggleCompletion(...el.dataset.complete.match(/^(\d+)-(\d+)-(-?\d+)$/).slice(1).map(Number));
   });
-  document.querySelectorAll('[data-result]').forEach(el=>el.onclick=()=>{
-    const b=blocks.find(x=>x.id===el.dataset.result);
+  document.querySelectorAll('[data-result]').forEach(el=>el.onclick=e=>{
+    e?.stopPropagation();const b=blocks.find(x=>x.id===el.dataset.result);
     const value=el.dataset.value;
     if(value==='finished') {toggleCompletion(b.p,b.t,b.w,b.d);return;}
     if(taskDone[keyFor(b.p,b.t)]||b.carried)return;
     if(dailyResults.get(b.id)===value) dailyResults.delete(b.id);
-    else dailyResults.set(b.id,value);
+    else {
+      dailyResults.set(b.id,value);
+      if(value==='worked'){
+        const w=b.w+(b.d===6?1:0),d=(b.d+1)%7;
+        if(!blocks.some(x=>x.w===w&&x.d===d&&x.p===b.p&&x.t===b.t&&!x.carried)){
+          b.carried='carry-'+b.id;
+          blocks.push({...b,id:b.carried,w,d,carried:null});
+        }
+      }
+    }
     renderAll();
   });
   document.querySelectorAll('[data-carry]').forEach(el=>el.onclick=()=>{
@@ -202,7 +636,7 @@ function bindProgress() {
   document.querySelectorAll('[data-undo]').forEach(el=>el.onclick=()=>{
     const b=blocks.find(x=>x.id===el.dataset.undo);
     const next=blocks.find(x=>x.id===b.carried);
-    if(next.carried||dailyResults.has(next.id)||taskDone[keyFor(b.p,b.t)])return;
+    if(!next||next.carried||dailyResults.has(next.id)||taskDone[keyFor(b.p,b.t)])return;
     blocks.splice(blocks.indexOf(next),1);
     b.carried=null;
     renderAll();
@@ -214,104 +648,31 @@ function weekResults(w){
   if(!entries.length&&!progress.length)return '';
   return `<div class="week-results"><strong>${entries.length} completed</strong>${entries.map(x=>`<span>✓ ${esc(getP(x.p).tasks[x.t])}</span>`).join('')}${progress.length?`<span>${progress.length} work session${progress.length===1?'':'s'} advanced</span>`:''}</div>`;
 }
-let gardenWeek=null;
-const planted=new Set();
-const flowers=[['Daisy','#fffdf0'],['Cosmos','#efb1c4'],['Marigold','#f7bb56'],['Aster','#c7b7eb']];
-function revealFlower(w){
-  planted.add(w);
-  renderAll();
-  const art=$('#gardenView .specimen-art svg');
-  if(art)art.classList.add('flower-bloom');
+function inWeeklyChecklist(pid,tid,w,h=taskHours(pid,tid,w),isFixed=fixed.some(f=>f.w===w&&f.p===pid&&f.t===tid)){
+  const key=keyFor(pid,tid);
+  return scheduleEnabled(pid,tid,true)&&Boolean(h||isFixed||(key!=='4-3'&&capturedWeeks.get(key)===w));
 }
-function flowerCard(w){
-  if(!w)return '';
-  return planted.has(w)
-    ? `<div class="flower-reveal"><strong>${flowers[w-1][0]} planted</strong><button id="seeFlower">View in Garden →</button></div>`
-    : '<button class="flower-reveal" id="revealFlower">✧ Reveal this week’s flower</button>';
+function weekComplete(w){
+  const keys=projects.flatMap(p=>p.tasks.flatMap((_,t)=>inWeeklyChecklist(p.id,t,w)?[keyFor(p.id,t)]:[]));
+  return keys.length>0&&keys.every(key=>completions.has(key));
 }
-function gardenRecord(w){
-  const finished=[...completions.values()].filter(x=>x.w===w);
-  const progress=new Map();
-  blocks.filter(b=>b.w===w&&dailyResults.get(b.id)==='worked').forEach(b=>{
-    const k=keyFor(b.p,b.t);
-    const item=progress.get(k)||{p:b.p,t:b.t,count:0};
-    item.count++;
-    progress.set(k,item);
+function showView(view){
+  $('#todayView').classList.toggle('off',view!=='today');
+  $('#planView').classList.toggle('off',view==='today');
+  $('#planView').dataset.view=view;
+  document.querySelectorAll('.workspace-tabs button').forEach(button=>{
+    button.setAttribute('aria-pressed',String(button.dataset.view===view));
   });
-  const bloom=w===1&&finished.some(x=>x.p===2&&x.t===2);
-  return {finished,progress:[...progress.values()],bloom};
+  renderAll();
 }
-function botanicalArt(stage,w){
-  return `<svg viewBox="0 0 140 122" aria-hidden="true">
-    <ellipse cx="70" cy="110" rx="39" ry="4" fill="#e9e1cd"/>
-    ${stage==='seed'?'<ellipse cx="70" cy="101" rx="9" ry="5" transform="rotate(-24 70 101)" fill="#ad8961"/>':`
-    <path d="M70 108 Q59 76 70 42" fill="none" stroke="#527454" stroke-width="2"/>
-    <path d="M65 86 Q40 87 35 63 Q57 62 65 86Z" fill="#87a67b"/>
-    <path d="M65 76 Q70 55 96 53 Q93 74 65 76Z" fill="#a1b98a"/>
-    ${stage==='bloom'?Array.from({length:9},(_,i)=>`<ellipse cx="70" cy="24" rx="6" ry="14" transform="rotate(${i*40} 70 42)" fill="${flowers[w-1][1]}" stroke="#cdbd96"/>`).join('')+'<circle cx="70" cy="42" r="8" fill="#d5a34e"/>':''}`}
-  </svg>`;
-}
-function gardenStage(record,w){
-  return planted.has(w)?'bloom':record.finished.length||record.progress.length?'sprout':'seed';
-}
-function gardenLink(w){
-  const stage=gardenStage(gardenRecord(w),w);
-  return `<button class="garden-link" data-garden="${w}" title="View in Garden W${w}" aria-label="View in Garden W${w}">${botanicalArt(stage,w)}</button>`;
-}
-function showGarden(w=null){
-  gardenWeek=w;
-  $('#planView').classList.add('off');
-  $('#gardenView').classList.remove('off');
-  $('#planTab').setAttribute('aria-pressed','false');
-  $('#gardenTab').setAttribute('aria-pressed','true');
-  renderGarden();
-}
-function renderGarden(){
-  const view=$('#gardenView');
-  const weeks=weekNames.map((_,i)=>i+1).reverse();
-  view.innerHTML=`<div class="garden-heading"><svg class="garden-landscape" viewBox="0 0 600 175" aria-hidden="true">
-<circle cx="470" cy="38" r="25" fill="#f3ce83" opacity=".65"/>
-<path d="M0 142Q98 31 237 118Q348 36 600 100V175H0Z" fill="#c5d5b3"/>
-<path d="M0 145Q157 76 282 146Q450 76 600 126V175H0Z" fill="#91ac83"/>
-<path d="M0 157Q173 131 275 165Q455 116 600 143V175H0Z" fill="#72946e"/>
-<path d="M321 175Q435 145 468 142Q466 148 377 175Z" fill="#eddbb3"/>
-<path d="M508 117l17-25 28 4 13 23z" fill="#a66f57"/><path d="M515 117h43v24h-43z" fill="#e9d6a8"/><path d="M538 125h9v16h-9z" fill="#8e735c"/>
-<g fill="#fff6ce">${Array.from({length:24},(_,i)=>`<circle cx="${(i*73)%590+5}" cy="${157+i%5*3}" r="${1+i%3*.4}"/>`).join('')}</g>
-</svg><span>WEEKWISE · NOVEMBER 2026</span><h2>Weekly Garden</h2><p>One flower for each week you wrap up. Select a plot to revisit that week.</p></div>${
-    gardenWeek?gardenDetail(gardenWeek):`<div class="garden-grid">${weeks.map(w=>{
-      const r=gardenRecord(w),stage=gardenStage(r,w);
-      const caption=r.finished[0]?'Completed '+getP(r.finished[0].p).tasks[r.finished[0].t]:r.progress[0]?'Made progress on '+getP(r.progress[0].p).tasks[r.progress[0].t]:'Waiting for the first update';
-      return `<button class="specimen" data-open-specimen="${w}">${botanicalArt(stage,w)}<span>W${w} · ${weekNames[w-1]}</span><strong>${stage==='bloom'?flowers[w-1][0]:stage==='sprout'?'Sprout':'Seed'}</strong><small>${esc(caption)}</small></button>`;
-    }).join('')}</div>`
-  }`;
-  document.querySelectorAll('[data-garden]').forEach(btn=>btn.onclick=e=>{e.stopPropagation();showGarden(Number(btn.dataset.garden))});
-  view.querySelectorAll('[data-open-specimen]').forEach(btn=>btn.onclick=()=>showGarden(Number(btn.dataset.openSpecimen)));
-  const draw=view.querySelector('[data-garden-reveal]');
-  if(draw)draw.onclick=()=>revealFlower(Number(draw.dataset.gardenReveal));
-  const back=$('#gardenBack');
-  if(back)back.onclick=()=>showGarden();
-}
-function gardenDetail(w){
-  const r=gardenRecord(w),stage=gardenStage(r,w);
-  return `<button id="gardenBack">← Back to Garden</button><article class="specimen-detail"><div class="specimen-art">${botanicalArt(stage,w)}</div><div><div class="muted">W${w} · ${weekNames[w-1]}</div><h3>${stage==='bloom'?flowers[w-1][0]:stage==='sprout'?'Sprout':'Seed'}</h3>
-    ${planted.has(w)?'':`<button class="flower-reveal" data-garden-reveal="${w}">✧ Reveal this week’s flower</button>`}<h4>Completed · ${r.finished.length}</h4>${r.finished.map(x=>`<p>✓ ${esc(getP(x.p).tasks[x.t])} <small>· ${esc(getP(x.p).name)}</small></p>`).join('')||'<p class="muted">No completions yet.</p>'}
-    <h4>Progress · ${r.progress.length}</h4>${r.progress.map(x=>`<p>${esc(getP(x.p).tasks[x.t])} · ${x.count} sessions</p>`).join('')||'<p class="muted">No progress recorded yet.</p>'}
-    ${w===1?`<div class="garden-milestone">${r.bloom?'✿ Weekly milestone reached':'Weekly milestone'} · Submit the Science Advances review</div>`:''}
-  </div></article>`;
-}
-$('#gardenTab').onclick=()=>showGarden();
-$('#planTab').onclick=()=>{
-  $('#gardenView').classList.add('off');
-  $('#planView').classList.remove('off');
-  $('#planTab').setAttribute('aria-pressed','true');
-  $('#gardenTab').setAttribute('aria-pressed','false');
-  requestAnimationFrame(drawLinks);
-};
+document.querySelectorAll('.workspace-tabs button').forEach(button=>{
+  button.onclick=()=>showView(button.dataset.view);
+});
 function renderUnassigned(){
   const pending=projects.flatMap(p=>p.tasks.flatMap((name,t)=>{
     const key=keyFor(p.id,t);
-    if(key==='4-3'||taskDone[key]||capturedWeeks.has(key)||blocks.some(b=>b.p===p.id&&b.t===t)||fixed.some(f=>f.p===p.id&&f.t===t)||weeklyExtra.some(x=>x.p===p.id&&x.t===t))return [];
-    return [`<div>${esc(p.name)} · ${p.id}.${t+1} ${esc(name)} ${esc(capturedEstimates.get(key)||'')} <select data-assign-week="${key}" aria-label="Assign ${esc(name)} to a week"><option value="">Choose week</option>${Array.from({length:8},(_,i)=>`<option value="${i+1}">${weekLabel(i+1)}</option>`).join('')}</select></div>`];
+    if(taskKind(p.id,t)==='waiting'||key==='4-3'||taskDone[key]||capturedWeeks.has(key)||blocks.some(b=>b.p===p.id&&b.t===t)||fixed.some(f=>f.p===p.id&&f.t===t)||weeklyExtra.some(x=>x.p===p.id&&x.t===t))return [];
+    return [`<div>${esc(p.name)} · ${p.id}.${t+1} ${esc(name)} ${esc(capturedEstimates.get(key)||'')} <select data-assign-week="${key}" aria-label="Assign ${esc(name)} to a week"><option value="">Choose week</option>${weekOptions()}</select></div>`];
   }));
   $('#unassigned').innerHTML=pending.length?`<details class="planning-notes"><summary>${pending.length} tasks without a week</summary>${pending.join('')}</details>`:'';
   document.querySelectorAll('[data-assign-week]').forEach(el=>el.onchange=()=>{
@@ -322,31 +683,17 @@ function renderUnassigned(){
   });
 }
 const storageKey='weekwise.workspace.v1';
-function saveWorkspace(){
-  try {
-    localStorage.setItem(storageKey,JSON.stringify({
-      projects,blocks,fixed,weeklyExtra,openWeek,
-      capturedWeeks:[...capturedWeeks],capturedEstimates:[...capturedEstimates],
-      completions:[...completions],dailyResults:[...dailyResults],planted:[...planted]
-    }));
-  } catch {}
-}
+function saveWorkspace(){return false} // Disabled until the authoritative store is ready.
 function restoreWorkspace(){
-  try {
-    const state=JSON.parse(localStorage.getItem(storageKey));
-    if(!state)return;
-    for(const [target,source] of [[projects,state.projects],[blocks,state.blocks],[fixed,state.fixed],[weeklyExtra,state.weeklyExtra]]) target.splice(0,target.length,...source);
-    for(const [target,source] of [[capturedWeeks,state.capturedWeeks],[capturedEstimates,state.capturedEstimates],[completions,state.completions],[dailyResults,state.dailyResults]]) {
-      for(const [key,value] of source)target.set(key,value);
-    }
-    for(const week of state.planted)planted.add(week);
-    for(const key of completions.keys())taskDone[key]=true;
-    openWeek=state.openWeek;
-  } catch {}
+ const state=diLoaded?.workspace||JSON.parse(localStorage.getItem(storageKey)||'null');if(!state)return;
+ for(const [target,source] of [[projects,state.projects],[blocks,state.blocks],[fixed,state.fixed],[weeklyExtra,state.weeklyExtra]])target.splice(0,target.length,...source);
+ for(const [target,source] of [[capturedWeeks,state.capturedWeeks],[capturedEstimates,state.capturedEstimates],[completions,state.completions],[dailyResults,state.dailyResults]]){target.clear();for(const pair of source)target.set(...pair)}
+ for(const key of completions.keys())taskDone[key]=true;openWeek=state.openWeek;
 }
 restoreWorkspace();
+openWeek=currentWeek();
 function canDrag(b){
-  return !b.carried&&!dailyResults.has(b.id)&&!taskDone[keyFor(b.p,b.t)];
+  return !b.carried&&scheduleEnabled(b.p,b.t);
 }
 function bindDrag(){
   let moving;
@@ -369,7 +716,13 @@ function bindDrag(){
     day.ondrop=e=>{
       if(!accepts())return;
       e.preventDefault();
+      const targetCard=Array.from(day.querySelectorAll('[data-drag-block]'))
+        .filter(card=>card.dataset.dragBlock!==moving.id)
+        .find(card=>{const rect=card.getBoundingClientRect();return e.clientY<rect.top+rect.height/2});
+      blocks.splice(blocks.indexOf(moving),1);
       moving.d=d;
+      const targetIndex=targetCard?blocks.findIndex(block=>block.id===targetCard.dataset.dragBlock):blocks.length;
+      blocks.splice(targetIndex,0,moving);
       renderAll();
     };
   });
@@ -377,85 +730,245 @@ function bindDrag(){
 function personalPanel(w){
   return `<aside class="personal-plans"><strong>Personal plans</strong><details class="brain-dump"><summary>＋ Brain dump</summary><form id="personal-form"><input name="item" aria-label="Personal plan" placeholder="What's on your mind?" required><select name="when" aria-label="When"><option value="today">Today</option><option value="week">This week</option><option value="date">Pick a date</option></select><input type="date" name="date" aria-label="Date" hidden><button type="button" id="personal-add">Add</button><small role="status"></small></form></details><div id="personal-list" data-week="${w}"></div></aside>`;
 }
-let personalSessionEntries;
-function bindBrainDump(){
-  const list=$('#personal-list');
-  if(!list)return;
-  const form=$('#personal-form'), week=Number(list.dataset.week);
-  const key='weekwise-personal-plans';
-  let entries=[];
-  try {const saved=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(saved))entries=saved} catch {}
-  entries=personalSessionEntries||entries;
-  const dateLabel=new Intl.DateTimeFormat('en',{weekday:'short',day:'numeric',month:'short'});
-  const show=()=>{
-    const rows=entries.filter(item=>item.week===week).sort((a,b)=>(a.date||'~').localeCompare(b.date||'~')).map(item=>`<tr><td>${item.date?dateLabel.format(new Date(item.date+'T12:00')):'This week'}</td><td>${esc(item.text)}</td></tr>`) .join('');
-    list.innerHTML=`<table class="personal-table"><thead><tr><th scope="col">When</th><th scope="col">Plan</th></tr></thead><tbody>${rows||'<tr><td colspan="2">No personal plans yet</td></tr>'}</tbody></table>`;
-  };
-  show();
-  const input=form.elements;
-  const itemField=input.namedItem("item");
-  input.when.onchange=()=>{input.date.hidden=input.when.value!=='date';input.date.required=!input.date.hidden};
-  const add=()=>{
-    if(!form.reportValidity())return;
-    const text=itemField.value.trim();
-    if(!text)return;
-    const date=input.when.value==='today'?'2026-11-03':input.when.value==='date'?input.date.value:'';
-    const target=date?Math.floor((Date.parse(date)-Date.UTC(2026,10,2))/604800000)+1:week;
-    const status=form.querySelector('[role=status]');
-    if(target<1||target>4){status.textContent='Choose a date within the 4-week plan.';return}
-    const next=[...entries,{text,date,week:target}];
-    let saved=true;
-    try {localStorage.setItem(key,JSON.stringify(next))} catch {saved=false}
-    entries=personalSessionEntries=next;
-    itemField.value='';
-    status.textContent=(target===week?'Added':'Added to W'+target)+(saved?'':' · Available until reload');
-    if(target!==week){openWeek=target;$('#weekFilter').value=String(target);renderAll();return}
-    show();
-  };
-  $('#personal-add').onclick=add;
-  itemField.onkeydown=e=>{if(e.key==='Enter'&&!e.isComposing){e.preventDefault();add()}};
-}
-function renderAll(){saveWorkspace();renderCards();renderTimeline();renderWeeks();bindBrainDump();bindDrag();bindProgress();renderSuggestion();renderGarden();renderUnassigned();document.querySelectorAll('[data-task-week]').forEach(el=>el.onchange=()=>{if(!el.value)return;capturedWeeks.set(el.dataset.taskWeek,Number(el.value));renderAll()})}
-$('#weekFilter').onchange=()=>{const w=$('#weekFilter').value;if(w!=='all')openWeek=Number(w);renderAll()};$('#sort').onchange=renderAll;$('#hide').onchange=()=>{if(selected&&!active(getP(selected)))selected=null;renderAll()};$('#four').onclick=()=>{range=4;$('#four').classList.add('active');$('#eight').classList.remove('active');renderTimeline()};$('#eight').onclick=()=>{range=8;$('#eight').classList.add('active');$('#four').classList.remove('active');renderTimeline()};$('#projectsToggle').onclick=()=>{
-  const collapsed=$('#planView').classList.toggle('projects-collapsed');
-  $('#projectsToggle').setAttribute('aria-expanded',String(!collapsed));
-  $('#projectsToggle').textContent=collapsed?'Show Timeline':'Focus on this week';
-  requestAnimationFrame(drawLinks);
-};
-window.addEventListener('resize',()=>requestAnimationFrame(drawLinks));renderAll();
+function bindBrainDump(){} // Legacy personal plans are read only during migration.
+$('#hide-completed').onchange=renderAll;
+function renderAll(){refreshWeekFilter();if($('#hide-completed').checked&&selected&&projectCompletion(getP(selected)))selected=null;saveWorkspace();renderCards();renderTimeline();renderWeeks();bindBrainDump();bindDrag();bindProgress();renderSuggestion();renderUnassigned();document.querySelectorAll('[data-task-week]').forEach(el=>el.onchange=()=>{if(!el.value)return;assignTaskWeek(el.dataset.taskWeek,Number(el.value))})}
+document.querySelectorAll('#timeline-overview,#timeline-focus').forEach(button=>button.onclick=()=>{timelineMode=button.id==='timeline-focus'?'focus':'overview';document.querySelectorAll('#timeline-overview,#timeline-focus').forEach(x=>x.setAttribute('aria-pressed',String(x===button)));renderTimeline()});
+$('#weekFilter').onchange=()=>{const value=$('#weekFilter').value;if(value!=='all'){openWeek=Number(value);showView('week')}else renderAll()};$('#sort').onchange=renderAll;$('#hide').onchange=()=>{if(selected&&!active(getP(selected)))selected=null;renderAll()};$('#four').onclick=()=>{range=4;$('#four').classList.add('active');$('#eight').classList.remove('active');renderTimeline()};$('#eight').onclick=()=>{range=8;$('#eight').classList.add('active');$('#four').classList.remove('active');renderTimeline()};
+renderAll();
 
-// Capture prototype: deterministic parsing of demonstrated patterns, not an AI parser.
-const captureExamples={both:'TopoAsia 新增 Prepare talk，2–6h，分两天\nTopoAsia talk 改到 Nov 7，具体时间未定',new:'TopoAsia 新增 Prepare talk，2–6h，分两天',update:'TopoAsia talk 改到 Nov 7，具体时间未定'};
-let captureChanges=[];
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function captureOpen(){ $('#captureModal').classList.remove('off');$('#captureText').value=captureExamples.both;captureEdit(); }
-function captureEdit(){captureChanges=[];$('#capturePreview').innerHTML='';$('#captureError').classList.add('off');$('#captureText').classList.remove('off');$('.capture-examples').classList.remove('off');$('.capture-hint').classList.remove('off');$('#captureParse').classList.remove('off');$('#captureApply').classList.add('off');$('#captureBack').classList.add('off');}
-function parseCapture(text){const out=[],errors=[];text.split(/\n+/).map(x=>x.trim()).filter(Boolean).forEach((line,i)=>{const id=line.match(/^\s*(\d+)\.(\d+)\b/);
-if(id){
- const p=+id[1],t=+id[2]-1;
- const event=fixed.find(f=>f.p===p&&f.t===t);
- const match=line.match(/(?:Nov(?:ember)?\s*|11\s*月\s*|11[\/.-])(\d{1,2})/i);
- const day=match?+match[1]:null;
- if(!event|| (day===null?!/待定|未定|pending|tbd/i.test(line):day<2||day>29)){
-   errors.push(`Line ${i+1}: Use a fixed task number and Nov 2–29 or “date pending”.`);return;
+
+const V9_KEY='weekwise.workspace.v9', V9_BACKUP='weekwise.backup.before-v9';
+const uid=()=>crypto.randomUUID();
+let v9, storageFailure='';
+function v9Read(key){const raw=localStorage.getItem(key);return raw?JSON.parse(raw):null}
+try{
+ v9=diLoaded;
+ if(!v9){
+  backupIntegrity('migration');
+  const raw=localStorage.getItem('weekwise-personal-plans'),items=raw?JSON.parse(raw):[];
+  if(!Array.isArray(items)||items.some(x=>!x||typeof x.text!=='string'||x.date&&!validDate(x.date)))throw Error('Invalid personal plans');
+  v9={schemaVersion:9,dateOrigin:'2026-11-02',workspace:JSON.parse(localStorage.getItem(storageKey)||'null')||undefined,tasks:items.map((x,i)=>({...x,id:'legacy-personal-'+i,name:x.text,date:x.date||null,week:x.week||null,hours:null,deadline:null,completedAt:x.completedAt||null})),subtasks:{}};
  }
- out.push({type:'update',p,t,day,time:/下午|afternoon/i.test(line)?'Afternoon':'Time TBD',checked:true});return;
+}catch(error){diBlocked=true;integrityError('Migration stopped. Original data preserved. '+error.message);throw error}
+// dateOrigin is migration metadata, not a current-month constraint. Old ordinal
+// coordinates stay lossless; every date/week conversion uses this persisted origin.
+const originMs=()=>Date.parse(v9.dateOrigin+'T00:00:00Z');
+weekDate=(w,d=0)=>new Date(originMs()+((w-1)*7+d)*86400000);
+timelineDay=date=>2+(Date.parse(date+'T00:00:00Z')-originMs())/86400000;
+markerDate=day=>new Date(originMs()+(day-2)*86400000).toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'});
+const dateWeek=date=>Math.floor((timelineDay(date)-2)/7)+1;
+function syncIdentities(){for(const p of projects){p.stableId||='project-'+p.id;p.tasks.forEach((name,t)=>{const key=keyFor(p.id,t);const record=v9.subtasks[key]||={id:uid()};record.name=name;record.projectId=p.stableId;record.estimatedHours??=parseFloat(capturedEstimates.get(key))||blocks.filter(b=>b.p===p.id&&b.t===t&&!b.carried).reduce((n,b)=>n+b.h,0)+weeklyExtra.filter(b=>b.p===p.id&&b.t===t).reduce((n,b)=>n+b.h,0); const completed=completions.get(key);record.completedAt=completed?(completed.completedAt||record.completedAt||((completed.date||todayISO())+'T00:00:00+08:00')):null;if(completed)completed.completedAt=record.completedAt;})}}
+const originalSave=saveWorkspace;
+function snapshotV9(){syncIdentities();return {...v9,schemaVersion:9,dateOrigin:v9.dateOrigin,tasks:v9.tasks,subtasks:v9.subtasks,workspace:{...(v9.workspace||{}),projects,blocks,fixed,deadlines,weeklyExtra,openWeek,capturedWeeks:[...capturedWeeks],capturedEstimates:[...capturedEstimates],completions:[...completions],dailyResults:[...dailyResults]}}}
+function commitIntegrity(data){validateIntegrity(data);const raw=JSON.stringify(data);if(localStorage.getItem(V9_KEY)!==diLastRaw)throw Error('Workspace changed in another tab. Reload before saving.');localStorage.setItem(V9_KEY,raw);diLastRaw=raw;return true}
+saveWorkspace=()=>{if(!diReady||diBlocked)return false;try{commitIntegrity(snapshotV9());storageFailure='';const el=$('#v9-storage-error');if(el)el.textContent='';return true}catch(error){storageFailure='Changes are not saved. '+error.message;integrityError(storageFailure);return false}};
+function importIntegrity(data){validateIntegrity(data);const copy=JSON.parse(JSON.stringify(data));backupIntegrity('import');commitIntegrity(copy);return copy}
+function taskWeek(task){return task.date?dateWeek(task.date):task.week}
+function standaloneRow(task){return `<tr><td><input type="checkbox" data-v9-done="${task.id}" ${task.completedAt?'checked':''} aria-label="Complete ${esc(task.name)}"></td><td>${esc(task.name)}${task.completedAt?' ✓':''}</td><td>${esc(task.date|| (task.week?weekCode(task.week):'No week'))}${task.deadline?'<br>⚑ '+esc(task.deadline):''}</td><td>${task.hours??'—'}${task.hours?'h':''}</td><td><button class="icon-edit" data-v9-edit="${task.id}" title="Edit task" aria-label="Edit task">✎</button></td></tr>`}
+personalPanel=w=>`<aside class="personal-plans brain-note"><strong>清空大脑</strong><p>先写下来，不用现在安排。</p><textarea data-brain-input aria-label="清空大脑，一行一件事" placeholder="问姐姐周末安排&#10;买跑鞋&#10;预约牙医">${esc(v9.brainDump||'')}</textarea><div class="brain-note-footer"><small data-brain-status role="status">自动保存 · 跨周保留</small><button type="button" data-brain-organize>整理这些事 →</button></div><details class="brain-existing"><summary>已记录事项 · ${v9.tasks.length}</summary><div id="v9-tasks" data-tasks-week="${w}"></div></details></aside>`;
+bindBrainDump=()=>{};
+function bindV9(){
+document.querySelectorAll('[data-v9-done]').forEach(el=>el.onchange=()=>{v9.tasks.find(t=>t.id===el.dataset.v9Done).completedAt=el.checked?new Date().toISOString():null;renderAll()});document.querySelectorAll('[data-v9-edit]').forEach(el=>el.onclick=()=>openDraft(v9.tasks.find(t=>t.id===el.dataset.v9Edit)))}
+const originalRender=renderAll;
+renderAll=()=>{originalRender();const list=$('#v9-tasks');if(list){const w=+list.dataset.tasksWeek;const shown=v9.tasks.filter(t=>!taskWeek(t)||taskWeek(t)===w||(w===9999&&taskWeek(t)>=currentWeek()+4));list.innerHTML=`<table class="personal-table"><thead><tr><th>✓</th><th>Task</th><th>When</th><th>Hours</th><th></th></tr></thead><tbody>${shown.map(standaloneRow).join('')||'<tr><td colspan="5">No quick tasks.</td></tr>'}</tbody></table>`}
+ for(const task of v9.tasks){if(!task.date)continue;const w=dateWeek(task.date),d=(timelineDay(task.date)-2)%7;let day=document.querySelector(`[data-drop-week="${w}"][data-drop-day="${d}"]`);if(!day&&task.date===todayISO()&&$('#planView').dataset.view==='today')day=$('#todayTasks .day');if(day){const card=document.createElement('div');card.className='block'+(task.completedAt?' finished':'');card.style='--c:#789b77;--bg:#789b7716';card.innerHTML=`<div class="top">📅 ${esc(task.name)}</div><div class="meta">${task.hours?task.hours+'h':''}</div><label><input type="checkbox" data-v9-done="${task.id}" ${task.completedAt?'checked':''}> Done</label>`;day.append(card)}}
+
+ bindWorkPanel();bindWeeklyBlockProgress();bindV9();bindBrainNote();if(storageFailure){let status=$('#v9-storage-error');if(!status){status=document.createElement('p');status.id='v9-storage-error';document.querySelector('header').after(status)}status.textContent=storageFailure;status.style.color='#a43d32'}
+};
+
+// A single cross-week scratchpad, independent of weekly allocation/completion.
+function brainLines(){return (v9.brainDump||'').split('\n').map((text,index)=>({text:text.trim(),index})).filter(x=>x.text)}
+function bindBrainNote(){
+ const input=document.querySelector('[data-brain-input]');if(!input)return;
+ const status=document.querySelector('[data-brain-status]'),button=document.querySelector('[data-brain-organize]');
+ button.disabled=!brainLines().length;
+ input.oninput=()=>{v9.brainDump=input.value;const ok=saveWorkspace();status.textContent=ok?'已保存 · 跨周保留':'未保存，请保留文字并重试';status.style.color=ok?'':'#a43d32';button.disabled=!brainLines().length};
+ button.onclick=openBrainOrganizer;
 }
-const proj=projects.find(p=>line.toLowerCase().includes(p.name.toLowerCase()))||(/visit prof\. qin/i.test(line)?getP(4):null);if(!proj&&!/visit prof\. qin/i.test(line)){errors.push(`Line ${i+1}: Project not recognized — ${line}`);return;}const isNew=/新增|新建|add\s|new\s|create\s/i.test(line);const talk=/\b(talk|give talk)\b|演讲|报告时间/i.test(line);const dayMatch=line.match(/(?:Nov(?:ember)?\s*|11[\/.-])(\d{1,2})/i);if(isNew){let name='';const m=line.match(/(?:新增|新建|add(?:\s+(?:a|new))?|create)\s*([^，,;；]+?)(?=\s*[,，;；]|\s+\d+[–-]\d+\s*h|$)/i);name=m?m[1].trim():'';name=name.replace(/^(?:task|subtask)\s*[:：]?\s*/i,'');if(!name){errors.push(`Line ${i+1}: Could not find a task name`);return;}const exists=proj.tasks.findIndex(t=>t.toLowerCase()===name.toLowerCase());if(exists!==-1){errors.push(`Line ${i+1}: “${name}” already exists; no duplicate will be created`);return;}const h=line.match(/(\d+(?:\.\d+)?)\s*[–-]\s*(\d+(?:\.\d+)?)\s*h/i)||line.match(/(\d+(?:\.\d+)?)\s*h/i);const effort=h?(h[2]?`${h[1]}–${h[2]}h`:`${h[1]}h`):'Not estimated';const session=/两天|2\s*days?|two\s*days?/i.test(line)?'Prefer 2 days':'Days not assigned';out.push({type:'create',p:proj.id,name,effort,session,checked:true,destination:targetWeek(line)});}
-else if(proj.id===4&&/visit prof\.? qin|拜访/i.test(line)){
-const match=dayMatch||line.match(/11\s*月\s*(\d{1,2})\s*日/);
-const day=Number(match?.[1]);
-if(!Number.isInteger(day)||day<2||day>29){errors.push('Use a date between Nov 2 and Nov 29 for the visit.');return;}
-out.push({type:'update',p:4,t:3,day,time:/下午|afternoon/i.test(line)?'Afternoon':'Time TBD',checked:true});
+function openBrainOrganizer(){
+ let dialog=$('#brain-organizer');if(!dialog){dialog=document.createElement('dialog');dialog.id='brain-organizer';document.body.append(dialog)}
+ const draw=()=>{
+  const lines=brainLines(),item=lines[0];
+  dialog.innerHTML=`<div class="heading"><strong>整理这些事</strong><button type="button" data-brain-close aria-label="关闭整理">×</button></div>${item?`<small>还有 ${lines.length} 件 · 一次处理一件</small><p class="brain-current"></p><label>加入项目<select data-brain-project><option value="">选择项目</option>${projects.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}</select></label><label>安排日期<input type="date" data-brain-date></label><p class="brain-help">加入项目后可再安排；生活事项可直接选择日期。</p><p data-brain-message role="status"></p><div class="brain-actions"><button type="button" data-brain-to-project>加入项目</button><button type="button" data-brain-to-date>安排日期</button><button type="button" data-brain-discard>划掉这条</button><button type="button" data-brain-later>稍后再整理</button></div>`:'<p class="brain-current">都整理好了，脑子可以松一口气了。</p><button type="button" data-brain-later>完成</button>'}`;
+  dialog.querySelector('[data-brain-close]').onclick=()=>dialog.close();dialog.querySelector('[data-brain-later]').onclick=()=>dialog.close();
+  if(!item)return;dialog.querySelector('.brain-current').textContent=item.text;
+  const act=kind=>{
+   const message=dialog.querySelector('[data-brain-message]');
+   if(localStorage.getItem(V9_KEY)!==diLastRaw){message.textContent='其他页面已更新，请先刷新；此条仍然保留。';return}
+   const project=dialog.querySelector('[data-brain-project]').value,date=dialog.querySelector('[data-brain-date]').value;
+   if(kind==='project'&&!project){message.textContent='请选择一个项目。';return}
+   if(kind==='date'&&!validDate(date)){message.textContent='请选择日期。';return}
+   const previous=JSON.parse(JSON.stringify(snapshotV9()));
+   if(kind==='project'){const p=getP(Number(project)),t=p.tasks.length;p.tasks.push(item.text);v9.subtasks[keyFor(p.id,t)]={id:uid(),projectId:p.stableId,name:item.text,type:'flexible',estimatedHours:0,completedAt:null}}
+   if(kind==='date')v9.tasks.push({id:uid(),name:item.text,date,week:dateWeek(date),hours:null,completedAt:null});
+   const raw=(v9.brainDump||'').split('\n');raw.splice(item.index,1);v9.brainDump=raw.join('\n');
+   if(!saveWorkspace()){
+    // Restore the full transaction so retrying cannot duplicate a task.
+    v9.brainDump=previous.brainDump;v9.tasks=previous.tasks;v9.subtasks=previous.subtasks;projects.splice(0,projects.length,...previous.workspace.projects);
+    message.textContent='保存失败，此条仍保留，请稍后重试。';return;
+   }
+   renderAll();draw();
+  };
+  dialog.querySelector('[data-brain-to-project]').onclick=()=>act('project');dialog.querySelector('[data-brain-to-date]').onclick=()=>act('date');dialog.querySelector('[data-brain-discard]').onclick=()=>act('discard');
+ };draw();dialog.showModal();
 }
-else if(talk&&dayMatch){const day=+dayMatch[1];if(day<1||day>30){errors.push(`Line ${i+1}: Invalid November date`);return;}const t=proj.tasks.findIndex(x=>/give talk|talk/i.test(x));if(t<0){errors.push(`Line ${i+1}: No matching talk task in ${proj.name}`);return;}out.push({type:'update',p:proj.id,t,day,checked:true});}
-else{errors.push(`Line ${i+1}: Not sure what to change — ${line}`);}});return{out,errors};}
-function capturePreview(){const parsed=parseCapture($('#captureText').value);captureChanges=parsed.out;$('#captureError').textContent=parsed.errors.join('  •  ');$('#captureError').classList.toggle('off',!parsed.errors.length);if(!captureChanges.length)return;$('#captureText').classList.add('off');$('.capture-examples').classList.add('off');$('.capture-hint').classList.add('off');$('#captureParse').classList.add('off');$('#captureBack').classList.remove('off');$('#captureApply').classList.remove('off');renderCaptureChanges();}
-function renderCaptureChanges(){const checked=captureChanges.filter(c=>c.checked).length;$('#capturePreview').innerHTML=`<div class="change-list"><div class="change-head"><strong>${captureChanges.length} proposed change${captureChanges.length===1?'':'s'}</strong><span class="muted">Nothing saved yet</span></div>${captureChanges.map((c,i)=>{const p=getP(c.p);const detail=c.type==='create'?`New subtask · ${esc(c.effort)} · ${esc(c.session)} · Choose where to plan`:(c.day===null?"Date → Pending":`Fixed date → Nov ${c.day}, 2026 · ${c.time||'Time TBD'}`);const name=c.type==='create'?c.name:p.tasks[c.t];return `<label class="change-item"><input type="checkbox" data-change="${i}" ${c.checked?'checked':''}><div class="change-item-body"><div class="change-item-title"><span class="change-pill ${c.type==='update'?'update':''}">${c.type==='create'?'ADD':'UPDATE'}</span>${esc(p.name)} · ${esc(name)}</div><div class="change-item-detail">${detail}</div>${c.type==='create'?`<select aria-label="Planning destination" data-destination="${i}"><option value="0">No week assigned</option>${Array.from({length:8},(_,i)=>i+1).map(w=>`<option value="${w}" ${c.destination===w?'selected':''}>${weekLabel(w)} · Unscheduled</option>`).join('')}</select>`:''}${c.type==='update'&&c.p===4?'<div class="change-notice">The Nov 6–9 conference window stays unchanged.</div>':''}</div></label>`}).join('')}</div>`;document.querySelectorAll('[data-destination]').forEach(el=>el.onchange=()=>{captureChanges[+el.dataset.destination].destination=+el.value});document.querySelectorAll('[data-change]').forEach(x=>x.onchange=()=>{captureChanges[+x.dataset.change].checked=x.checked;$('#captureApply').textContent=`Confirm ${captureChanges.filter(c=>c.checked).length} change(s)`;$('#captureApply').disabled=!captureChanges.some(c=>c.checked)});$('#captureApply').textContent=`Confirm ${checked} change(s)`;$('#captureApply').disabled=!checked;}
-function applyCapture(){const changes=captureChanges.filter(c=>c.checked);if(!changes.length)return;for(const c of changes){const p=getP(c.p);if(c.type==='create'){if(p.tasks.some(t=>t.toLowerCase()===c.name.toLowerCase()))continue;const key=keyFor(p.id,p.tasks.length);if(c.effort!=='Not estimated')capturedEstimates.set(key,c.effort);if(c.destination)capturedWeeks.set(key,c.destination);p.tasks.push(c.name);p.effort=p.effort+' · '+c.effort; p.hours+=Number((c.effort.match(/\d+(?:\.\d+)?/)||['0'])[0]);}else{const old=fixed.find(f=>f.p===c.p&&f.t===c.t);const previousDay=old?.w?2+(old.w-1)*7+old.d:null;
-p.markers=p.markers.filter(m=>!(m.type==='fixed'&&(m.task===c.t||(m.task==null&&m.day===previousDay))));
-if(c.day===null){old.pendingWeek=old.w||old.pendingWeek;old.w=0;continue}
-const w=Math.floor((c.day-2)/7)+1,d=(c.day-2)%7;if(old){old.w=w;old.d=d;old.time=c.time||'Time TBD';}else{fixed.push({id:'cap-'+c.p+'-'+c.t,p:c.p,t:c.t,w,d,name:p.tasks[c.t],time:c.time||'Time TBD'});}p.markers=p.markers.filter(m=>!(m.type==='fixed'&&m.task===c.t));if(!p.markers.some(m=>m.type==='fixed'&&m.day===c.day&&m.task===c.t))p.markers.push({type:'fixed',day:c.day,task:c.t});}}
-$('#capturePreview').innerHTML=`<div class="capture-success">✓ ${changes.length} change${changes.length===1?'':'s'} applied to this demo. ${changes.some(c=>c.type==='create')?'New tasks appear in the selected week or in Tasks without a week.':''}</div>`;$('#captureApply').classList.add('off');$('#captureBack').classList.add('off');$('#captureError').classList.add('off');openWeek=openWeek||1;$('#weekFilter').value=String(openWeek);$('#hide').checked=false;renderAll();setTimeout(()=>$('#captureModal').classList.add('off'),1250);}
-$('#captureBtn').onclick=captureOpen;$('#closeCapture').onclick=()=>$('#captureModal').classList.add('off');$('#captureBack').onclick=captureEdit;$('#captureParse').onclick=capturePreview;$('#captureApply').onclick=applyCapture;document.querySelectorAll('[data-example]').forEach(b=>b.onclick=()=>{$('#captureText').value=captureExamples[b.dataset.example];captureEdit()});
+// Preserve all legacy editing and append a consistent subtask editor.
+function taskTotalEstimate(p,t){return blocks.filter(b=>b.p===p&&b.t===t&&!b.carried).reduce((n,b)=>n+b.h,0)+weeklyExtra.filter(b=>b.p===p&&b.t===t).reduce((n,b)=>n+b.h,0)+fixed.filter(b=>b.p===p&&b.t===t).reduce((n,b)=>n+(b.h||0),0)}
+const baseCards=renderCards;
+function openDraft(task){
+ const dialog=$('#quick-task-editor');$('#quick-task-fields').innerHTML=`<form><label>Name<input name="name" required value="${esc(task.name)}"></label><label>Estimated hours<input name="hours" type="number" min="0.01" step="any" value="${task.hours??''}"></label><label>Date<input name="date" type="date" value="${task.date||''}"></label><label>DDL<input name="deadline" type="date" value="${task.deadline||''}"></label><label>Week<select name="week"><option value="">No week</option>${weekOptions(task.week)}</select></label></form>`;
+ const form=dialog.querySelector('form'),field=n=>form.elements.namedItem(n);field('week').value=task.week?String(task.week):'';form.onsubmit=e=>e.preventDefault();$('#quick-task-cancel').onclick=()=>dialog.close();$('#quick-task-save').onclick=()=>{if(!form.reportValidity()||!field('name').value.trim())return;const date=field('date').value||null;Object.assign(task,{name:field('name').value.trim(),hours:field('hours').value?Number(field('hours').value):null,date,deadline:field('deadline').value||null,week:date?dateWeek(date):field('week').value?Number(field('week').value):null});renderAll();if(!storageFailure)dialog.close()};dialog.showModal();
+}
+// JSON transfer includes both management objects and all legacy schedule state.
+function downloadJSON(data,name){const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function validateV9(data){return validateIntegrity(data)}
+const transfer=document.createElement('span');transfer.innerHTML='<button id="v9-export">Export JSON</button> <button id="v9-import">Import JSON</button><input id="v9-file" type="file" accept=".json,application/json" hidden>';document.querySelector('header').append(transfer);
+$('#v9-export').onclick=()=>{try{downloadJSON(validateV9(snapshotV9()),'weekwise-v9.json')}catch(error){integrityError('Export stopped. '+error.message)}};$('#v9-import').onclick=()=>$('#v9-file').click();$('#v9-file').onchange=async e=>{try{const data=validateV9(JSON.parse(await e.target.files[0].text()));if(!confirm('Replace this workspace with the imported data? A backup of the current workspace will be saved and downloaded first.'))return;const backup=snapshotV9(),stamp=Date.now();downloadJSON(backup,'weekwise-before-import-'+stamp+'.json');importIntegrity(data);location.reload()}catch(error){alert('Import stopped. '+error.message)}finally{e.target.value=''}};
+// UI-only selection; all saved state continues to use the V9 objects.
+// Inline task editor: only explicit Save mutates domain objects.
+let inlineTask=null;var inlineReady=true;
+function taskKind(p,t){const r=inlineReady?v9.subtasks[keyFor(p,t)]:null;if(r?.type)return r.type;const f=fixed.find(x=>x.p===p&&x.t===t);return f?(f.w?'fixed':'waiting'):p===4&&t===3?'waiting':'flexible'}
+function scheduleEnabled(p,t,includeFixed=false){const k=taskKind(p,t);return k==='flexible'||includeFixed&&k==='fixed'}
+const beforeInlineActive=isTaskActive;
+isTaskActive=(p,t,w)=>scheduleEnabled(p,t,true)&&beforeInlineActive(p,t,w);
+function inlineTiming(p,t){const k=taskKind(p.id,t),f=fixed.find(x=>x.p===p.id&&x.t===t);if(k==='waiting')return 'Waiting';if(k==='fixed')return f?.w?'📅 '+markerDate(2+(f.w-1)*7+f.d)+(eventDuration(f)?' · '+eventDuration(f)+'h':''):'Waiting';return esc(capturedEstimates.get(keyFor(p.id,t))|| (taskTotalEstimate(p.id,t)?taskTotalEstimate(p.id,t)+'h':'—'))}
+const scheduledEstimate=taskTotalEstimate;
+taskTotalEstimate=(p,t)=>inlineReady?(v9.subtasks[keyFor(p,t)]?.estimatedHours??scheduledEstimate(p,t)):scheduledEstimate(p,t);
+renderCards=()=>{syncIdentities();projects.forEach(p=>p.tasks.forEach((_,t)=>{const r=v9.subtasks[keyFor(p.id,t)];r.estimatedHours??=parseFloat(capturedEstimates.get(keyFor(p.id,t)))||scheduledEstimate(p.id,t)}));baseCards();document.querySelectorAll('#cards .project').forEach(card=>{const p=getP(+card.dataset.id);card.querySelectorAll('.taskrow').forEach((row,t)=>{row.dataset.inlineTask=keyFor(p.id,t);const fw=$('#weekFilter').value;row.classList.toggle('not-this-week',fw!=='all'&&!isTaskActive(p.id,t,Number(fw)));row.tabIndex=0;row.setAttribute('aria-expanded','false');row.setAttribute('role','button');row.setAttribute('aria-label','Edit '+p.tasks[t]);row.innerHTML=`<div class="task"><span title="${esc(p.tasks[t])}">${p.id}.${t+1} ${esc(p.tasks[t])}${taskDone[keyFor(p.id,t)]?' ✓':''}</span></div>${progressBadge(p.id,t,$('#weekFilter').value==='all'?null:Number($('#weekFilter').value))}<button type="button" class="inline-time" data-edit-timing="${keyFor(p.id,t)}" aria-label="Edit timing: ${esc(p.tasks[t])}" title="Click to edit hours, date or Waiting">${inlineTiming(p,t)}</button>`;row.querySelector('[data-edit-timing]').onclick=e=>{e.stopPropagation();editSubtask(p,t,'timing')};row.onclick=e=>{e.stopPropagation();editSubtask(p,t)};row.onkeydown=e=>{if(e.target!==row)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();editSubtask(p,t)}};if(inlineTask?.p===p.id&&inlineTask.t===t)mountInline(row,p,t)})})};
+function editSubtask(p,t,focus=null){if(inlineTask&&(inlineTask.p!==p.id||inlineTask.t!==t)&&!confirm('Discard unsaved task changes?'))return;inlineTask={p:p.id,t};renderCards();const row=document.querySelector(`[data-inline-task="${keyFor(p.id,t)}"]`);row?.scrollIntoView?.({block:'nearest'});row?.querySelector(focus==='timing'?(taskKind(p.id,t)==='fixed'?'[name=date]':taskKind(p.id,t)==='waiting'?'[name=type]':'[name=hours]'):'[name=name]')?.focus()}
+function mountInline(row,p,t){syncIdentities();const key=keyFor(p.id,t),r=v9.subtasks[key],f=fixed.find(x=>x.p===p.id&&x.t===t);const draft={type:taskKind(p.id,t),name:p.tasks[t],hours:parseFloat(capturedEstimates.get(key))||taskTotalEstimate(p.id,t)||'',date:f?.w?weekDate(f.w,f.d).toISOString().slice(0,10):r.savedTiming?.date||'',duration:f?.durationHours??f?.h??r.savedTiming?.duration??'',start:f?.startTime||r.savedTiming?.start||''};
+ row.classList.add('inline-edit');row.setAttribute('aria-expanded','true');row.removeAttribute('role');row.onclick=e=>e.stopPropagation();row.innerHTML=`<div class="inline-first"><input name="name" required aria-label="Task name" value="${esc(draft.name)}"><button type="button" data-inline-save aria-label="Save task" title="Save">Save</button><button type="button" data-inline-cancel aria-label="Cancel editing" title="Cancel">×</button></div><div class="inline-second"><label class="inline-field">Timing<select name="type" aria-label="Type"><option value="flexible">Flexible</option><option value="fixed">Fixed</option><option value="waiting">Waiting</option></select></label><div class="inline-fields"></div><label class="inline-done"><input type="checkbox" name="taskDone" ${taskDone[key]?'checked':''} > Done</label></div>`;
+ const type=row.querySelector('[name=type]'),fields=row.querySelector('.inline-fields');type.value=draft.type;
+ const remember=()=>{fields.querySelectorAll('input').forEach(x=>draft[x.name]=x.value)};
+ const draw=()=>{fields.innerHTML=type.value==='flexible'?`<label class="inline-field">Estimated hours<input name="hours" type="number" min="0.01" step="any" aria-label="Estimated hours" placeholder="e.g. 2" value="${esc(draft.hours)}"></label>`:type.value==='fixed'?`<label class="inline-field">Date<input name="date" type="date" required aria-label="Fixed date" value="${esc(draft.date)}"></label><label class="inline-field">Start time · optional<input name="start" type="time" aria-label="Start time" value="${esc(draft.start)}"></label><label class="inline-field">Duration · hours · optional<input name="duration" type="number" min="0.01" step="any" placeholder="e.g. 0.5" aria-label="Duration" value="${esc(draft.duration)}"><small>0.5 = 30 min · 1.5 = 90 min</small></label>`:'<span class="inline-error" role="status">Waiting for a date</span>'};type.onchange=()=>{remember();draw()};draw();
+ const cancel=()=>{inlineTask=null;renderCards()};row.querySelector('[data-inline-cancel]').onclick=cancel;
+ const save=()=>{remember();const name=row.querySelector('[name=name]');if(!name.value.trim()){name.setCustomValidity('Enter a task name');name.reportValidity();return}for(const input of row.querySelectorAll('input'))if(!input.reportValidity())return;const error=type.value==='fixed'?timingError(draft.duration,draft.start):'';if(error){row.querySelector('[name=duration]').setCustomValidity(error);row.querySelector('[name=duration]').reportValidity();return}
+ const oldType=taskKind(p.id,t),related=blocks.filter(b=>b.p===p.id&&b.t===t),allocated=weeklyExtra.some(b=>b.p===p.id&&b.t===t)||capturedWeeks.has(key),oldDate=f?.w?weekDate(f.w,f.d).toISOString().slice(0,10):null;
+ // Save timing directly. Native confirmation dialogs may be blocked in embedded previews.
+
+ r.savedTiming={...(r.savedTiming||{}),date:draft.date||oldDate||r.savedTiming?.date||null,duration:draft.duration===''?null:Number(draft.duration),start:draft.start||null};r.type=type.value;p.tasks[t]=name.value.trim();r.name=p.tasks[t];if(draft.hours!==''){capturedEstimates.set(key,Number(draft.hours)+'h');r.estimatedHours=Number(draft.hours)}
+ const oldDay=f?.w?2+(f.w-1)*7+f.d:null;p.markers=p.markers.filter(m=>!(m.type==='fixed'&&(m.task===t||m.task==null&&oldDay!==null&&m.day===oldDay)));
+ if(type.value==='fixed'){const off=timelineDay(draft.date)-2;const event=f||{id:'fixed-'+r.id,p:p.id,t};if(!f)fixed.push(event);Object.assign(event,{w:dateWeek(draft.date),d:((off%7)+7)%7,name:p.tasks[t],durationHours:draft.duration===''?null:Number(draft.duration),startTime:draft.start||null});delete event.h;p.markers.push({type:'fixed',task:t,day:timelineDay(draft.date)})}else if(f){f.pendingWeek=f.w||f.pendingWeek;f.w=0;f.name=p.tasks[t]}
+ if(type.value==='fixed'){openWeek=dateWeek(draft.date);refreshWeekFilter();$('#weekFilter').value=String(openWeek);mobileDays.set(openWeek,((timelineDay(draft.date)-2)%7+7)%7)}
+ const complete=row.querySelector('[name=taskDone]').checked;if(complete!==!!taskDone[key]){if(complete)completions.set(key,{p:p.id,t,w:openWeek,date:todayISO(),completedAt:new Date().toISOString()});else completions.delete(key);taskDone[key]=complete;}inlineTask=null;renderAll()};row.querySelector('[data-inline-save]').onclick=save;row.onkeydown=e=>{e.stopPropagation();if(e.key==='Escape'){e.preventDefault();cancel()}if(e.key==='Enter'&&e.target.tagName!=='SELECT'){e.preventDefault();save()}};row.oninput=()=>row.querySelectorAll('input').forEach(x=>x.setCustomValidity(''));
+}
+dailyControls=b=>`<div class="daily-controls">${[['finished','✓','Complete task'],['worked','−','Worked today · continue tomorrow'],['remove','×','Remove this work block only']].map(([value,icon,label])=>`<button type="button" data-inline-action="${b.id}" data-action="${value}" aria-label="${label}" title="${label}" aria-pressed="${value==='finished'?blockIsComplete(b):value==='worked'&&dailyResults.get(b.id)==='worked'&&!taskDone[keyFor(b.p,b.t)]}">${icon}</button>`).join('')}</div>${dailyResults.get(b.id)==='worked'&&!taskDone[keyFor(b.p,b.t)]?'<small>已记录 · 次日继续</small>':''}`;
+function carryWorkBlock(id){
+ const b=blocks.find(x=>x.id===id);
+ if(!b||!scheduleEnabled(b.p,b.t))return 'Fixed events cannot be carried';
+ if(b.carried)return 'Already carried';
+ if(dailyResults.get(b.id)==='finished'||b.completedAt)return 'Undo completion before carrying';
+ const nextDay=weekDate(b.w,b.d+1).toISOString().slice(0,10),w=dateWeek(nextDay),d=((timelineDay(nextDay)-2)%7+7)%7;
+ if([...blocks,...fixed].some(x=>x!==b&&x.p===b.p&&x.t===b.t&&x.w===w&&x.d===d&&!x.carried))return 'Already planned tomorrow';
+ const next={id:uid(),p:b.p,t:b.t,w,d,h:b.h,carriedFrom:b.id};
+ b.carried=next.id;b.carriedAt=new Date().toISOString();
+ b.carryHistory=[...(b.carryHistory||[]),{from:weekDate(b.w,b.d).toISOString().slice(0,10),to:nextDay,carriedAt:b.carriedAt}];
+ blocks.push(next);return null;
+}
+function carryNotice(id,message){const card=[...document.querySelectorAll('[data-work-block]')].find(x=>x.dataset.workBlock===id);if(!card)return;let note=card.querySelector('[data-carry-notice]');if(!note){note=document.createElement('small');note.dataset.carryNotice='';note.setAttribute('role','status');card.append(note)}note.textContent=message}
+function setTaskCompletion(p,t,complete,w=openWeek){
+ const key=keyFor(p,t);
+ taskDone[key]=complete;
+ if(complete){if(!completions.has(key))completions.set(key,{p,t,w,date:todayISO(),completedAt:new Date().toISOString()})}
+ else{completions.delete(key);for(const b of blocks.filter(x=>x.p===p&&x.t===t)){if(dailyResults.get(b.id)==='finished')dailyResults.delete(b.id);delete b.completedAt}if(v9.weeklyGoals)for(const k of Object.keys(v9.weeklyGoals))if(k.startsWith(key+'@'))delete v9.weeklyGoals[k]}
+}
+function setWorkBlockComplete(b,complete){
+ if(!b||b.carried)return;
+ if(complete){dailyResults.set(b.id,'finished');b.completedAt=new Date().toISOString()}
+ else{dailyResults.delete(b.id);delete b.completedAt;if(v9.weeklyGoals)delete v9.weeklyGoals[keyFor(b.p,b.t)+'@'+b.w]}
+}
+function bindWeeklyBlockProgress(){document.querySelectorAll('[data-week-blocks]').forEach(input=>{const [pid,tid,week]=input.dataset.weekBlocks.split('-').map(Number);const progress=workProgress(pid,tid,week);input.checked=!!taskDone[keyFor(pid,tid)]||!!v9.weeklyGoals?.[keyFor(pid,tid)+'@'+week]||progress.all;input.indeterminate=!input.checked&&progress.completed>0;input.setAttribute('aria-checked',input.indeterminate?'mixed':String(input.checked));input.onchange=()=>{const [p,t,w]=input.dataset.weekBlocks.split('-').map(Number);setTaskCompletion(p,t,input.checked,w);renderAll()}})}
+function protectWorkBlockRemoval(b){
+ const dialog=$('#project-editor');
+ dialog.innerHTML=`<strong>移除这个工作块？</strong><p>${esc(getP(b.p).tasks[b.t])} · ${esc(weekDate(b.w,b.d).toISOString().slice(0,10))} · ${b.h}h</p><p>只移除这个工作块，原任务和完成状态会保留。</p><div><button type="button" data-keep-block>取消</button><button type="button" data-remove-block>确认移除</button></div>`;
+ dialog.querySelector('[data-keep-block]').onclick=()=>dialog.close();
+ dialog.querySelector('[data-remove-block]').onclick=()=>{const index=blocks.indexOf(b);if(index>=0){blocks.splice(index,1);dailyResults.delete(b.id)}dialog.close();renderAll()};
+ dialog.showModal();dialog.querySelector('[data-keep-block]').focus();
+}
+function moveWorkBlockDialog(b){
+ const dialog=$('#project-editor');
+ dialog.innerHTML=`<strong>移动工作块</strong><p>${esc(getP(b.p).tasks[b.t])}</p><label>日期<select data-move-day>${dayNames.map((name,d)=>`<option value="${d}" ${d===b.d?'selected':''}>${name} ${weekDate(b.w,d).getUTCDate()}</option>`).join('')}</select></label><label>位置<select data-move-position></select></label><div><button type="button" data-move-cancel>取消</button><button type="button" data-move-save>移动</button></div>`;
+ const day=dialog.querySelector('[data-move-day]'),position=dialog.querySelector('[data-move-position]');
+ const draw=()=>{position.innerHTML=blocks.filter(x=>x!==b&&x.w===b.w&&x.d===+day.value&&!x.carried).map(x=>`<option value="${esc(x.id)}">放在 ${esc(getP(x.p).tasks[x.t])} 前面</option>`).join('')+'<option value="">放在最后</option>';position.value=''};
+ day.onchange=draw;draw();
+ dialog.querySelector('[data-move-cancel]').onclick=()=>dialog.close();
+ dialog.querySelector('[data-move-save]').onclick=()=>{blocks.splice(blocks.indexOf(b),1);b.d=+day.value;const index=position.value?blocks.findIndex(x=>x.id===position.value):blocks.length;blocks.splice(index<0?blocks.length:index,0,b);mobileDays.set(b.w,b.d);dialog.close();renderAll()};
+ dialog.showModal();
+}
+function bindWorkPanel(){document.querySelectorAll('.work-editor').forEach(x=>x.remove());document.querySelectorAll('[data-work-block],[data-work-fixed]').forEach(card=>{const isFixed=!!card.dataset.workFixed,b=(isFixed?fixed:blocks).find(x=>x.id===(card.dataset.workBlock||card.dataset.workFixed));if(!b)return;card.onclick=null;card.onkeydown=null;card.removeAttribute('tabindex');const top=card.querySelector('.top');const text=top.textContent;top.innerHTML=`<button type="button" title="${esc(text)}" aria-label="Edit original task: ${esc(getP(b.p).tasks[b.t])}">${esc(text)}</button>`;top.querySelector('button').onclick=()=>{if($('#planView').dataset.view==='today')showView('week');$('#left')?.classList.remove('off');editSubtask(getP(b.p),b.t)};
+ if(!isFixed){const meta=card.querySelector('.meta');meta.innerHTML=`<button type="button" aria-label="Edit this block hours">${b.h}h</button>`;meta.querySelector('button').onclick=()=>{meta.innerHTML=`<div class="hours-edit"><input aria-label="Block hours" type="number" min="0.01" step="any" value="${b.h}" required><button type="button" aria-label="Save block hours">✓</button><button type="button" aria-label="Cancel block hours">×</button></div>`;const input=meta.querySelector('input'),buttons=meta.querySelectorAll('button');const save=()=>{if(!input.reportValidity())return;b.h=Number(input.value);renderAll()};buttons[0].onclick=save;buttons[1].onclick=()=>renderAll();input.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();save()}if(e.key==='Escape')renderAll()};input.focus();input.select?.()};if(canDrag(b)){const move=document.createElement('button');move.type='button';move.textContent='⋯';move.setAttribute('aria-label','Move work block');move.title='移动日期或调整顺序';move.onclick=()=>moveWorkBlockDialog(b);meta.append(move)}}
+ });}
+
+// One delegated handler survives Calendar / Today re-renders and cloned cards.
+function applyCalendarAction(id,action){
+ const b=blocks.find(x=>x.id===id);if(!b)return;
+ if(action==='finished'){setTaskCompletion(b.p,b.t,!taskDone[keyFor(b.p,b.t)],b.w);renderAll();return}
+ if(action==='worked'){
+  if(taskDone[keyFor(b.p,b.t)])setTaskCompletion(b.p,b.t,false,b.w);
+  delete b.completedAt;dailyResults.set(b.id,'worked');
+  if(!b.carried){
+   const date=weekDate(b.w,b.d+1).toISOString().slice(0,10),w=dateWeek(date),d=((timelineDay(date)-2)%7+7)%7;
+   let next=blocks.find(x=>x!==b&&x.p===b.p&&x.t===b.t&&x.w===w&&x.d===d&&!x.carried);
+   if(!next){next={id:uid(),p:b.p,t:b.t,w,d,h:b.h,carriedFrom:b.id};blocks.push(next)}
+   b.carried=next.id;b.carriedAt=new Date().toISOString();
+  }
+  renderAll();return;
+ }
+ if(action==='remove'){protectWorkBlockRemoval(b);return}
+}
+document.addEventListener('click',event=>{
+ const button=event.target.closest('[data-inline-action]');if(!button)return;
+ event.preventDefault();event.stopPropagation();
+ applyCalendarAction(button.dataset.inlineAction,button.dataset.action);
+});
+// V9 is authoritative after migration. Restore before first V9 write.
+if(v9.workspace){const state=v9.workspace;for(const [target,source] of [[projects,state.projects],[blocks,state.blocks],[fixed,state.fixed],[weeklyExtra,state.weeklyExtra]])target.splice(0,target.length,...source);for(const [target,source] of [[capturedWeeks,state.capturedWeeks],[capturedEstimates,state.capturedEstimates],[completions,state.completions],[dailyResults,state.dailyResults]]){target.clear();for(const pair of source)target.set(...pair)}if(state.deadlines)deadlines.splice(0,deadlines.length,...state.deadlines);taskDone={};for(const key of completions.keys())taskDone[key]=true;}
+
+// Restore independent manual entry points without changing Capture or inline editors.
+const projectFilters={inactive:true,completed:true,...(v9.projectFilters||{})};
+const revealedProjects=new Set(v9.revealedProjects||[]);
+$('#hide').checked=projectFilters.inactive;$('#hide-completed').checked=projectFilters.completed;
+const entrySnapshot=snapshotV9;
+snapshotV9=()=>({...entrySnapshot(),projectFilters:{...projectFilters},revealedProjects:[...revealedProjects]});
+const filteredProjects=visibleProjects;
+visibleProjects=()=>{const visible=filteredProjects();return orderedProjects(projects.filter(p=>visible.includes(p)||revealedProjects.has(p.stableId)))};
+for(const [selector,key] of [['#hide','inactive'],['#hide-completed','completed']])$(selector).onchange=()=>{projectFilters[key]=$(selector).checked;revealedProjects.clear();renderAll()};
+function revealCreatedProject(p){revealedProjects.add(p.stableId);selected=p.id;showView('week');$('#left').classList.remove('off')}
+function newProjectWizard(){
+ const dialog=$('#project-editor');let step=1;const draft={name:'',hours:'',deadline:'',tasks:['']};
+ const draw=()=>{dialog.innerHTML=`<form><strong>Step ${step} — ${step===1?'Project details':'Tasks'}</strong>${step===1?`<label>Name<input name="name" required value="${esc(draft.name)}"></label><label>Estimated hours (optional)<input name="hours" type="number" min="0.01" step="any" value="${esc(draft.hours)}"></label><label>DDL (optional)<input name="deadline" type="date" value="${esc(draft.deadline)}"></label>`:`<p>Add subtasks below. You can add more later and edit each task’s hours and timing.</p><div data-task-inputs>${draft.tasks.map((name,i)=>`<div class="project-task-input"><input data-task-name="${i}" aria-label="Task ${i+1}" value="${esc(name)}"><button type="button" data-delete-task="${i}" aria-label="Delete task ${i+1}">×</button></div>`).join('')}</div><button type="button" data-add-task>＋ Add task</button>`}<p role="status"></p><div><button type="button" data-cancel>Cancel</button>${step===2?'<button type="button" data-back>Back</button>':''}<button type="button" data-advance>${step===1?'Next → Subtasks':'Create Project'}</button></div></form>`;
+ const form=dialog.querySelector('form'),field=n=>form.elements.namedItem(n),rememberTasks=()=>{draft.tasks=[...form.querySelectorAll('[data-task-name]')].map(x=>x.value)};
+ form.querySelector('[data-cancel]').onclick=()=>dialog.close();
+ if(step===2){form.querySelector('[data-back]').onclick=()=>{rememberTasks();step=1;draw()};form.querySelector('[data-add-task]').onclick=()=>{rememberTasks();draft.tasks.push('');draw()};form.querySelectorAll('[data-delete-task]').forEach(b=>b.onclick=()=>{rememberTasks();draft.tasks.splice(+b.dataset.deleteTask,1);draw()})}
+ const advance=()=>{if(!form.reportValidity())return;if(step===1){if(!field('name').value.trim())return;Object.assign(draft,{name:field('name').value.trim(),hours:field('hours').value,deadline:field('deadline').value});step=2;draw();return}rememberTasks();if(localStorage.getItem(V9_KEY)!==diLastRaw){form.querySelector('[role=status]').textContent='Workspace changed in another tab. Reload before saving.';return}
+ const hours=draft.hours===''?null:Number(draft.hours),p={id:Math.max(0,...projects.map(p=>p.id))+1,stableId:uid(),name:draft.name,color:'#789b77',tasks:draft.tasks.map(x=>x.trim()).filter(Boolean),weeks:[],estimatedHours:hours,hours:hours||0,effort:hours===null?'':hours+'h',ddl:draft.deadline?timelineDay(draft.deadline):null,markers:draft.deadline?[{type:'ddl',day:timelineDay(draft.deadline)}]:[]};projects.push(p);p.tasks.forEach((name,t)=>{v9.subtasks[keyFor(p.id,t)]={id:uid(),projectId:p.stableId,name,type:'flexible',estimatedHours:0,completedAt:null}});revealCreatedProject(p);renderAll();if(storageFailure){form.querySelector('[role=status]').textContent=storageFailure;return}dialog.close();};form.querySelector('[data-advance]').onclick=advance;form.onsubmit=e=>{e.preventDefault();advance()};
+ };draw();dialog.showModal();dialog.querySelector('[name=name]').focus();
+}
+function manualEntry(project=null){
+ if(!project)return newProjectWizard();
+ const dialog=$('#project-editor'),adding=!!project;
+ dialog.innerHTML=`<form><strong>${adding?'Add Task · '+esc(project.name):'New Project'}</strong><label>Name<input name="name" required></label><label>Estimated hours<input name="hours" type="number" min="0.01" step="any"></label>${adding?'<label>Type<select name="type"><option value="flexible">Flexible</option><option value="fixed">Fixed</option><option value="waiting">Waiting</option></select></label><div data-timing></div>':''}<label>DDL (optional)<input name="deadline" type="date"></label><p role="status"></p><div><button type="button" data-cancel>Cancel</button><button type="button" data-create>${adding?'Add Task':'Create Project'}</button></div></form>`;
+ const form=dialog.querySelector('form'),field=n=>form.elements.namedItem(n);
+ if(adding){const draw=()=>{form.querySelector('[data-timing]').innerHTML=field('type').value==='fixed'?'<label>Date<input name="date" type="date" required></label><label>Start time (optional)<input name="start" type="time"></label>':field('type').value==='flexible'?`<label>Week<select name="week"><option value="">No week</option>${weekOptions(openWeek)}</select></label>`:'<small>Waiting for a date</small>'};field('type').onchange=draw;draw()}
+ form.querySelector('[data-cancel]').onclick=()=>dialog.close();
+ const create=()=>{if(!form.reportValidity())return;const name=field('name').value.trim();if(!name){field('name').focus();return}
+ const hours=field('hours').value?Number(field('hours').value):null,deadline=field('deadline').value||null;
+ // Refuse stale-tab writes before touching any domain data.
+ if(localStorage.getItem(V9_KEY)!==diLastRaw){form.querySelector('[role=status]').textContent='Workspace changed in another tab. Reload before saving.';return}
+ let p=project;
+ if(!adding){p={id:Math.max(0,...projects.map(p=>p.id))+1,stableId:uid(),name,color:'#789b77',tasks:[],weeks:[],effort:hours===null?'':hours+'h',hours:hours||0,ddl:deadline?timelineDay(deadline):null,markers:deadline?[{type:'ddl',day:timelineDay(deadline)}]:[]};projects.push(p)}
+ else{const t=p.tasks.length,key=keyFor(p.id,t),type=field('type').value;p.tasks.push(name);v9.subtasks[key]={id:uid(),projectId:p.stableId,name,type,estimatedHours:hours||0,deadline,completedAt:null};if(hours)capturedEstimates.set(key,hours+'h');
+ if(type==='fixed'){const date=field('date').value,off=timelineDay(date)-2;fixed.push({id:uid(),p:p.id,t,w:dateWeek(date),d:((off%7)+7)%7,name,durationHours:hours,startTime:field('start').value||null});p.markers.push({type:'fixed',task:t,day:timelineDay(date)})}
+ if(type==='flexible'&&field('week').value){const w=Number(field('week').value);capturedWeeks.set(key,w);if(hours)weeklyExtra.push({p:p.id,t,w,h:hours})}}
+ revealCreatedProject(p);renderAll();if(storageFailure){form.querySelector('[role=status]').textContent=storageFailure;return}dialog.close();document.querySelector(`[data-id="${p.id}"]`)?.scrollIntoView({block:'nearest'});
+ };form.querySelector('[data-create]').onclick=create;form.onsubmit=e=>{e.preventDefault();create()};dialog.showModal();field('name').focus();
+}
+$('#new-project').onclick=()=>manualEntry();
+const entryRenderCards=renderCards;
+renderCards=()=>{entryRenderCards();document.querySelectorAll('[data-new-task]').forEach(b=>b.onclick=e=>{e.stopPropagation();manualEntry(getP(Number(b.dataset.newTask)))});document.querySelectorAll('#cards .project').forEach(card=>{if(revealedProjects.has(getP(Number(card.dataset.id)).stableId))card.classList.remove('dim')})};
+
+diReady=true;openWeek=currentWeek();renderAll();
+
 </script></body></html>
